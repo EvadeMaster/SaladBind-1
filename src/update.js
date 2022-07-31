@@ -9,6 +9,9 @@ const { execFile } = require('child_process');
 const si = require("systeminformation");
 const { dataDirectory, saladbind_directory} = require("./setup");
 const path = require("path");
+let rawdata = fs.readFileSync(configFile);
+const config = JSON.parse(rawdata);
+let isDev = config.dev != false && config.dev == true;
 
 if (!fs.existsSync(dataDirectory)) {
 	fs.mkdirSync(dataDirectory, { recursive: true });
@@ -41,7 +44,7 @@ const updateCheck = new Promise((resolve, reject) => {
 		}, 10000);
 
 		const spinner = ora('Checking for updates...').start();
-		fetch('https://raw.githubusercontent.com/UhhhAaron/SaladBind/main/internal/changelog.json')
+		fetch(`https://raw.githubusercontent.com/UhhhAaron/SaladBind/${isDev ? "dev" : "main"}/internal/changelog.json`)
 			.then(res => res.json())
 			.then(data => {
 				clearTimeout(timer);
