@@ -5,7 +5,7 @@
         "kawpow": 3484,
         "beamv3": 2000,
         "EQUI144_5": 2000,
-        "autolykos2": 2467,
+        "autolykos2": 2468,
         "octopus": 4720,
         "randomx": null
     },
@@ -103,8 +103,8 @@
         "teamredminer": {
             "miner": "TeamRedMiner",
             "download": {
-                "win32": "https://github.com/todxx/teamredminer/releases/download/v0.10.1/teamredminer-v0.10.1-win.zip",
-                "linux": "https://github.com/todxx/teamredminer/releases/download/v0.10.1/teamredminer-v0.10.1-linux.tgz"
+                "win32": "https://github.com/todxx/teamredminer/releases/download/v0.10.2/teamredminer-v0.10.2-win.zip",
+                "linux": "https://github.com/todxx/teamredminer/releases/download/v0.10.2/teamredminer-v0.10.2-linux.tgz"
             },
             "algos": [
                 "ethash",
@@ -119,7 +119,7 @@
                 "linux"
             ],
             "fee": 2,
-            "version": "v0.10.1",
+            "version": "v0.10.2",
             "parameters": {
                 "fileName": "teamredminer",
                 "algo": "-a",
@@ -131,8 +131,8 @@
         "lolminer": {
             "miner": "lolMiner",
             "download": {
-                "win32": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.51a/lolMiner_v1.51a_Win64.zip",
-                "linux": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.51a/lolMiner_v1.51a_Lin64.tar.gz"
+                "win32": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.53/lolMiner_v1.53_Win64.zip",
+                "linux": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.53/lolMiner_v1.53_Lin64.tar.gz"
             },
             "algos": [
                 "ethash",
@@ -149,7 +149,7 @@
                 "linux"
             ],
             "fee": 1,
-            "version": "1.51a",
+            "version": "1.53",
             "parameters": {
                 "fileName": "lolMiner",
                 "algo": "--algo",
@@ -161,9 +161,9 @@
         "xmrig": {
             "miner": "XMRig",
             "download": {
-                "win32": "https://github.com/xmrig/xmrig/releases/download/v6.17.0/xmrig-6.17.0-gcc-win64.zip",
-                "linux": "https://github.com/xmrig/xmrig/releases/download/v6.17.0/xmrig-6.17.0-linux-x64.tar.gz",
-                "darwin": "https://github.com/xmrig/xmrig/releases/download/v6.17.0/xmrig-6.17.0-macos-x64.tar.gz"
+                "win32": "https://github.com/xmrig/xmrig/releases/download/v6.18.0/xmrig-6.18.0-gcc-win64.zip",
+                "linux": "https://github.com/xmrig/xmrig/releases/download/v6.18.0/xmrig-6.18.0-linux-x64.tar.gz",
+                "darwin": "https://github.com/xmrig/xmrig/releases/download/v6.18.0/xmrig-6.18.0-macos-x64.tar.gz"
             },
             "algos": [
                 "randomx"
@@ -176,7 +176,7 @@
                 "darwin"
             ],
             "fee": 1,
-            "version": "6.17.0",
+            "version": "6.18.0",
             "parameters": {
                 "fileName": "xmrig",
                 "algo": "-a",
