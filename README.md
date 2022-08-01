@@ -1,4 +1,9 @@
+## Disclaimer
+This build contains prerelease code for SaladBind, these code will not be merged onto [UhhhAaron/SaladBind](https://github.com/UhhhAaron/SaladBind) or vtheskeleton/SaladBind, **I do this in my free time**, I do often read Pull requests and issues, feel free to open them
 
+EvadeMaster, v1.7.8 (vtheskeleton/SaladBind) contributor
+
+## README.md (UhhhAaron/SaladBind)
 **This application is retired and not affiliated with Salad Technologies.** 
 
 This repo will occasionally receive updates to the list of miners so they aren't too out-of-date. **You can do this yourself, too. Just go to /internal/miners.json, update the download link and variable "version" for the miner you want to update and submit a pull request. I will probably approve it within the day.**
