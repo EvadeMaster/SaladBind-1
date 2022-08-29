@@ -1,6 +1,6 @@
 {
   "name": "saladbind",
-  "version": "1.7.8.2",
+  "version": "1.7.9",
   "description": "BIND-ing the good features from other projects together (and fucking nuking the bad ones)",
   "main": "src/index.js",
   "scripts": {
