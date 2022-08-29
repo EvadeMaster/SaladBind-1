@@ -1,11 +1,11 @@
 {
     "algos": {
-        "ethash": 4969,
-        "etchash": 3031,
-        "kawpow": 3484,
+        "ethash": 5016,
+        "etchash": 3055,
+        "kawpow": 3523,
         "beamv3": 2000,
         "EQUI144_5": 2000,
-        "autolykos2": 2468,
+        "autolykos2": 2511,
         "octopus": 4720,
         "randomx": null
     },
@@ -41,8 +41,8 @@
         "trex": {
             "miner": "T-Rex",
             "download": {
-                "win32": "https://github.com/trexminer/T-Rex/releases/download/0.26.4/t-rex-0.26.4-win.zip",
-                "linux": "https://github.com/trexminer/T-Rex/releases/download/0.26.4/t-rex-0.26.4-linux.tar.gz"
+                "win32": "https://github.com/trexminer/T-Rex/releases/download/0.26.5/t-rex-0.26.5-win.zip",
+                "linux": "https://github.com/trexminer/T-Rex/releases/download/0.26.5/t-rex-0.26.5-linux.tar.gz"
             },
             "algos": [
                 "ethash",
@@ -59,7 +59,7 @@
                 "linux"
             ],
             "fee": 1,
-            "version": "0.26.4",
+            "version": "0.26.5",
             "parameters": {
                 "fileName": "t-rex",
                 "algo": "-a",
