@@ -1,5 +1,5 @@
 {
-    "version": "1.7.8.2",
+    "version": "1.7.9",
     "changelog": [
         "1.7.0: SaladBind now uses proper system folders",
         "1.7.1: Fixed nothing LOL... :(",
@@ -7,9 +7,8 @@
         "1.7.3: Fixed a bug caused by 1.7.2 making it work ONLY on Windows machines.",
 	    "1.7.4: Updated messages to reflect file locations being changed",
         "1.7.7: fixed the updater on 1.7.6",
-        "1.7.8: Updated miners",
-	"1.7.8.1: Forked project and updated miners again",
-	    "1.7.8.2: NiceHash hostnames fixed, broken links changed/removed"
+        "1.7.8: Added Troubleshooting guide and fix lolMiner Secure Connection bug",
+	    "1.7.9: Added the ability to switch branch"
     ],
     "force": true,
     "next_version": "1.6.0",
