@@ -1,6 +1,6 @@
 {
   "name": "saladbind",
-  "version": "1.7.8.2",
+  "version": "1.7.9",
   "description": "BIND-ing the good features from other projects together (and fucking nuking the bad ones)",
   "main": "src/index.js",
   "scripts": {
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/UhhhAaron/SaladBind.git"
+    "url": "git+https://github.com/EvadeMaster/SaladBind.git"
   },
-  "author": "Original author: LIT Devs, Maintained by: UhhhAaron",
+  "author": "Original author: LIT Devs, Forked of: UhhAaron, Maintained by: EvadeMaster",
   "license": "GNUv3",
   "bugs": {
-    "url": "https://github.com/UhhhAaron/SaladBind/issues"
+    "url": "https://github.com/EvadeMaster/SaladBind/issues"
   },
-  "homepage": "https://github.com/UhhhAaron/SaladBind#readme",
+  "homepage": "https://github.com/EvadeMaster/SaladBind#readme",
   "dependencies": {
     "chalk": "^4.1.2",
     "decompress": "^4.2.1",

@@ -7,8 +7,11 @@ const fs = require("fs")
 const https = require('https');
 const { execFile } = require('child_process');
 const si = require("systeminformation");
-const { dataDirectory, saladbind_directory} = require("./setup");
+const { dataDirectory, saladbind_directory, configFile } = require("./setup");
 const path = require("path");
+let rawdata = fs.readFileSync(configFile);
+const config = JSON.parse(rawdata);
+let isDev = config.dev != false && config.dev == true;
 
 if (!fs.existsSync(dataDirectory)) {
 	fs.mkdirSync(dataDirectory, { recursive: true });
@@ -41,16 +44,16 @@ const updateCheck = new Promise((resolve, reject) => {
 		}, 10000);
 
 		const spinner = ora('Checking for updates...').start();
-		fetch('https://raw.githubusercontent.com/UhhhAaron/SaladBind/main/internal/changelog.json')
+		fetch(`https://raw.githubusercontent.com/EvadeMaster/SaladBind-1/${isDev ? "dev" : "main"}/internal/changelog.json`)
 			.then(res => res.json())
 			.then(data => {
 				clearTimeout(timer);
 				if(updateFailed) return; // to not mess up stuff if it recovers
 				version = data.version
 				files = { //files to download if the user decides to autoupdate.
-					"win32": { "file": `https://github.com/UhhhAaron/SaladBind/releases/download/v${version}/saladbind-win.exe`, "name": `SaladBind-win-${version}.exe` },
-					"linux": { "file": `https://github.com/UhhhAaron/SaladBind/releases/download/v${version}/saladbind-linux`, "name": `SaladBind-linux-${version}` },
-					"darwin": { "file": `https://github.com/UhhhAaron/SaladBind/releases/download/v${version}/saladbind-macos`, "name": `SaladBind-macos-${version}` }
+					"win32": { "file": `https://github.com/EvadeMaster/SaladBind-1/releases/download/v${version}/saladbind-win.exe`, "name": `SaladBind-win-${version}.exe` },
+					"linux": { "file": `https://github.com/EvadeMaster/SaladBind-1/releases/download/v${version}/saladbind-linux`, "name": `SaladBind-linux-${version}` },
+					"darwin": { "file": `https://github.com/EvadeMaster/SaladBind-1/releases/download/v${version}/saladbind-macos`, "name": `SaladBind-macos-${version}` }
 				}
 				if (version !== packageJson.version) {
 					spinner.succeed(chalk.bold.green(`SaladBind ${data.version} is available!`));
@@ -91,9 +94,6 @@ const updateCheck = new Promise((resolve, reject) => {
 	.catch(err => {
 		spinner.fail(chalk.bold.red(`Could not check for updates, please try again later.`));
 		console.log(err);
-		setTimeout(() => {
-			resolve();
-		}, 3500);
 
 	});
 

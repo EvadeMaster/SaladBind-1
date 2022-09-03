@@ -94,11 +94,20 @@ async function toggleBypassGpu() {
 	}
 	await save("bypassGPUChecks", !bypassGPUChecks);
 }
+async function toggleSBbranch() {
+	let dev;
+	try {
+		dev = await JSON.parse(fs.readFileSync(configFile)).dev;
+	} catch {
+		dev = false;
+	}
+	await save("dev", !dev);
+}
 async function miner(){
 	const promptResult = await inquirer.prompt([{
 		type: 'list',
 		name: "useapi",
-		message: "How would you like to provide your mining details?",
+		message: "How would you like to provide your mining details? Recommend that you use (Get with Salad Auth token) option",
 		choices: [{
 				name: `Automatic ${chalk.yellow("(Read from Salad logs)")}`,
 				value: "auto"
@@ -151,7 +160,7 @@ async function miner(){
 		let id = idJSON?.id;
 		if (!rigID) {
 			spinner.fail()
-			console.log(chalk.bold.red("Could not find your Rig ID! Please make sure that you have mined for at least 5 minutes using Salad's official application after restarting it."));
+			console.log(chalk.bold.red("Could not find your Rig ID! Please make sure that you have mined for at least 5 minutes using Salad's official application version 0.5.8 after restarting it."));
 			setTimeout(() => {
 				run(true)
 			}, 3500);
@@ -186,7 +195,7 @@ async function miner(){
 				if (input.length == 778 || input == "cancel") {
 					return true;
 				}
-				return `Your Salad Access Token is required for automatic mode. If you don't want this, type "${chalk.yellowBright("cancel")}" and select manual\nor select to get them automatically from the logs of Salad. ${chalk.yellow.bold("\nYou may be seeing this if you entered the token incorrectly, the token is 778 chars long!\nIf you do not know how to configure read this\nhttps://bit.ly/saladbindconfig (copy this to read it)")}`;
+				return `Your Salad Access Token is required for automatic mode. If you don't want this, type "${chalk.yellowBright("cancel")}" and select manual\nor select to get them automatically from the logs of Salad. ${chalk.yellow.bold("\nYou may be seeing this if you entered the token incorrectly, the token is 778 chars long!\nIf you do not know how to configure read this\nhttps://github.com/UhhhAaron/SaladBind#automatic-get-with-salad-auth-token (copy this to read it)")}`;
 			}
 		}]);
 		if(auth.auth == "cancel") {
@@ -203,7 +212,7 @@ async function miner(){
 		} catch (e) {
 			spinner.fail();
 			console.log(e);
-			console.log(chalk.bold.red("Failed to get your Rig ID! This is most likely your auth code being expired, try refreshing app.salad.io in your browser and getting the token again.\nIf that does not work, please contact us at https://discord.gg/HfBAtQ2afz."));
+			console.log(chalk.bold.red("Failed to get your Rig ID! This is most likely your auth code being expired, try refreshing app.salad.io in your browser and getting the token again."));
 			console.log("Going back in 20 seconds");
 			setTimeout(() => {
 				run(true);
@@ -289,6 +298,10 @@ async function debugMenu(){
 				value: "bypass"
 			},
 			{
+				name: `SaladBind Branch ${configData.dev ? chalk.redBright("(dev)") : chalk.green("(main)")}`,
+				value: "toggleBranch"
+			},
+			{
 				name: `${firstTime ? chalk.greenBright("Finish") : chalk.redBright("Go Back")}`,
 				value: "back"
 			}
@@ -298,6 +311,10 @@ async function debugMenu(){
 		run(true)
 		} else if(prompt.settings == "bypass"){
 			await toggleBypassGpu()
+			console.clear()
+			return debugMenu()
+		} else if(prompt.settings == "toggleBranch"){
+			await toggleSBbranch()
 			console.clear()
 			return debugMenu()
 		}
