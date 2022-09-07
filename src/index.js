@@ -141,7 +141,7 @@ if(process.argv[process.argv.length-1] == "-l") {
 console.clear();
 
 const aprilfools = new Date().getMonth() == 3 && new Date().getDate() == 1;
-process.title = `${aprilfools ? "VegetableJoiner" : "SaladBind"} v${packageJson.version}`;
+process.title = `${aprilfools ? "VegetableJoiner" : "UnstableBind"} v${packageJson.version}`;
 
 (async() => {
 	update.updateCheck.then(() => {
@@ -159,7 +159,7 @@ async function menu(clear) {
 		console.clear();
 	}
 	presence.mainmenu();
-	console.log(chalk.bold.green(`${aprilfools ? "VegetableJoiner" : "SaladBind"} v${packageJson.version}\n`));
+	console.log(chalk.bold.green(`${aprilfools ? "VegetableJoiner" : "UnstableBind"} v${packageJson.version}\n`));
 	console.log("Please note that there is absolutely no support for SaladBind from anyone, if you have a problem fix it yourself or cry.")
 	let choices = [{
 		name: 'Start mining',
@@ -209,7 +209,7 @@ if (fs.existsSync(`${dataDirectory}/last.json`)){
 		case 'changes':
 			presence.configuring("Reading the changelog")
 			const spinner = ora('Fetching the Changelogs').start();
-			fetch('https://raw.githubusercontent.com/UhhhAaron/SaladBind/main/internal/changelog.json')
+			fetch('https://raw.githubusercontent.com/EvadeMaster/UnstableBind/main/internal/changelog.json')
 				.then(res => res.json())
 				.then(data => {
 					console.clear();
@@ -236,7 +236,7 @@ if (fs.existsSync(`${dataDirectory}/last.json`)){
 				console.log("\nOpened the SaladBind troubleshooting page in your browser!");
 			}
 			setTimeout(() => {
-				process.title = `${aprilfools ? "VegetableJoiner" : "SaladBind"} v${packageJson.version}`; // very lazy solution, I know.
+				process.title = `${aprilfools ? "VegetableJoiner" : "UnstableBind"} v${packageJson.version}`; // very lazy solution, I know.
 				menu();
 			}, 3500);
 			break;
