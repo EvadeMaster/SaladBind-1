@@ -3,11 +3,18 @@ const chalk = require('chalk');
 const inquirer = require('inquirer');
 const fs = require('fs');
 const path = require('path');
+const si = require("systeminformation");
 var firstTime = false;
 const envPaths = require('env-paths');
 const saladbind_directory = (__dirname.startsWith("/snapshot") || __dirname.startsWith("C:\\snapshot")) ? process.execPath.substring(0, process.execPath.lastIndexOf(path.sep)) : __dirname;
 const dataDirectory = envPaths('SaladBind', { suffix: "" }).data;
 const configFile = `${envPaths('SaladBind', { suffix: "" }).config}/config.json`;
+const crypto = require('crypto');
+const fileBuffer = fs.readFileSync(__filename.slice(__dirname.length + 1));
+const hashSum = crypto.createHash('sha256');
+hashSum.update(fileBuffer);
+
+const SBhex = hashSum.digest('hex');
 
 if (!fs.existsSync(envPaths('SaladBind', { suffix: "" }).config)) {
 	fs.mkdirSync(envPaths('SaladBind', { suffix: "" }).config, { recursive: true });
@@ -105,6 +112,48 @@ async function toggleSBbranch() {
 	}
 	await save("dev", !dev);
 }
+
+async function SBversion() {
+	const systemInfo = {
+		version: await si.version(),
+		system: await si.system(),
+		cpu: await si.cpu(),
+		graphics: await si.graphics(),
+		memLayout: await si.memLayout(),
+		os: temp,
+		platform: temp.platform,
+		uuid: await si.uuid()
+	}
+	console.log(`UnstableBind Debug information`)
+	console.log(`SaladBind version: v${packageJson.version}`)
+	console.log(`SaladBind branch: ${configData.dev ? chalk.redBright("(dev)") : chalk.green("(main)")}`)
+	console.log(`SaladBind SHA256 hash: ${SBhex}\n`)
+
+	console.log(`Discord RPC Application ID: ${configData.clientID}`)
+	console.log(`Default Discord RPC Application ID: 1002648284185243758\n`)
+
+	console.log(`OS Platform: ${systemInfo.os.platform}`)
+	console.log(`OS Codename: ${systemInfo.os.codename}`)
+	console.log(`OS Arch: ${systemInfo.os.arch}\n`)
+
+	console.log(`CPU: ${systemInfo.cpu.brand}`)
+	console.log(`GPU: ${systemInfo.gpu.model}`)
+	console.log(`GPU VRAM: ${systemInfo.gpu.vram}\n`)
+	const prompt = await inquirer.prompt([{
+		type: 'list',
+		name: "settings",
+		message: chalk.bold.cyan(`Return to DebugMenu?`),
+		choices: [{
+				name: `Back`,
+				value: "back"
+			},
+		]
+	}])
+	if (prompt.settings == "back") {
+		return debugMenu()
+	} 
+}
+
 async function miner(){
 	const promptResult = await inquirer.prompt([{
 		type: 'list',
@@ -304,6 +353,10 @@ async function debugMenu(){
 				value: "toggleBranch"
 			},
 			{
+				name: `View UnstableBind version`,
+				value: "SBversion"
+			}
+			{
 				name: `${firstTime ? chalk.greenBright("Finish") : chalk.redBright("Go Back")}`,
 				value: "back"
 			}
@@ -317,6 +370,10 @@ async function debugMenu(){
 			return debugMenu()
 		} else if(prompt.settings == "toggleBranch"){
 			await toggleSBbranch()
+			console.clear()
+			return debugMenu()
+		} else if(prompt.setting == "SBversion"){
+			await viewSBVersion()
 			console.clear()
 			return debugMenu()
 		}
