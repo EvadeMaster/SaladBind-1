@@ -27,10 +27,12 @@ async function run(clear = false) {
 async function main(configData = {}) {
 	console.clear()
 	if (firstTime) {
-		console.log(`${chalk.greenBright.bold("Welcome to SaladBind!")}
+		console.log(`${chalk.greenBright.bold("Welcome to UnstableBind!")}
 This is a program that makes it easier to select a miner, algorithm, and pool for Salad! 
-All of the money you mine using SaladBind goes to Salad, and all Salad boosts and XP will work in SaladBind.
-\n${chalk.yellow("Note that there is no support for SaladBind. Use at your own risk")}
+All of the money you mine using UnstableBind goes to Salad, and all Salad boosts and XP will work in UnstableBind.
+
+This version of UnstableBind is based on original vtheskeleton/SaladBind v1.7.8 (& some of UhhhAaron/SaladBind)
+\n${chalk.yellow("Note that there is no support for UnstableBind. Use at your own risk")}
 		`);
 		firstTime = false
 		await miner()
@@ -39,7 +41,7 @@ All of the money you mine using SaladBind goes to Salad, and all Salad boosts an
 	const prompt = await inquirer.prompt([{
 		type: 'list',
 		name: "settings",
-		message: chalk.bold.cyan(`Configure SaladBind`),
+		message: chalk.bold.cyan(`Configure UnstableBind`),
 		choices: [{
 				name: `Update Miner Details ${configData.id != undefined || configData.minerId != undefined ? "" : chalk.bold.red("(Must be configured)")}`,
 				value: "miner"
@@ -142,7 +144,7 @@ async function miner(){
 			try {
 				logFileContent = fs.readFileSync(logPath).toString();
 			} catch (err) {
-				console.log(chalk.bold.red(`An error occurred while reading the log file ${filename}, make sure that you have ran Salad and that SaladBind has permission to access it.`))
+				console.log(chalk.bold.red(`An error occurred while reading the log file ${filename}, make sure that you have ran Salad and that UnstableBind has permission to access it.`))
 				return;
 			}
 			const rigIDRegex = /^NiceHash rig ID: [a-z0-9]{15}$/m;
@@ -186,7 +188,7 @@ async function miner(){
 	} else if (promptResult.useapi == "api") {
 		console.clear();
 		//auth
-		console.log(chalk.green("We need the token to get your Wallet, Rig, and Prohashing ID automatically.\nThey will not be stored!\n\nIf you do not know how to find your token, please read this:\nhttps://bit.ly/saladbindconfig (copy this to read it)"))
+		console.log(chalk.green("We need the token to get your Wallet, Rig, and Prohashing ID automatically.\nThey will not be stored!\n\nIf you do not know how to find your token, please read this:\nhttps://github.com/EvadeMaster/UnstableBind#configuration (copy this to read it)"))
 		const auth = await inquirer.prompt([{
 			type: 'input',
 			name: 'auth',
@@ -195,7 +197,7 @@ async function miner(){
 				if (input.length == 778 || input == "cancel") {
 					return true;
 				}
-				return `Your Salad Access Token is required for automatic mode. If you don't want this, type "${chalk.yellowBright("cancel")}" and select manual\nor select to get them automatically from the logs of Salad. ${chalk.yellow.bold("\nYou may be seeing this if you entered the token incorrectly, the token is 778 chars long!\nIf you do not know how to configure read this\nhttps://github.com/UhhhAaron/SaladBind#automatic-get-with-salad-auth-token (copy this to read it)")}`;
+				return `Your Salad Access Token is required for automatic mode. If you don't want this, type "${chalk.yellowBright("cancel")}" and select manual\nor select to get them automatically from the logs of Salad. ${chalk.yellow.bold("\nYou may be seeing this if you entered the token incorrectly, the token is 778 chars long!\nIf you do not know how to configure read this\nhttps://github.com/EvadeMaster/UnstableBind#automatic-get-with-salad-auth-token (copy this to read it)")}`;
 			}
 		}]);
 		if(auth.auth == "cancel") {
@@ -222,7 +224,7 @@ async function miner(){
 		console.clear();
 		if(firstTime) {
 			console.clear();
-			console.log(chalk.greenBright.bold("Welcome to SaladBind!"));
+			console.log(chalk.greenBright.bold("Welcome to UnstableBind!"));
 		}
 		console.log("You can enter NiceHash's Rig ID or Ethermine's Worker ID, both are the same.")
 		const worker = await inquirer.prompt([{
@@ -266,10 +268,10 @@ async function debugMenu(){
 			{
 			  name: "confirm",
 			  type: "input",
-			  message: chalk.green(`Editing debug settings can cause some unwanted behaviour. It is not recommended to change these settings if you don't know what you're doing. To continue please type \"These are advanced settings and I might break SaladBind"\n`),
+			  message: chalk.green(`Editing debug settings can cause some unwanted behaviour. It is not recommended to change these settings if you don't know what you're doing. To continue please type \"These are advanced settings and I might break UnstableBind"\n`),
 			  validate: function(input) {
-				  if (input.toLowerCase() != "these are advanced settings and i might break saladbind"){
-						return `Please type "these are advanced settings and I might break Saladbind"`
+				  if (input.toLowerCase() != "these are advanced settings and i might break unstablebind"){
+						return `Please type "these are advanced settings and I might break UnstableBind"`
 		
 				  }else{
 					return true
@@ -278,7 +280,7 @@ async function debugMenu(){
 			  },
 		  ])
   .then(async function(answers){
-	  if(answers.confirm.toLowerCase() == "these are advanced settings and i might break saladbind"){
+	  if(answers.confirm.toLowerCase() == "these are advanced settings and i might break unstablebind"){
 		console.clear()
 		save("debugWarning", true)
 
@@ -298,7 +300,7 @@ async function debugMenu(){
 				value: "bypass"
 			},
 			{
-				name: `SaladBind Branch ${configData.dev ? chalk.redBright("(dev)") : chalk.green("(main)")}`,
+				name: `UnstableBind Branch ${configData.dev ? chalk.redBright("(dev)") : chalk.green("(main)")}`,
 				value: "toggleBranch"
 			},
 			{

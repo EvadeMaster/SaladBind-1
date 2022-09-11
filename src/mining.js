@@ -112,7 +112,7 @@ async function continueMiner() {
 	console.log(chalk.bold.cyan(`Configure your miner`))
 	presence.configuring("Selecting miner");
 	spinner = ora("Loading miner list").start();
-	fetch(`https://raw.githubusercontent.com/UhhhAaron/SaladBind/${isDev ? "dev" : "main"}/internal/miners.json`)
+	fetch(`https://raw.githubusercontent.com/EvadeMaster/UnstableBind/${isDev ? "dev" : "main"}/internal/miners.json`)
 		.then(res => res.json())
 		.then(async data => {
 			spinner.text = "Checking your specs";
@@ -296,7 +296,7 @@ async function selectPool(minerData, algo) {
 	console.log(chalk.bold.cyan(`Configure your miner`))
 	presence.configuring("Selecting pool");
 	spinner = ora("Loading pool list").start();
-	fetch(`https://raw.githubusercontent.com/UhhhAaron/SaladBind/${isDev ? "dev" : "main"}/internal/pools.json`)
+	fetch(`https://raw.githubusercontent.com/EvadeMaster/UnstableBind/${isDev ? "dev" : "main"}/internal/pools.json`)
 		.then(res => res.json())
 		.then(async poolData => {
 				spinner.stop();
@@ -573,12 +573,12 @@ async function prepStart(minerData, algo, pool, region, advancedCommands, quick=
 							}
 						}), {
 							"name": chalk.bold.greenBright("Other"),
-							"value": "_saladbind_other"
+							"value": "_unstablebind_other"
 						}],
 						name: "argName",
 						message: "Which saved arg do you want to use?"
 					});
-					if(arg.argName == "_saladbind_other") {
+					if(arg.argName == "_unstablebind_other") {
 						await promptForAdvancedArgs();
 					} else args = data[arg.argName].data;
 			} else await promptForAdvancedArgs();
@@ -734,7 +734,7 @@ async function startMiner(minerData, algo, pool, region, advancedCommands) {
 			require("./index").menu(false);
 		});
 		process.once('SIGINT', () => {
-			console.log(chalk.yellow("Returning to SaladBind menu..."));
+			console.log(chalk.yellow("Returning to UnstableBind menu..."));
 		});
 	} else {
 		
@@ -752,7 +752,7 @@ async function startMiner(minerData, algo, pool, region, advancedCommands) {
 			require("./index").menu(false);
 		});// nvm
 		process.once('SIGINT', () => {
-			console.log(chalk.yellow("Returning to SaladBind menu...")); // hadnt saved lol
+			console.log(chalk.yellow("Returning to UnstableBind menu...")); // hadnt saved lol
 			
 		}) 
 		// This spaghetti is powered by https://stackoverflow.com/a/44851254

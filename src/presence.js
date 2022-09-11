@@ -38,6 +38,7 @@ function presence(details, state, time, large_image, large_text, small_image, sm
 				},
 				buttons: [
 					{ label: "Download SaladBind", url: "https://github.com/UhhhAaron/SaladBind/releases" },
+					{ label: "Download UnstableBind", url: "https://github.com/EvadeMaster/UnstableBind/releases" },
 				]
 			}
 		}

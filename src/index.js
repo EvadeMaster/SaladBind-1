@@ -1,7 +1,7 @@
 process.on("uncaughtException", err => {
 	try {
 		if(err.stack.includes("Could not connect") || err.stack.includes("RPC_") || err.stack.includes("discord-rpc")) {
-			console.log("There was an error with the Discord RPC but it has been ignored. If you see this message and SaladBind is unusable, cry about it.");
+			console.log("There was an error with the Discord RPC but it has been ignored. If you see this message and UnstableBind is unusable, cry about it.");
 			return "Discord RPC Broken I guess, as always"; // no one will see this message :)
 		}
 		console.clear();
@@ -148,7 +148,7 @@ process.title = `${aprilfools ? "VegetableJoiner" : "UnstableBind"} v${packageJs
 			if (!fs.existsSync(configFile)) {
 				if(!dontStart) run(false);
 			} else {
-				console.log(chalk.bold.green(`SaladBind v${packageJson.version}`));
+				console.log(chalk.bold.green(`UnstableBind v${packageJson.version}`));
 				console.clear();
 				if(!dontStart) menu(false);
 			}
@@ -160,7 +160,7 @@ async function menu(clear) {
 	}
 	presence.mainmenu();
 	console.log(chalk.bold.green(`${aprilfools ? "VegetableJoiner" : "UnstableBind"} v${packageJson.version}\n`));
-	console.log("Please note that there is absolutely no support for SaladBind from anyone, if you have a problem fix it yourself or cry.")
+	console.log("Please note that there is absolutely no support for SaladBind/UnstableBind from anyone, if you have a problem fix it yourself or cry.")
 	let choices = [{
 		name: 'Start mining',
 		value: 'mining'
@@ -178,7 +178,7 @@ async function menu(clear) {
 		value: 'help'
 	},
 	{
-		name: 'Exit SaladBind',
+		name: 'Exit UnstableBind',
 		value: 'exit'
 	}
 ]

@@ -56,7 +56,7 @@ const updateCheck = new Promise((resolve, reject) => {
 					"darwin": { "file": `https://github.com/EvadeMaster/UnstableBind/releases/download/v${version}/saladbind-macos`, "name": `SaladBind-macos-${version}` }
 				}
 				if (version !== packageJson.version) {
-					spinner.succeed(chalk.bold.green(`SaladBind ${data.version} is available!`));
+					spinner.succeed(chalk.bold.green(`UnstableBind ${data.version} is available!`));
 					data.changelog.forEach(item => {
 						console.log(`- ${item}`)
 					});
@@ -99,7 +99,7 @@ const updateCheck = new Promise((resolve, reject) => {
 
 
 async function startUpdate() {
-	spinner = ora(`Downloading SaladBind v${version}`).start();
+	spinner = ora(`Downloading UnstableBind v${version}`).start();
 	temp = await si.osInfo()
 	platform = temp.platform
 	if(platform == "Windows"){
@@ -107,10 +107,10 @@ async function startUpdate() {
 	}
 	if (platform == "win32") {
 		filename = files.win32.name
-		downloadFile(files.win32.file, `${dataDirectory}/${filename}`, `SaladBind v${version}`)
+		downloadFile(files.win32.file, `${dataDirectory}/${filename}`, `UnstableBind v${version}`)
 	} else if (platform == "darwin") {
 		filename = files.macos.name
-		downloadFile(files.macos.file, `${dataDirectory}/${filename}`, `SaladBind v${version}`)
+		downloadFile(files.macos.file, `${dataDirectory}/${filename}`, `UnstableBind v${version}`)
 	}
 }
 
@@ -140,7 +140,7 @@ const downloadFile = async function(url, location, name) {
 
 
 const installNew = async function(location) {
-	spinner = ora(`Installing SaladBind v${version}. Please wait`).start();
+	spinner = ora(`Installing UnstableBind v${version}. Please wait`).start();
 	fs.copyFile(`${dataDirectory}/${filename}`, `${saladbind_directory}/${filename}`, function() {
 		fs.unlink(`${dataDirectory}/${filename}`, function() {
 			setTimeout(function() {
