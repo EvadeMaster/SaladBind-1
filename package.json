@@ -1,5 +1,5 @@
 {
-  "name": "saladbind",
+  "name": "UnstableBind",
   "version": "1.7.9",
   "description": "BIND-ing the good features from other projects together (and fucking nuking the bad ones)",
   "main": "src/index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EvadeMaster/SaladBind.git"
+    "url": "git+https://github.com/EvadeMaster/UnstableBind.git"
   },
   "author": "Original author: LIT Devs, Forked of: UhhAaron, Maintained by: EvadeMaster",
   "license": "GNUv3",
   "bugs": {
-    "url": "https://github.com/EvadeMaster/SaladBind/issues"
+    "url": "https://github.com/EvadeMaster/UnstableBind/issues"
   },
-  "homepage": "https://github.com/EvadeMaster/SaladBind#readme",
+  "homepage": "https://github.com/EvadeMaster/UnstableBind#readme",
   "dependencies": {
     "chalk": "^4.1.2",
     "decompress": "^4.2.1",
