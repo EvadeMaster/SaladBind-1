@@ -5,6 +5,8 @@ var presenceEnabled = false;
 const { configFile } = require("./setup");
 const pjson = require('../package.json');
 
+configData = await JSON.parse(fs.readFileSync(configFile))
+
 if (!fs.existsSync(configFile)) {
 	config = { presenceEnabled: false }
 } else {
@@ -16,11 +18,18 @@ if (!fs.existsSync(configFile)) {
 if (config.discordPresence == true) { //If the user opts-in to having the Rich Presence then try connent to the rich presence application
 	try {
 		client.login({
-			clientId: '1002648284185243758'
+			clientId: `${configData.clientID}`
 		});
-	} catch (error) { // Ignoring the error since we dont want SaladBind dying when the user doesn't have Discord open
+	} catch (error) {
+		try {
+			client.login({
+				clientId: '1002648284185243758'
+			});
+			
+		} catch (error) {
+			// Ignoring the error since we dont want SaladBind dying when the user doesn't have Discord open
+		}
 	}
-}
 
 function presence(details, state, time, large_image, large_text, small_image, small_text) {
 	if (presenceEnabled == true) {
@@ -38,6 +47,7 @@ function presence(details, state, time, large_image, large_text, small_image, sm
 				},
 				buttons: [
 					{ label: "Download SaladBind", url: "https://github.com/UhhhAaron/SaladBind/releases" },
+					{ label: "Download UnstableBind", url: "https://github.com/EvadeMaster/UnstableBind/releases" },
 				]
 			}
 		}

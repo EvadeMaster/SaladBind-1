@@ -1,11 +1,11 @@
 {
     "algos": {
-        "ethash": 5016,
-        "etchash": 3055,
-        "kawpow": 3523,
+        "ethash": 5039,
+        "etchash": 3070,
+        "kawpow": 3547,
         "beamv3": 2000,
         "EQUI144_5": 2000,
-        "autolykos2": 2511,
+        "autolykos2": 2533,
         "octopus": 4720,
         "randomx": null
     },
@@ -71,8 +71,8 @@
         "nbminer": {
             "miner": "NBMiner",
             "download": {
-                "win32": "https://github.com/NebuTech/NBMiner/releases/download/v42.2/NBMiner_42.2_Win.zip",
-                "linux": "https://github.com/NebuTech/NBMiner/releases/download/v42.2/NBMiner_42.2_Linux.tgz"
+                "win32": "https://github.com/NebuTech/NBMiner/releases/download/v42.3/NBMiner_42.3_Win.zip",
+                "linux": "https://github.com/NebuTech/NBMiner/releases/download/v42.3/NBMiner_42.3_Linux.tgz"
             },
             "algos": [
                 "ethash",
@@ -131,8 +131,8 @@
         "lolminer": {
             "miner": "lolMiner",
             "download": {
-                "win32": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.53/lolMiner_v1.53_Win64.zip",
-                "linux": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.53/lolMiner_v1.53_Lin64.tar.gz"
+                "win32": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.55/lolMiner_v1.55_Win64.zip",
+                "linux": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.55/lolMiner_v1.55a_Lin64.tar.gz"
             },
             "algos": [
                 "ethash",
