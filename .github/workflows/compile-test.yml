@@ -62,20 +62,16 @@ jobs:
         path: bin/saladbind-macos
   
     - name: Write workflow summary
-      run: |
-        SaladBind-Linux=${{ hashFiles('bin/saladbind-linux') }}
-        SaladBind-Win=${{ hashFiles('bin/saladbind-win.exe') }}
-        SaladBind-MacOS=${{ hashFiles('bin/saladbind-macos') }}
-        
+      run: |        
         echo "# Build Summary" >> $GITHUB_STEP_SUMMARY
         echo "### Information" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "### Artifact cryptographic hash" >> $GITHUB_STEP_SUMMARY
         echo "SaladBind-Linux X64" >> $GITHUB_STEP_SUMMARY
-        echo "- SHA-256: `$SaladBind-Linux`" >> $GITHUB_STEP_SUMMARY
+        echo "- SHA-256: `${{ hashFiles('bin/saladbind-linux') }}`" >> $GITHUB_STEP_SUMMARY
         echo "SaladBind-Win X64" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
-        echo "- SHA-256: `$SaladBind-Win`" >> $GITHUB_STEP_SUMMARY
+        echo "- SHA-256: `${{ hashFiles('bin/saladbind-win.exe') }}`" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "SaladBind-MacOS X64" >> $GITHUB_STEP_SUMMARY
-        echo "- SHA-256: `$SaladBind-MacOS`" >> $GITHUB_STEP_SUMMARY
+        echo "- SHA-256: `${{ hashFiles('bin/saladbind-macos') }}`" >> $GITHUB_STEP_SUMMARY
