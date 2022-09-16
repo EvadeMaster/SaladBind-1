@@ -63,9 +63,9 @@ jobs:
   
     - name: Write workflow summary
       run: |
-        SaladBind-Linux=$(hashFiles('bin/saladbind-linux'))
-        SaladBind-Win=$(hashFiles('bin/saladbind-win.exe'))
-        SaladBind-MacOS=$(hashFiles('bin/saladbind-macos'))
+        SaladBind-Linux=$(hashFiles('bin/saladbind-linux')
+        SaladBind-Win=$(hashFiles('bin/saladbind-win.exe')
+        SaladBind-MacOS=$(hashFiles('bin/saladbind-macos')
         
         echo "# Build Summary" >> $GITHUB_STEP_SUMMARY
         echo "### Information" >> $GITHUB_STEP_SUMMARY
