@@ -33,10 +33,20 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3.0.0
       with:
         node-version: ${{ matrix.node-version }}
+        
+    - name: Update package.json
+      uses: vemel/nextversion@0.1.1
+      with:
+        path: package.json
+        type: semver
+        release: beta
+        encoding: utf-8
+      
     - run: |
        npm install
        npm run compile
@@ -58,17 +68,12 @@ jobs:
       with:
         name: SaladBind-MacOS X64
         path: bin/saladbind-macos
-        
-    - name: Check package version
-      id: cpv
-      uses: PostHog/check-package-version@v2
   
     - name: Write workflow summary
       run: |
         echo "# Build Summary" >> $GITHUB_STEP_SUMMARY
         echo "### Information" >> $GITHUB_STEP_SUMMARY
-        echo "Committed version: ${{ steps.cpv.outputs.committed-version }}" >> $GITHUB_STEP_SUMMARY
-        echo "Published version: ${{ steps.cpv.outputs.published-version }}" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
         echo "### Artifact cryptographic hash" >> $GITHUB_STEP_SUMMARY
         echo "SaladBind-Linux X64" >> $GITHUB_STEP_SUMMARY
         echo "- SHA-256: `${{hashFiles('bin/saladbind-linux')}}`" >> $GITHUB_STEP_SUMMARY
