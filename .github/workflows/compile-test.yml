@@ -45,16 +45,16 @@ jobs:
       uses: actions/upload-artifact@v3.1.0
       with:
         name: SaladBind-LinuxX64
-        path: /bin/saladbind/saladbind-linux
+        path: bin/saladbind-linux
 
     - name: Upload a Build Artifact [Windows]
       uses: actions/upload-artifact@v3.1.0
       with:
         name: SaladBind-WinX64
-        path: /bin/saladbind/saladbind-win.exe
+        path: bin/saladbind-win.exe
 
     - name: Upload a Build Artifact [MacOS]
       uses: actions/upload-artifact@v3.1.0
       with:
         name: SaladBind-MacOSX64
-        path: /bin/saladbind/saladbind-macos
+        path: bin/saladbind-macos
