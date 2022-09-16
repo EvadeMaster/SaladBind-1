@@ -1,6 +1,25 @@
 name: Compilation Test
 
-on: [push, pull_request]
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'dev'
+    paths-ignore:
+      - '.gitattributes'
+      - '.github/**.json'
+      - '.gitignore'
+      - '.gitmodules'
+      - '**.md'
+      - 'LICENSE'
+  pull_request:
+    paths-ignore:
+      - '.gitattributes'
+      - '.github/**.json'
+      - '.gitignore'
+      - '.gitmodules'
+      - '**.md'
+      - 'LICENSE'
 
 
 jobs:
@@ -21,3 +40,8 @@ jobs:
     - run: |
        npm install
        npm run compile
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.0
+      with:
+        name: UnstableBind-dev
+        # path: build/dev/*.*
