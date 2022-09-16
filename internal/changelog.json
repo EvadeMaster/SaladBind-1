@@ -5,10 +5,11 @@
         "1.7.1: Fixed nothing LOL... :(",
         "1.7.2: Fixed the patch of 1.7.1 :), Windows machines can now find the miner again.",
         "1.7.3: Fixed a bug caused by 1.7.2 making it work ONLY on Windows machines.",
-	    "1.7.4: Updated messages to reflect file locations being changed",
+	"1.7.4: Updated messages to reflect file locations being changed",
         "1.7.7: fixed the updater on 1.7.6",
         "1.7.8: Added Troubleshooting guide and fix lolMiner Secure Connection bug",
-	    "1.7.9: Added the ability to switch branch"
+	"1.7.9: Added the ability to switch branch",
+	"1.7.10": "SaladBind is now UnstableBind, Added 2 new experimental features, RPC customisation and Debug Information."
     ],
     "force": true,
     "next_version": "1.6.0",
