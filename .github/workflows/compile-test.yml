@@ -68,8 +68,8 @@ jobs:
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "### Artifact cryptographic hash" >> $GITHUB_STEP_SUMMARY
         echo "SaladBind-Linux X64" >> $GITHUB_STEP_SUMMARY
-        echo "- SHA-256: `${{hashFiles('bin/saladbind-linux')}}`" >> $GITHUB_STEP_SUMMARY
+        echo "- SHA-256: ```${{hashFiles('bin/saladbind-linux')}}```" >> $GITHUB_STEP_SUMMARY
         echo "SaladBind-Win X64" >> $GITHUB_STEP_SUMMARY
-        echo "- SHA-256: `${{hashFiles('bin/saladbind-win.exe')}}`" >> $GITHUB_STEP_SUMMARY
+        echo "- SHA-256: ```${{hashFiles('bin/saladbind-win.exe')}}```" >> $GITHUB_STEP_SUMMARY
         echo "SaladBind-MacOS X64" >> $GITHUB_STEP_SUMMARY
-        echo "- SHA-256: `${{hashFiles('bin/saladbind-macos')}}`" >> $GITHUB_STEP_SUMMARY
+        echo "- SHA-256: ```${{hashFiles('bin/saladbind-macos')}}```" >> $GITHUB_STEP_SUMMARY
