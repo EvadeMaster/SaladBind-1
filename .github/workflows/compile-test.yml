@@ -44,17 +44,35 @@ jobs:
     - name: Upload a Build Artifact [Linux]
       uses: actions/upload-artifact@v3.1.0
       with:
-        name: SaladBind-LinuxX64
+        name: SaladBind-Linux X64
         path: bin/saladbind-linux
 
     - name: Upload a Build Artifact [Windows]
       uses: actions/upload-artifact@v3.1.0
       with:
-        name: SaladBind-WinX64
+        name: SaladBind-Win X64
         path: bin/saladbind-win.exe
 
     - name: Upload a Build Artifact [MacOS]
       uses: actions/upload-artifact@v3.1.0
       with:
-        name: SaladBind-MacOSX64
+        name: SaladBind-MacOS X64
         path: bin/saladbind-macos
+        
+    - name: Check package version
+      id: cpv
+      uses: PostHog/check-package-version@v2
+  
+    - name: Write workflow summary
+      run: |
+        echo "# Build Summary" >> $GITHUB_STEP_SUMMARY
+        echo "### Information" >> $GITHUB_STEP_SUMMARY
+        echo "Committed version: ${{ steps.cpv.outputs.committed-version }}" >> $GITHUB_STEP_SUMMARY
+        echo "Published version: ${{ steps.cpv.outputs.published-version }}" >> $GITHUB_STEP_SUMMARY
+        echo "### Artifact cryptographic hash" >> $GITHUB_STEP_SUMMARY
+        echo "SaladBind-Linux X64" >> $GITHUB_STEP_SUMMARY
+        echo "- SHA-256: `${{hashFiles('bin/saladbind-linux')}}`" >> $GITHUB_STEP_SUMMARY
+        echo "SaladBind-Win X64" >> $GITHUB_STEP_SUMMARY
+        echo "- SHA-256: `${{hashFiles('bin/saladbind-win.exe')}}`" >> $GITHUB_STEP_SUMMARY
+        echo "SaladBind-MacOS X64" >> $GITHUB_STEP_SUMMARY
+        echo "- SHA-256: `${{hashFiles('bin/saladbind-macos')}}`" >> $GITHUB_STEP_SUMMARY
