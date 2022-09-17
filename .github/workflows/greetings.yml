@@ -9,7 +9,8 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-    - uses: actions/first-interaction@v1
+    - uses: actions/first-interaction@v1.1.0
       with:
         repo-token: ${{ secrets.BEEPBOOP_TOKEN }}
-        pr-message: 'It looks like this is your first contribution to SaladBind - welcome! If you haven''t already, please read our [contributing guide](https://github.com/UhhhAaron/SaladBind/blob/main/CONTRIBUTING.md).'
+        issue-message: 'It looks like this is your first issue reported - welcome! If you haven''t already, please read [GitHub''s Community Guide](https://docs.github.com/en/site-policy/github-terms/github-community-guidelines).'
+        pr-message: 'It looks like this is your first contribution to SaladBind - welcome! If you haven''t already, please read our [contributing guide](https://github.com/EvadeMaster/UnstableBind/blob/main/CONTRIBUTING.md).'
