@@ -21,11 +21,11 @@ jobs:
           GITHUB_TOKEN: ${{secrets.TOKEN}}
       - name: Read changelog
         id: changelog
-        uses: juliangruber/read-file-action@v1
+        uses: juliangruber/read-file-action@v1.1.0
         with:
           path: ./CHANGELOG.md
       - name: Install node
-        uses: actions/setup-node@v3.0.0
+        uses: actions/setup-node@v3.4.1
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
@@ -37,7 +37,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           body: ${{ steps.changelog.outputs.content }}
-          token: ${{ secrets.TOKEN}}
+          token: ${{ secrets.TOKEN }}
           files: |
             bin/saladbind-win.exe
             bin/saladbind-macos
