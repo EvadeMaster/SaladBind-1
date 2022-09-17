@@ -11,7 +11,6 @@
 	"1.7.8.1: Forked project and updated miners again",
 	"1.7.8.2: NiceHash hostnames fixed, broken links changed/removed",
 	   "1.7.9: lolMiner configuration improved, added FAQ/Troubleshooting guide, updated miners (TeamRed, lolM, XMR)"
-	"1.7.10": "SaladBind is now UnstableBind, Added 2 new experimental features, RPC customisation and Debug Information."
 
     ],
     "force": true,
