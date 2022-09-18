@@ -23,6 +23,9 @@
             },
             "octopus": {
                 "host": "stratum+tcp://octopus.REGION.nicehash.com:9200"
+            },
+            "zelhash": {
+                "host": "stratum+tcp://zelhash.REGION.nicehash.com:9200"
             }
 
         }
