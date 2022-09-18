@@ -29,6 +29,7 @@ process.on("uncaughtException", err => {
 			if (out.exit == "exit" || out.exit == "") process.exit(1)
 			else if (out.exit == "write_log") {
 				try {
+					const envPaths = require('env-paths');
 					fs.writeFileSync(`${envPaths('SaladBind', { suffix: "" }).data}/saladbind_error.txt`, `Hi! I'm a SaladBind Error Log.\nI'm now going to puke everything I know at you. I hope you don't mind (it's very technical :D)\n\nThe error was ${err}\n\nHere's the stacktrace, so we can figure out where the error is coming from:\n${err.stack}\n\nAnd finally, some cool debug information I made just for you!\nIt helps us find out if the person sitting in front of the screen is the problem.\n${JSON.stringify(getDebugData(), null, " ")}`);
 					console.log(`\nWrote to "${envPaths('SaladBind', { suffix: "" }).data}/saladbind_error.txt" successfully\n`);
 					process.exit(1);
@@ -67,8 +68,9 @@ const open = require("open");
 const si = require("systeminformation");
 const update = require("./update.js")
 const presence = require("./presence.js");
-const { configFile, dataDirectory, saladbind_directory, run} = require("./setup");
+const { configFile, dataDirectory, saladbind_directory, run, save } = require("./setup");
 const envPaths = require('env-paths');
+let isDev = config.dev != false && config.dev == true;
 
 function getDebugData() {
 	function safelyReadAndParseFile(name) {
@@ -158,12 +160,17 @@ async function menu(clear) {
 	if (clear == undefined || clear == true) {
 		console.clear();
 	}
+
 	presence.mainmenu();
 	console.log(chalk.bold.green(`${aprilfools ? "VegetableJoiner" : "UnstableBind"} v${packageJson.version}\n`));
 	console.log("Please note that there is absolutely no support for SaladBind/UnstableBind from anyone, if you have a problem fix it yourself or cry.")
 	let choices = [{
 		name: 'Start mining',
 		value: 'mining'
+	},
+	{
+		name: `Annoucement`,
+		value: 'annoucement'
 	},
 	{
 		name: 'Settings',
@@ -195,6 +202,7 @@ if (fs.existsSync(`${dataDirectory}/last.json`)){
 		choices: choices
 	}];
 	const answers = await inquirer.prompt(questions);
+
 	switch (answers.menu) {
 		case 'quick':
 			require("./mining").quick();
@@ -208,7 +216,7 @@ if (fs.existsSync(`${dataDirectory}/last.json`)){
 			break;
 		case 'changes':
 			presence.configuring("Reading the changelog")
-			const spinner = ora('Fetching the Changelogs').start();
+			spinner = ora('Fetching the Changelogs').start();
 			fetch('https://raw.githubusercontent.com/EvadeMaster/UnstableBind/main/internal/changelog.json')
 				.then(res => res.json())
 				.then(data => {
@@ -223,6 +231,28 @@ if (fs.existsSync(`${dataDirectory}/last.json`)){
 						name: 'backtomenu',
 						message: 'Press ENTER to return to the menu.'
 					}).then(function() {
+						menu();
+					});
+				})
+			break;
+		case 'annoucement':
+			presence.configuring("Reading the annoucement")
+			spinner = ora('Fetching the Annoucement').start();
+			fetch(`https://raw.githubusercontent.com/EvadeMaster/UnstableBind/${isDev ? "dev" : "main"}/internal/announcement.json`)
+				.then(res => res.json())
+				.then(data => {
+					console.clear();
+					spinner.succeed(chalk.bold.green(`Annoucement - No.${data.number}`));
+					data.announcement.forEach(item => {
+						console.log(`- ${item}`)
+					});
+					console.log();
+					inquirer.prompt({
+						type: 'input',
+						name: 'backtomenu',
+						message: 'Press ENTER to return to the menu.'
+					}).then(async function() {
+						await save("announcement", data.number)
 						menu();
 					});
 				})
