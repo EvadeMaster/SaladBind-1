@@ -1,6 +1,6 @@
 {
     "algos": {
-        "ethash": -1,
+        "ethash": 2147483647,
         "etchash": 3070,
         "kawpow": 3555,
         "beamv3": 2000,
@@ -139,7 +139,8 @@
                 "ethash",
                 "etchash",
                 "beamv3",
-                "EQUI144_5"
+                "EQUI144_5",
+                "zelhash"
             ],
             "supported_gpus": [
                 "nvidia",
