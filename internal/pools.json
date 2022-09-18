@@ -1,191 +1,70 @@
 {
-    "algos": {
-        "ethash": -1,
-        "etchash": 3070,
-        "kawpow": 3555,
-        "beamv3": 2000,
-        "EQUI144_5": 2000,
-        "autolykos2": 2537,
-        "octopus": 7000,
-        "randomx": null,
-        "ghostrider": null
+    "nicehash": {
+        "name": "NiceHash",
+        "regions": ["auto"],
+        "algos": {
+            "beamv3": {
+                "host": "stratum+tcp://beamv3.REGION.nicehash.com:9200"
+            },
+            "kawpow": {
+                "host": "stratum+tcp://kawpow.REGION.nicehash.com:9200"
+            },
+            "ethash": {
+                "host": "stratum+tcp://daggerhashimoto.REGION.nicehash.com:9200"
+            },
+            "EQUI144_5": {
+                "host": "stratum+tcp://zhash.REGION.nicehash.com:9200"
+            },
+            "randomx": {
+                "host": "stratum+tcp://randomxmonero.REGION.nicehash.com:9200"
+            },
+            "autolykos2": {
+                "host": "stratum+tcp://autolykos.REGION.nicehash.com:9200"
+            },
+            "octopus": {
+                "host": "stratum+tcp://octopus.REGION.nicehash.com:9200"
+            }
+
+        }
     },
-    "miners": {
-        "phoenixminer": {
-            "miner": "PhoenixMiner",
-            "download": {
-                "win32": "https://phoenixminer.info/downloads/PhoenixMiner_6.2c_Windows.zip",
-                "linux": "https://phoenixminer.info/downloads/PhoenixMiner_6.2c_Linux.tar.gz"
+    "ethermine": {
+        "name": "Ethermine",
+        "regions": ["asia1", "eu1", "us1"],
+        "algos": {
+            "etchash": {
+                "host": "ethproxy+ssl://REGION-etc.ethermine.org:5555"
             },
-            "algos": [
-                "ethash",
-                "etchash"
-            ],
-            "supported_gpus": [
-                "nvidia",
-                "amd"
-            ],
-            "supported_os": [
-                "win32",
-                "linux"
-            ],
-            "fee": 0.65,
-            "version": "6.2c",
-            "parameters": {
-                "fileName": "PhoenixMiner",
-                "algo": "",
-                "wallet": "PHOENIX",
-                "pool": "-pool",
-                "pass": "-pass"
+            "ethash": {
+                "host": "ethproxy+ssl://REGION.ethermine.org:5555"
             }
-        },
-        "trex": {
-            "miner": "T-Rex",
-            "download": {
-                "win32": "https://github.com/trexminer/T-Rex/releases/download/0.26.5/t-rex-0.26.5-win.zip",
-                "linux": "https://github.com/trexminer/T-Rex/releases/download/0.26.5/t-rex-0.26.5-linux.tar.gz"
+        }
+    },
+    "prohashing": {
+        "name": "Prohashing",
+        "regions": ["europe", "us"],
+        "algos": {
+            "ethash": {
+                "host": "stratum+tcp://REGIONprohashing.com:3339"
             },
-            "algos": [
-                "ethash",
-                "etchash",
-                "kawpow",
-                "autolykos2",
-                "octopus"
-            ],
-            "supported_gpus": [
-                "nvidia"
-            ],
-            "supported_os": [
-                "win32",
-                "linux"
-            ],
-            "fee": 1,
-            "version": "0.26.5",
-            "parameters": {
-                "fileName": "t-rex",
-                "algo": "-a",
-                "wallet": "-u",
-                "pool": "-o",
-                "pass": "-p"
-            }
-        },
-        "nbminer": {
-            "miner": "NBMiner",
-            "download": {
-                "win32": "https://github.com/NebuTech/NBMiner/releases/download/v42.3/NBMiner_42.3_Win.zip",
-                "linux": "https://github.com/NebuTech/NBMiner/releases/download/v42.3/NBMiner_42.3_Linux.tgz"
+            "etchash": {
+                "host": "stratum+tcp://REGIONprohashing.com:3357"
             },
-            "algos": [
-                "ethash",
-                "etchash",
-                "kawpow",
-                "beamv3",
-                "autolykos2",
-                "octopus"
-            ],
-            "supported_gpus": [
-                "nvidia",
-                "amd"
-            ],
-            "supported_os": [
-                "win32",
-                "linux"
-            ],
-            "fee": 2,
-            "version": "42.2",
-            "parameters": {
-                "fileName": "nbminer",
-                "algo": "-a",
-                "wallet": "-u",
-                "pool": "-o",
-                "pass": "-p"
-            }
-        },
-        "teamredminer": {
-            "miner": "TeamRedMiner",
-            "download": {
-                "win32": "https://github.com/todxx/teamredminer/releases/download/v0.10.3.1/teamredminer-v0.10.3.1-win.zip",
-                "linux": "https://github.com/todxx/teamredminer/releases/download/v0.10.3.1/teamredminer-v0.10.3.1-linux.tgz"
+            "EQUI144_5": {
+                "host": "stratum+tcp://REGIONprohashing.com:3345"
             },
-            "algos": [
-                "ethash",
-                "etchash",
-                "kawpow"
-            ],
-            "supported_gpus": [
-                "amd"
-            ],
-            "supported_os": [
-                "win32",
-                "linux"
-            ],
-            "fee": 2,
-            "version": "v0.10.3.1",
-            "parameters": {
-                "fileName": "teamredminer",
-                "algo": "-a",
-                "wallet": "-u",
-                "pool": "-o",
-                "pass": "-p"
-            }
-        },
-        "lolminer": {
-            "miner": "lolMiner",
-            "download": {
-                "win32": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.57/lolMiner_v1.57_Win64.zip",
-                "linux": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.57/lolMiner_v1.57_Lin64.tar.gz"
+            "randomx": {
+                "host": "stratum+tcp://REGIONprohashing.com:3359"
             },
-            "algos": [
-                "ethash",
-                "etchash",
-                "beamv3",
-                "EQUI144_5"
-            ],
-            "supported_gpus": [
-                "nvidia",
-                "amd"
-            ],
-            "supported_os": [
-                "win32",
-                "linux"
-            ],
-            "fee": 1,
-            "version": "1.57",
-            "parameters": {
-                "fileName": "lolMiner",
-                "algo": "--algo",
-                "wallet": "--user",
-                "pool": "--tls on --pool",
-                "pass": "--pass"
-            }
-        },
-        "xmrig": {
-            "miner": "XMRig",
-            "download": {
-                "win32": "https://github.com/xmrig/xmrig/releases/download/v6.18.0/xmrig-6.18.0-gcc-win64.zip",
-                "linux": "https://github.com/xmrig/xmrig/releases/download/v6.18.0/xmrig-6.18.0-linux-x64.tar.gz",
-                "darwin": "https://github.com/xmrig/xmrig/releases/download/v6.18.0/xmrig-6.18.0-macos-x64.tar.gz"
+            "kawpow": {
+                "host": "stratum+tcp://REGIONprohashing.com:3361"
             },
-            "algos": [
-                "randomx",
-                "ghostrider"
-            ],
-            "supports_cpu": true,
-            "supported_gpus": [],
-            "supported_os": [
-                "win32",
-                "linux",
-                "darwin"
-            ],
-            "fee": 1,
-            "version": "6.18.0",
-            "parameters": {
-                "fileName": "xmrig",
-                "algo": "-a",
-                "wallet": "-u",
-                "pool": "-o",
-                "pass": "-p"
+            "octopus": {
+                "host": "stratum+tcp://REGIONprohashing.com:3363"
+            },
+            "ghostrider": {
+                "host": "stratum+tcp://REGIONprohashing.com:3362"
             }
+            
         }
     }
 }
