@@ -1,0 +1,20 @@
+{
+    "announcement": [
+        "⚠️ PSA: Ethereum mining is officially dead! Please switch to other algorithm!",
+        "",
+        "🎉 1.7.11 is released to the development branch!",
+        "",
+        "🛠️ What's new?",
+        "Added announcement system, this feature like you're currently using!",
+        "Added RPC Customisation system, (disclaimer) this feature only allows you to change the application ID",
+        "Added more algorithm suppot for Prohashing Pool octopus and ghostrider!",
+        "Removed SaladBind 'Show Debug Information' because it doesn't serve that much of a purpose",
+        "Fix a lot of bugs",
+        "",
+        "🔧 Under the hood",
+        "Move from 'UhhhAaron/SaladBind' to 'EvadeMaster/UnstableBind'",
+        "Migrate from CodeQL v1 to CodeQL v2",
+        "Upgrade 'Compliation Test' workflow to now give the build artifacts and show build summary (pain)",
+        "Bumped GitHub actions version on release.yml and greetings.yml"
+    ]
+}
