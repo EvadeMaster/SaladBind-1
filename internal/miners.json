@@ -6,8 +6,7 @@
         "beamv3": 2000,
         "EQUI144_5": 2000,
         "autolykos2": 2537,
-        "octopus": 5000,
-        "zelhash": 5000,
+        "octopus": 7000,
         "randomx": null,
         "ghostrider": null
     },
@@ -111,7 +110,8 @@
             "algos": [
                 "ethash",
                 "etchash",
-                "kawpow"
+                "kawpow",
+                "autolykos2"
             ],
             "supported_gpus": [
                 "amd"
@@ -140,8 +140,7 @@
                 "ethash",
                 "etchash",
                 "beamv3",
-                "EQUI144_5",
-                "zelhash"
+                "EQUI144_5"
             ],
             "supported_gpus": [
                 "nvidia",
