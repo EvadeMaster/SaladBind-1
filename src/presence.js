@@ -5,7 +5,7 @@ var presenceEnabled = false;
 const { configFile } = require("./setup");
 const pjson = require('../package.json');
 
-configData = await JSON.parse(fs.readFileSync(configFile))
+//configData = await JSON.parse(fs.readFileSync(configFile))
 
 if (!fs.existsSync(configFile)) {
 	config = { presenceEnabled: false }
@@ -29,7 +29,7 @@ if (config.discordPresence == true) { //If the user opts-in to having the Rich P
 		} catch (error) {
 			// Ignoring the error since we dont want SaladBind dying when the user doesn't have Discord open
 		}
-	}
+	}}
 
 function presence(details, state, time, large_image, large_text, small_image, small_text) {
 	if (presenceEnabled == true) {
