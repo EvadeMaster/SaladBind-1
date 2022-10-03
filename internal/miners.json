@@ -1,14 +1,14 @@
 {
     "algos": {
         "ethash": 2147483647,
-        "etchash": 3078,
-        "kawpow": 3555,
+        "etchash": 3086,
+        "kawpow": 3578,
         "beamv3": 2000,
         "EQUI144_5": 2000,
-        "autolykos2": 2543,
-        "octopus": 7000,
+        "autolykos2": 2548,
+        "octopus": 4720,
         "randomx": null,
-        "ghostrider": null
+        "raptoreum": null
     },
     "miners": {
         "phoenixminer": {
@@ -42,8 +42,8 @@
         "trex": {
             "miner": "T-Rex",
             "download": {
-                "win32": "https://github.com/trexminer/T-Rex/releases/download/0.26.5/t-rex-0.26.5-win.zip",
-                "linux": "https://github.com/trexminer/T-Rex/releases/download/0.26.5/t-rex-0.26.5-linux.tar.gz"
+                "win32": "https://github.com/trexminer/T-Rex/releases/download/0.26.6/t-rex-0.26.6-win.zip",
+                "linux": "https://github.com/trexminer/T-Rex/releases/download/0.26.6/t-rex-0.26.6-linux.tar.gz"
             },
             "algos": [
                 "ethash",
@@ -60,7 +60,7 @@
                 "linux"
             ],
             "fee": 1,
-            "version": "0.26.5",
+            "version": "0.26.6",
             "parameters": {
                 "fileName": "t-rex",
                 "algo": "-a",
@@ -92,7 +92,7 @@
                 "linux"
             ],
             "fee": 2,
-            "version": "42.2",
+            "version": "42.3",
             "parameters": {
                 "fileName": "nbminer",
                 "algo": "-a",
@@ -110,8 +110,7 @@
             "algos": [
                 "ethash",
                 "etchash",
-                "kawpow",
-                "autolykos2"
+                "kawpow"
             ],
             "supported_gpus": [
                 "amd"
@@ -133,8 +132,8 @@
         "lolminer": {
             "miner": "lolMiner",
             "download": {
-                "win32": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.57/lolMiner_v1.57_Win64.zip",
-                "linux": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.57/lolMiner_v1.57_Lin64.tar.gz"
+                "win32": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.59/lolMiner_v1.59a_Win64.zip",
+                "linux": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.59/lolMiner_v1.59a_Lin64.tar.gz"
             },
             "algos": [
                 "ethash",
@@ -151,7 +150,7 @@
                 "linux"
             ],
             "fee": 1,
-            "version": "1.57",
+            "version": "1.59a",
             "parameters": {
                 "fileName": "lolMiner",
                 "algo": "--algo",
@@ -169,7 +168,7 @@
             },
             "algos": [
                 "randomx",
-                "ghostrider"
+                "raptoreum"
             ],
             "supports_cpu": true,
             "supported_gpus": [],
