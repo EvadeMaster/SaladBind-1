@@ -45,11 +45,11 @@ If my pre-compiled exe's don't work for whatever reason, compile the repo yourse
 If they do work, you should probably compile it yourself anyway.
 ### Windows
 
-Download the `saladbind-win.exe` from [GitHub Releases](https://github.com/UhhhAaron/SaladBind/releases/latest).
+Download the `saladbind-win.exe` from [GitHub Releases](https://github.com/EvadeMaster/UnstableBind/releases/latest).
 
 ### macOS and Linux
 
-Download the `saladbind-macos`/`saladbind-linux` file from [GitHub Releases](https://github.com/UhhhAaron/SaladBind/releases/latest). For these platforms, you'll need to run SaladBind from the terminal, due to how SaladBind works. If you need help with using the terminal, don't be afraid to Google a bit - you'll have to use `cd` to be in the same folder that SaladBind is in.
+Download the `saladbind-macos`/`saladbind-linux` file from [GitHub Releases](https://github.com/EvadeMaster/UnstableBind/releases/latest). For these platforms, you'll need to run SaladBind from the terminal, due to how SaladBind works. If you need help with using the terminal, don't be afraid to Google a bit - you'll have to use `cd` to be in the same folder that SaladBind is in.
 
 Use these commands to start SaladBind, for macOS or Linux respectively:
 
