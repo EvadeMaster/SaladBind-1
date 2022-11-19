@@ -82,24 +82,32 @@ SaladBind will search your Salad's log file for your Rig ID and save it automati
 ### Automatic (Get with Salad Auth token)
 
 You will be prompted to enter your access token.
-To get your access token, log in to [https://app.salad.io/](https://app.salad.io) and follow these steps depending on your browser:
+To get your access token, log in to [https://salad.com/store](https://salad.com/storeo) and follow these steps depending on your browser:
 
 #### Chromium and derivatives
 
 1. Click the lock symbol in the address bar
 2. Open `Cookies` and uncollapse `app-api.salad.io`
 3. Look for `sAccessToken` and copy it (right click and click `Select all` as it is very long)
+![image](https://user-images.githubusercontent.com/93124920/202850854-4133c465-f50c-45a8-8c65-c2b4b7199a76.png)
 4. Paste the token into the terminal (on Windows, right-click in the SaladBind window to paste)
 
-#### Firefox (Outdated)
-This method stopped working for me, I suggest just using the log method.
-1. Go to [app-api.salad.io/api/v1/profile/referral-code](https://app-api.salad.io/api/v1/profile/referral-code)
-2. Open the devtools by pressing F12
+#### Firefox
+This method will not work at all if `Total Cookie Protection` is enabled, [Learn about it here!](https://support.mozilla.org/en-US/kb/introducing-total-cookie-protection-standard-mode)
+1. Go to [browser privacy settings](about:preferences#privacy)
+2. Set Browser Privacy to `Custom` and set Cookies to `Cross-site tracking cookies` [⚠️ You may need to log in to Salad again!](https://salad.com/store)
+![image](https://user-images.githubusercontent.com/93124920/202851351-a20ab4ef-207a-4ef5-bd74-00034aefc973.png)
+3. Go to [app-api.salad.io/api/v1/profile/referral-code](https://app-api.salad.io/api/v1/profile/referral-code)
+4. Open the devtools by pressing F12 or right-click and select `Inspect`
 3. Click on `Storage` and make sure that `Cookies` is uncollapsed
+![image](https://user-images.githubusercontent.com/93124920/202851412-0d259fd4-1928-4b59-8d7a-0fec05285a9f.png)
 4. Double click the value box next to `sAccessToken` and copy it
 5. Paste the token into the terminal (on Windows, right-click in the SaladBind window to paste)
+6. Go to [browser privacy settings](about:preferences#privacy) and set Browser Privacy to `Standard`
 
 ### Manual
+⚠️ Salad 1.0 no longer gives the required IDs to mine with Nicehash and Ethermine in the logs, you'll have to use Salad [0.5.6](https://github.com/SaladTechnologies/salad-applications/releases/tag/0.5.6) to get the IDs required for these pools.
+
 This method is the most consistent and reliable.
 
 1. Start mining with the Salad app normally, if you have already been mining for over ~3h you need to restart Salad 
