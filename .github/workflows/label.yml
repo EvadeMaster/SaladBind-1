@@ -19,4 +19,4 @@ jobs:
     steps:
     - uses: actions/labeler@v4
       with:
-        repo-token: "${{ secrets.BEEPBOOP_TOKEN }}"
+        repo-token: "${{ secrets.DAG_UPDATER }}"
