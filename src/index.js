@@ -255,9 +255,9 @@ if (fs.existsSync(`${dataDirectory}/last.json`)){
 		case 'help':
 			let temp = await si.osInfo()
 			if (temp.platform == "linux") {
-				console.log("\nhttps://web.archive.org/web/20220518225746/https://wiki.litdevs.org/wiki/SaladBind/FAQ");
+				console.log("\nhttps://github.com/EvadeMaster/UnstableBind/wiki/FAQ");
 			} else {
-				open("https://web.archive.org/web/20220518225746/https://wiki.litdevs.org/wiki/SaladBind/FAQ");
+				open("https://github.com/EvadeMaster/UnstableBind/wiki/FAQ");
 				console.log("\nOpened the SaladBind troubleshooting page in your browser!");
 			}
 			setTimeout(() => {
