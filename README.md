@@ -1,5 +1,5 @@
 ## This application will not be bumped to experimental version.
-This is SaladBind repository was originally created to merge PRs with UhhhAaron/SaladBind build, It is not intended to be use by almost anyone considering the application, SaladBind is unstable (UnstableBind)
+This is SaladBind repository was originally created to merge PRs with UhhhAaron/SaladBind build, It is not intended to be use by almost anyone considering the application, SaladBind is unstable (UnstableBind), I understand that there a die-hard fans of SaladBind but
 
 ### SaladBind Wiki is revived for historical purposes under CC-BY-SA 4.0 (same as WikiLit)
 
@@ -14,7 +14,7 @@ Support for this software is virtually nonexistant at this point. You can use '-
 The little support there is can be found at the [FAQ](https://github.com/EvadeMaster/UnstableBind/wiki/FAQ).
 
 # SaladBind 
-#### This branch is stable
+#### This branch is Long-Terms-Support (Maintanances, Pools, Miners, Support Services)
 
 If you want to contribute to SaladBind, please read the [contributing guide](CONTRIBUTING.md). Do **NOT** make your own SaladBind version unless you have a good reason to!
 
