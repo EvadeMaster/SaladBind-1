@@ -1,25 +1,31 @@
-# This repository has reached end-of-life and is no longer maintained.
-**If you're still crypto mining, you should probably stop. If you're still crypto mining to a Salad account, you should definitely stop.**
+***This application is retired and not affiliated with Salad Technologies.*** 
 
-If you insist on still mining through Salad, [UnstableBind](https://github.com/EvadeMaster/UnstableBind) is a more updated fork of this application.
-#
+This repo will occasionally receive updates to the list of miners so they aren't too out-of-date. **You can do this yourself, too. Just go to /internal/miners.json, update the download link and variable "version" for the miner you want to update and submit a pull request. I will probably approve it within the day.**
 
-**This application is not affiliated with Salad Technologies.** 
+Support for this software is virtually nonexistant at this point. You can use '-d' as a command line argument to debug independently.
 
-There is no support for this application anywhere. You can view an [archive of the wiki FAQ](https://web.archive.org/web/20220518225746/https://wiki.litdevs.org/wiki/SaladBind/FAQ), or use argument `-d` to debug. 
+*I* did **not** create this application, do not contact me for support (besides making minor tweaks)!
 
+The little support there is can be found at an [archive of the wiki FAQ.](https://web.archive.org/web/20220518225746/https://wiki.litdevs.org/wiki/SaladBind/FAQ).
 
+# SaladBind 
+#### This branch is stable
 
-# SaladBind
+If you want to contribute to SaladBind, please read the [contributing guide](CONTRIBUTING.md). Do **NOT** make your own SaladBind version unless you have a good reason to!
 
-SaladBind is abandoned, nobody works on it.
+SaladBind is pretty much abandoned, nobody really works on it.
 ## Table of Contents
 
-[Features](##Features) <br>
+[Features](#Features) <br>
 [Installation](#Installation) <br>
 [Configuration](#Configuration) <br>
 [Miner Setup Guide](#Miner-Setup-Guide) <br>
 [Compiling](#Compiling)
+
+SaladBind is no longer made by LIT Devs, or associated with LIT Devs. Don't bother them about it, this is a fork by a 3rd party.
+
+If you need support, see an archive of the [SaladBind FAQ](https://web.archive.org/web/20220518225746/https://wiki.litdevs.org/wiki/SaladBind/FAQ).
+
 ## Features
 
 - Switch between miners, pools, and algorithms
@@ -35,7 +41,7 @@ SaladBind is abandoned, nobody works on it.
 - Immediately restart mining with old settings using a command line argument.
 
 ## Installation
-If my pre-compiled executables don't work for whatever reason, compile the repo yourself.
+If my pre-compiled exe's don't work for whatever reason, compile the repo yourself.
 If they do work, you should probably compile it yourself anyway.
 ### Windows
 
@@ -124,7 +130,7 @@ SaladBind offers some command line arguments.
 
 ## Compiling
 
-You can and should compile SaladBind yourself. You'll need to install [Node.js](https://nodejs.org/).
+You can and probably should compile SaladBind yourself. You'll need to install [Node.js](https://nodejs.org/).
 
 1. Clone the repository
 2. Open a terminal in the folder and run `npm install`
