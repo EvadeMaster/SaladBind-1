@@ -213,7 +213,7 @@ if (fs.existsSync(`${dataDirectory}/last.json`)){
 		case 'changes':
 			presence.configuring("Reading the changelog")
 			spinner = ora('Fetching the Changelogs').start();
-			fetch('https://raw.githubusercontent.com/UhhhAaron/SaladBind/main/internal/changelog.json')
+			fetch('https://raw.githubusercontent.com/EvadeMaster/UnstableBind/main/internal/changelog.json')
 				.then(res => res.json())
 				.then(data => {
 					console.clear();
@@ -234,7 +234,7 @@ if (fs.existsSync(`${dataDirectory}/last.json`)){
 		case 'annoucement':
 			presence.configuring("Reading the annoucement")
 			spinner = ora('Fetching the Annoucement').start();
-			fetch(`https://raw.githubusercontent.com/UhhhAaron/SaladBind/main/internal/announcement.json`)
+			fetch(`https://raw.githubusercontent.com/EvadeMaster/UnstableBind/main/internal/announcement.json`)
 				.then(res => res.json())
 				.then(data => {
 					console.clear();
