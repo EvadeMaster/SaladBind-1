@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.SECRET_ACTIONS }}
+          token: ${{ secrets.DAG_UPDATER }}
       - name: Install node
         uses: actions/setup-node@v3.0.0
         with:
