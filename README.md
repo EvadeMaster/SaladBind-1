@@ -1,3 +1,8 @@
+## This application will not be bumped to experimental version.
+This is SaladBind repository was originally created to merge PRs with UhhhAaron/SaladBind build, It is not intended to be use by almost anyone considering the application, SaladBind is unstable (UnstableBind)
+
+### SaladBind Wiki is revived for historical purposes under CC-BY-SA 4.0 (same as WikiLit)
+
 ***This application is retired and not affiliated with Salad Technologies.*** 
 
 This repo will occasionally receive updates to the list of miners so they aren't too out-of-date. **You can do this yourself, too. Just go to /internal/miners.json, update the download link and variable "version" for the miner you want to update and submit a pull request. I will probably approve it within the day.**
