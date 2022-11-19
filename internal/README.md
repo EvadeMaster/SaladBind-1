@@ -15,18 +15,15 @@ Tip: When disabling algorithm, set the DAG value of the algorithm that you want 
 
 Algorithm  | Mineable | Get dag source from |
 | ------------- | ------------- | ------------- |
-| Ethash  | ❌ (as of 15 September 2022) | 2147483647 (unmineable)
+| Ethash | ✅ (EthereumPoW) | https://minerstat.com/dag-size-calculator
 | Etchash |  ✅ | https://minerstat.com/dag-size-calculator
 | KawPow |  ✅ | https://minerstat.com/dag-size-calculator
 | Autolykos2 | ✅ | https://minerstat.com/dag-size-calculator
 | Octopus | ✅ | 7gb (estimated, this algorithm grows at least 1-1.5gb a year)
 | BeamV3 (EQUI150-5)| ✅ | 2gb
 | ZHash (EQUI144-5) | ✅ | 2gb
-| Zelhash* (EQUI125-4) | ✅ | 2gb
 | RandomX | ✅ | DAG not required
 | Ghostrider | ✅ | DAG not required
-
-*Zcash or Zelhash is not enabled in SaladBind because it hasn't been tested yet™️, to enable it, add `"zelhash": 2000` under `algos` and change the supported algorithm in compatible miner at miners.json if you wish to use it. (Only Nicehash pool is supported.)
 
 ## Announcement.json
 If your going to make your own announcement, increment the number in "number" by 1, It not that important. :)
