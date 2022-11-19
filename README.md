@@ -6,7 +6,7 @@ Support for this software is virtually nonexistant at this point. You can use '-
 
 *I* did **not** create this application, do not contact me for support (besides making minor tweaks)!
 
-The little support there is can be found at an [archive of the wiki FAQ.](https://web.archive.org/web/20220518225746/https://wiki.litdevs.org/wiki/SaladBind/FAQ).
+The little support there is can be found at the [FAQ](https://github.com/EvadeMaster/UnstableBind/wiki/FAQ).
 
 # SaladBind 
 #### This branch is stable
@@ -24,7 +24,7 @@ SaladBind is pretty much abandoned, nobody really works on it.
 
 SaladBind is no longer made by LIT Devs, or associated with LIT Devs. Don't bother them about it, this is a fork by a 3rd party.
 
-If you need support, see an archive of the [SaladBind FAQ](https://web.archive.org/web/20220518225746/https://wiki.litdevs.org/wiki/SaladBind/FAQ).
+If you need support, see the [SaladBind FAQ](https://github.com/EvadeMaster/UnstableBind/wiki/FAQ).
 
 ## Features
 
