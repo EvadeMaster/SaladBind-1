@@ -1,4 +1,4 @@
-## This application will not be bumped to experimental version.
+## This branch will not be bumped to experimental version.
 This is SaladBind repository was originally created to merge PRs with UhhhAaron/SaladBind build, It is not intended to be use by almost anyone considering the application, SaladBind is unstable (UnstableBind), I understand that there a die-hard fans of SaladBind but
 
 ### SaladBind Wiki is revived for historical purposes under CC-BY-SA 4.0 (same as WikiLit)
