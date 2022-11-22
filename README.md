@@ -1,6 +1,7 @@
-## ⚠️ This branch will not be bumped to experimental version.
+## ⚠️ Notice
+### When will UnstableBind reach end-of-life?
+UnstableBind will reach a maturity state and will be archived on January 1st, 2023.
 
-This is SaladBind repository was originally created to merge PRs with UhhhAaron/SaladBind build, It is not intended to be use by almost anyone considering the application, SaladBind is unstable (UnstableBind), I understand that there a die-hard fans of SaladBind but, I don't want to keep updating and maintenancing the same project forever! :(
 
 ### SaladBind Wiki is revived for historical purposes under CC-BY-SA 4.0 (same as WikiLit)
 
@@ -8,7 +9,7 @@ This is SaladBind repository was originally created to merge PRs with UhhhAaron/
 
 This repo will occasionally receive updates to the list of miners so they aren't too out-of-date. **You can do this yourself, too. Just go to /internal/miners.json, update the download link and variable "version" for the miner you want to update and submit a pull request. I will probably approve it within the day.**
 
-Support for this software is virtually nonexistant at this point. You can use '-d' as a command line argument to debug independently.
+Support for this software is virtually non-existant at this point. You can use '-d' as a command line argument to debug independently.
 
 *I* did **not** create this application, do not contact me for support (besides making minor tweaks)!
 
@@ -16,9 +17,9 @@ The little support there is can be found at the [FAQ](https://github.com/EvadeMa
 
 # SaladBind
 
-#### This branch is Long-Terms-Support (Maintanances, Pools, Miners, Support Services) until 2025
+#### This branch is Long-Terms-Support (Maintanances, Pools, Miners, Support Services) until January 1st 2023
 
-If you want to contribute to UnstableBind, please read the [contributing guide](CONTRIBUTING.md). Do **NOT** make your own UnstableBind version unless you have a good reason to!
+If you want to contribute to UnstableBind, please read the [contributing guide](https://github.com/EvadeMaster/UnstableBind/wiki/Contributing). Do **NOT** make your own UnstableBind version unless you have a good reason to!
 
 SaladBind & UnstableBind is pretty much abandoned, nobody really works on it.
 
