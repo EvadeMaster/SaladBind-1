@@ -1,4 +1,7 @@
-# Guide
+## ⚠️ Important
+
+### When will UnstableBind reach end-of-life?
+UnstableBind will reach a maturity state and will be archived on January 1st, 2023.
 
 ## Miners
 Links to miners listed in /internal/miners.json for convenience:
