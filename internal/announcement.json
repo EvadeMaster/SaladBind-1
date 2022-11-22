@@ -1,12 +1,15 @@
 {
-    "number": "2",
+    "number": "3",
     "announcement": [
-        "🔧 New Prohashing pool url: https://prohashing.com/blog/prohashings-upcoming-worldwide-architecture",
+        "⚠️ Important",
+        "UnstableBind will receive last update on Jan 1st 2023 UTC+0",
         "",
-        "🎉 Miner bump",
-        "> T-Rex: 0.26.6 -> 0.26.8",
-        "> TeamRedMiner: 0.10.2 -> 0.10.5",
-        "> lolMiner: 1.55 -> 1.61",
-        "> XMRig: 6.18.0 -> 6.18.1"
+        "🔧 Under the hood",
+        "UnstableBind is now back to being stable.",
+        "DAG size will now regularly update daily.",
+        "SaladBind Wiki is now restored for historical purposes. https://github.com/EvadeMaster/UnstableBind/wiki/FAQ",
+        "",
+        "✍️ Written by EvadeMaster, Repository maintained by EvadeMaster",
+        "Branch: Vanilla (Long-Term-Support)"
     ]
 }
