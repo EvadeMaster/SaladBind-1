@@ -17,7 +17,7 @@ The little support there is can be found at the [FAQ](https://github.com/EvadeMa
 
 # SaladBind
 
-#### This branch is Long-Terms-Support (Maintanances, Pools, Miners, Support Services) until January 1st 2023
+#### This branch is Short-Term-Support (Maintanances, Pools, Miners, Support Services) until January 1st 2023
 
 If you want to contribute to UnstableBind, please read the [contributing guide](https://github.com/EvadeMaster/UnstableBind/wiki/Contributing). Do **NOT** make your own UnstableBind version unless you have a good reason to!
 
