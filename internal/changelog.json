@@ -1,5 +1,5 @@
 {
-    "version": "1.7.10",
+    "version": "1.7.11",
     "changelog": [
         "1.7.0: SaladBind now uses proper system folders",
         "1.7.1: Fixed nothing LOL... :(",
@@ -11,7 +11,8 @@
 	"1.7.8.1: Forked project and updated miners again",
 	"1.7.8.2: NiceHash hostnames fixed, broken links changed/removed",
 	   "1.7.9: lolMiner configuration improved, added FAQ/Troubleshooting guide, updated miners (TeamRed, lolM, XMR)",
-	   "1.7.10 - Ethash Post-Mortem: Announcements feature, Ghostrider (Raptoreum) algorithm support, TeamRed updated"
+	   "1.7.10 - Ethash Post-Mortem: Announcements feature, Ghostrider (Raptoreum) algorithm support, TeamRed updated",
+       "1.7.11 - UnstableBind, change the URL in FAQ/Troubleshooting guide to github"
     ],
     "force": true,
     "next_version": "1.6.0",

@@ -26,8 +26,10 @@
             },
             "zelhash": {
                 "host": "stratum+tcp://zelhash.REGION.nicehash.com:9200"
+            },
+            "neoscrpyt": {
+                "host": "stratum+tcp://neoscrypt.auto.nicehash.com:9200"
             }
-
         }
     },
     "ethermine": {
@@ -36,9 +38,6 @@
         "algos": {
             "etchash": {
                 "host": "ethproxy+ssl://REGION-etc.ethermine.org:5555"
-            },
-            "ethash": {
-                "host": "ethproxy+ssl://REGION.ethermine.org:5555"
             }
         }
     },

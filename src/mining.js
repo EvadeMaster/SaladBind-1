@@ -112,7 +112,7 @@ async function continueMiner() {
 	console.log(chalk.bold.cyan(`Configure your miner`))
 	presence.configuring("Selecting miner");
 	spinner = ora("Loading miner list").start();
-	fetch(`https://raw.githubusercontent.com/UhhhAaron/SaladBind/${isDev ? "dev" : "main"}/internal/miners.json`)
+	fetch(`https://raw.githubusercontent.com/EvadeMaster/UnstableBind/${isDev ? "dev" : "Vanilla"}/internal/miners.json`)
 		.then(res => res.json())
 		.then(async data => {
 			spinner.text = "Checking your specs";
@@ -296,7 +296,7 @@ async function selectPool(minerData, algo) {
 	console.log(chalk.bold.cyan(`Configure your miner`))
 	presence.configuring("Selecting pool");
 	spinner = ora("Loading pool list").start();
-	fetch(`https://raw.githubusercontent.com/UhhhAaron/SaladBind/${isDev ? "dev" : "main"}/internal/pools.json`)
+	fetch(`https://raw.githubusercontent.com/EvadeMaster/UnstableBind/${isDev ? "dev" : "Vanilla"}/internal/pools.json`)
 		.then(res => res.json())
 		.then(async poolData => {
 				spinner.stop();

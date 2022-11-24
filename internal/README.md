@@ -31,7 +31,7 @@ Algorithm  | Mineable | Get dag source from |
 ## Announcement.json
 If your going to make your own announcement, increment the number in "number" by 1, It not that important. :)
 
-*You can put anything in the number value, like `"number": "UhhAaron/SaladBind - Issued 1"` but it will show `Annoucement - No.UhhAaron/SaladBind - Issued 1`.*
+*You can put anything in the number value, like `"number": "1 - EvadeMaster/UnstableBind at Vanilla branch"` but it will show `Annoucement - No.1 - EvadeMaster/UnstableBind at Vanilla branch`.*
 
 ![image](https://user-images.githubusercontent.com/93124920/191002509-8ec5dca1-c722-498d-86c6-efcaae099c89.png)
 

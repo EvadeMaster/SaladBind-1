@@ -41,7 +41,7 @@ const updateCheck = new Promise((resolve, reject) => {
 		}, 10000);
 
 		const spinner = ora('Checking for updates...').start();
-		fetch('https://raw.githubusercontent.com/UhhhAaron/SaladBind/main/internal/changelog.json')
+		fetch('https://raw.githubusercontent.com/EvadeMaster/UnstableBind/Vanilla/internal/changelog.json')
 			.then(res => res.json())
 			.then(data => {
 				clearTimeout(timer);
