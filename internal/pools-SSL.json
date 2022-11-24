@@ -1,0 +1,72 @@
+{
+    "nicehash": {
+        "name": "NiceHash",
+        "regions": ["auto"],
+        "algos": {
+            "beamv3": {
+                "host": "stratum+ssl://beamv3.REGION.nicehash.com:443"
+            },
+            "kawpow": {
+                "host": "stratum+ssl://kawpow.REGION.nicehash.com:443"
+            },
+            "ethash": {
+                "host": "stratum+ssl://daggerhashimoto.REGION.nicehash.com:443"
+            },
+            "EQUI144_5": {
+                "host": "stratum+ssl://zhash.REGION.nicehash.com:443"
+            },
+            "randomx": {
+                "host": "stratum+ssl://randomxmonero.REGION.nicehash.com:443"
+            },
+            "autolykos2": {
+                "host": "stratum+ssl://autolykos.REGION.nicehash.com:443"
+            },
+            "octopus": {
+                "host": "stratum+ssl://octopus.REGION.nicehash.com:443"
+            },
+            "zelhash": {
+                "host": "stratum+ssl://zelhash.REGION.nicehash.com:443"
+            },
+            "neoscrpyt": {
+                "host": "stratum+ssl://neoscrypt.REGION.nicehash.com:443"
+            }
+        }
+    },
+    "ethermine": {
+        "name": "Ethermine",
+        "regions": ["asia1", "eu1", "us1"],
+        "algos": {
+            "etchash": {
+                "host": "ethproxy+ssl://REGION-etc.ethermine.org:5555"
+            }
+        }
+    },
+    "prohashing": {
+        "name": "Prohashing",
+        "regions": ["eu", "us"],
+        "algos": {
+            "ethash": {
+                "host": "stratum+tcp://REGION.mining.prohashing.com:3339"
+            },
+            "etchash": {
+                "host": "stratum+tcp://REGION.mining.prohashing.com:3357"
+            },
+            "EQUI144_5": {
+                "host": "stratum+tcp://REGION.mining.prohashing.com:3345"
+            },
+            "randomx": {
+                "host": "stratum+tcp://REGION.mining.prohashing.com:3359"
+            },
+            "kawpow": {
+                "host": "stratum+tcp://REGION.mining.prohashing.com:3361"
+            },
+            "octopus": {
+                "host": "stratum+tcp://REGION.mining.prohashing.com:3363"
+            },
+            "ghostrider": {
+                "host": "stratum+tcp://REGION.mining.prohashing.com:3362"
+            }
+            
+        }
+    }
+}
