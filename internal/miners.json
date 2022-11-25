@@ -5,115 +5,159 @@
         "kawpow": 3656,
         "beamv3": 2000,
         "EQUI144_5": 2000,
-        "autolykos2": 2622,
+        "autolykos2": 2624,
         "octopus": 7000,
         "randomx": null,
         "ghostrider": null
     },
     "miners": {
-      "trex": {
-        "miner": "T-Rex",
-        "download": {
-          "win32": "https://github.com/trexminer/T-Rex/releases/download/0.26.8/t-rex-0.26.8-win.zip",
-          "linux": "https://github.com/trexminer/T-Rex/releases/download/0.26.8/t-rex-0.26.8-linux.tar.gz"
+        "trex": {
+            "miner": "T-Rex",
+            "download": {
+                "win32": "https://github.com/trexminer/T-Rex/releases/download/0.26.8/t-rex-0.26.8-win.zip",
+                "linux": "https://github.com/trexminer/T-Rex/releases/download/0.26.8/t-rex-0.26.8-linux.tar.gz"
+            },
+            "algos": [
+                "ethash",
+                "etchash",
+                "kawpow",
+                "autolykos2",
+                "octopus"
+            ],
+            "supported_gpus": [
+                "nvidia"
+            ],
+            "supported_os": [
+                "win32",
+                "linux"
+            ],
+            "fee": 1,
+            "version": "0.26.8",
+            "parameters": {
+                "fileName": "t-rex",
+                "algo": "-a",
+                "wallet": "-u",
+                "pool": "-o",
+                "pass": "-p"
+            }
         },
-        "algos": ["ethash", "etchash", "kawpow", "autolykos2", "octopus"],
-        "supported_gpus": ["nvidia"],
-        "supported_os": ["win32", "linux"],
-        "fee": 1,
-        "version": "0.26.8",
-        "parameters": {
-          "fileName": "t-rex",
-          "algo": "-a",
-          "wallet": "-u",
-          "pool": "-o",
-          "pass": "-p"
-        }
-      },
-      "nbminer": {
-        "miner": "NBMiner",
-        "download": {
-          "win32": "https://github.com/NebuTech/NBMiner/releases/download/v42.3/NBMiner_42.3_Win.zip",
-          "linux": "https://github.com/NebuTech/NBMiner/releases/download/v42.3/NBMiner_42.3_Linux.tgz"
+        "nbminer": {
+            "miner": "NBMiner",
+            "download": {
+                "win32": "https://github.com/NebuTech/NBMiner/releases/download/v42.3/NBMiner_42.3_Win.zip",
+                "linux": "https://github.com/NebuTech/NBMiner/releases/download/v42.3/NBMiner_42.3_Linux.tgz"
+            },
+            "algos": [
+                "ethash",
+                "etchash",
+                "kawpow",
+                "beamv3",
+                "autolykos2",
+                "octopus"
+            ],
+            "supported_gpus": [
+                "nvidia",
+                "amd"
+            ],
+            "supported_os": [
+                "win32",
+                "linux"
+            ],
+            "fee": 2,
+            "version": "42.3",
+            "parameters": {
+                "fileName": "nbminer",
+                "algo": "-a",
+                "wallet": "-u",
+                "pool": "-o",
+                "pass": "-p"
+            }
         },
-        "algos": [
-          "ethash",
-          "etchash",
-          "kawpow",
-          "beamv3",
-          "autolykos2",
-          "octopus"
-        ],
-        "supported_gpus": ["nvidia", "amd"],
-        "supported_os": ["win32", "linux"],
-        "fee": 2,
-        "version": "42.3",
-        "parameters": {
-          "fileName": "nbminer",
-          "algo": "-a",
-          "wallet": "-u",
-          "pool": "-o",
-          "pass": "-p"
-        }
-      },
-      "teamredminer": {
-        "miner": "TeamRedMiner",
-        "download": {
-          "win32": "https://github.com/todxx/teamredminer/releases/download/v0.10.6/teamredminer-v0.10.6-win.zip",
-          "linux": "https://github.com/todxx/teamredminer/releases/download/v0.10.6/teamredminer-v0.10.6-linux.tgz"
+        "teamredminer": {
+            "miner": "TeamRedMiner",
+            "download": {
+                "win32": "https://github.com/todxx/teamredminer/releases/download/v0.10.6/teamredminer-v0.10.6-win.zip",
+                "linux": "https://github.com/todxx/teamredminer/releases/download/v0.10.6/teamredminer-v0.10.6-linux.tgz"
+            },
+            "algos": [
+                "ethash",
+                "etchash",
+                "kawpow"
+            ],
+            "supported_gpus": [
+                "amd"
+            ],
+            "supported_os": [
+                "win32",
+                "linux"
+            ],
+            "fee": 2,
+            "version": "v0.10.6",
+            "parameters": {
+                "fileName": "teamredminer",
+                "algo": "-a",
+                "wallet": "-u",
+                "pool": "-o",
+                "pass": "-p"
+            }
         },
-        "algos": ["ethash", "etchash", "kawpow"],
-        "supported_gpus": ["amd"],
-        "supported_os": ["win32", "linux"],
-        "fee": 2,
-        "version": "v0.10.6",
-        "parameters": {
-          "fileName": "teamredminer",
-          "algo": "-a",
-          "wallet": "-u",
-          "pool": "-o",
-          "pass": "-p"
-        }
-      },
-      "lolminer": {
-        "miner": "lolMiner",
-        "download": {
-          "win32": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.62/lolMiner_v1.62_Win64.zip",
-          "linux": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.62/lolMiner_v1.62_Lin64.tar.gz"
+        "lolminer": {
+            "miner": "lolMiner",
+            "download": {
+                "win32": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.62/lolMiner_v1.62_Win64.zip",
+                "linux": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.62/lolMiner_v1.62_Lin64.tar.gz"
+            },
+            "algos": [
+                "ethash",
+                "etchash",
+                "beamv3",
+                "EQUI144_5"
+            ],
+            "supported_gpus": [
+                "nvidia",
+                "amd"
+            ],
+            "supported_os": [
+                "win32",
+                "linux"
+            ],
+            "fee": 1,
+            "version": "1.62",
+            "parameters": {
+                "fileName": "lolMiner",
+                "algo": "--algo",
+                "wallet": "--user",
+                "pool": "--tls on --pool",
+                "pass": "--pass"
+            }
         },
-        "algos": ["ethash", "etchash", "beamv3", "EQUI144_5"],
-        "supported_gpus": ["nvidia", "amd"],
-        "supported_os": ["win32", "linux"],
-        "fee": 1,
-        "version": "1.62",
-        "parameters": {
-          "fileName": "lolMiner",
-          "algo": "--algo",
-          "wallet": "--user",
-          "pool": "--tls on --pool",
-          "pass": "--pass"
+        "xmrig": {
+            "miner": "XMRig",
+            "download": {
+                "win32": "https://github.com/xmrig/xmrig/releases/download/v6.18.1/xmrig-6.18.1-gcc-win64.zip",
+                "linux": "https://github.com/xmrig/xmrig/releases/download/v6.18.1/xmrig-6.18.1-linux-x64.tar.gz",
+                "darwin": "https://github.com/xmrig/xmrig/releases/download/v6.18.1/xmrig-6.18.1-macos-x64.tar.gz"
+            },
+            "algos": [
+                "randomx",
+                "ghostrider"
+            ],
+            "supports_cpu": true,
+            "supported_gpus": [],
+            "supported_os": [
+                "win32",
+                "linux",
+                "darwin"
+            ],
+            "fee": 1,
+            "version": "6.18.1",
+            "parameters": {
+                "fileName": "xmrig",
+                "algo": "-a",
+                "wallet": "-u",
+                "pool": "-o",
+                "pass": "-p"
+            }
         }
-      },
-      "xmrig": {
-        "miner": "XMRig",
-        "download": {
-          "win32": "https://github.com/xmrig/xmrig/releases/download/v6.18.1/xmrig-6.18.1-gcc-win64.zip",
-          "linux": "https://github.com/xmrig/xmrig/releases/download/v6.18.1/xmrig-6.18.1-linux-x64.tar.gz",
-          "darwin": "https://github.com/xmrig/xmrig/releases/download/v6.18.1/xmrig-6.18.1-macos-x64.tar.gz"
-        },
-        "algos": ["randomx", "ghostrider"],
-        "supports_cpu": true,
-        "supported_gpus": [],
-        "supported_os": ["win32", "linux", "darwin"],
-        "fee": 1,
-        "version": "6.18.1",
-        "parameters": {
-          "fileName": "xmrig",
-          "algo": "-a",
-          "wallet": "-u",
-          "pool": "-o",
-          "pass": "-p"
-        }
-      }
     }
 }
