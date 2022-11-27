@@ -2,7 +2,7 @@ name: DAG size updater
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * 1'
   workflow_dispatch:
 
 jobs:
@@ -13,11 +13,11 @@ jobs:
         node-version: [16.x]
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.1.0
         with:
           token: ${{ secrets.DAG_UPDATER }}
       - name: Install node
-        uses: actions/setup-node@v3.0.0
+        uses: actions/setup-node@v3.5.1
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
@@ -30,5 +30,5 @@ jobs:
             git config user.name EvadeMaster
             git config user.email 93124920+EvadeMaster@users.noreply.github.com
             git add .
-            git commit -m "🔧 Scheduled Maintenance: Update DAG sizes"
+            git commit -m "🔧 Weekly Maintenance: Update DAG sizes"
             git push
