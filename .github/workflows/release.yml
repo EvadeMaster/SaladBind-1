@@ -10,13 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.1.0
       - name: Generate changelog
         run: |
-          gh api repos/UhhhAaron/SaladBind/releases/generate-notes -f tag_name="${GITHUB_REF#refs/tags/}" -f target_commitish=main -q .body >> CHANGELOG.md
+          gh api repos/EvadeMaster/UnstableBind/releases/generate-notes -f tag_name="${GITHUB_REF#refs/tags/}" -f target_commitish=main -q .body >> CHANGELOG.md
         env:
           GITHUB_TOKEN: ${{secrets.TOKEN}}
       - name: Read changelog
@@ -25,7 +25,7 @@ jobs:
         with:
           path: ./CHANGELOG.md
       - name: Install node
-        uses: actions/setup-node@v3.0.0
+        uses: actions/setup-node@v3.5.1
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
@@ -34,7 +34,7 @@ jobs:
             npm install
             npm run compile
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v0.1.15
         with:
           body: ${{ steps.changelog.outputs.content }}
           token: ${{ secrets.TOKEN}}
