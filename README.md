@@ -82,10 +82,10 @@ Then, it'll prompt you to enter your mining details.
 
 You can do this by letting UnstableBind search your log file, entering your Salad Auth token, or enter your Rig ID manually.
 
-### Automatic (Read from Salad logs) (Recommended)
+### Automatic (Read from Salad logs)
 
-This method is the most convenient.
-UnstableBindwill search your Salad's log file for your Rig ID and save it automatically.
+⚠️ You'll have to use Salad [0.5.6](https://github.com/SaladTechnologies/salad-applications/releases/tag/0.5.6)
+UnstableBind will search your Salad's log file for your Rig ID and save it automatically.
 
 1. Make sure that "Override GPU Compatibility Detection" is enabled in your Salad settings. If this is disabled, Salad might not log your Prohashing details.
 2. Start mining with the Salad app normally for 5-15 minutes (the "Chopping" stage)
@@ -96,7 +96,7 @@ UnstableBindwill search your Salad's log file for your Rig ID and save it automa
 You will be prompted to enter your access token.
 To get your access token, log in to [https://salad.com/store](https://salad.com/storeo) and follow these steps depending on your browser:
 
-#### Chromium and derivatives
+#### Chromium and derivatives (Recommended)
 
 1. Click the lock symbol in the address bar
 2. Open `Cookies` and uncollapse `app-api.salad.io`
@@ -104,7 +104,7 @@ To get your access token, log in to [https://salad.com/store](https://salad.com/
   ![image](https://user-images.githubusercontent.com/93124920/202850854-4133c465-f50c-45a8-8c65-c2b4b7199a76.png)
 4. Paste the token into the terminal (on Windows, right-click in the UnstableBind window to paste)
 
-#### Firefox
+#### Firefox (Recommended)
 
 This method will not work at all if `Total Cookie Protection` is enabled, [Learn about it here!](https://support.mozilla.org/en-US/kb/introducing-total-cookie-protection-standard-mode)
 
