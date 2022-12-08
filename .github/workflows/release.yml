@@ -18,7 +18,7 @@ jobs:
         run: |
           gh api repos/EvadeMaster/UnstableBind/releases/generate-notes -f tag_name="${GITHUB_REF#refs/tags/}" -f target_commitish=main -q .body >> CHANGELOG.md
         env:
-          GITHUB_TOKEN: ${{secrets.TOKEN}}
+          GITHUB_TOKEN: ${{secrets.DAG_UPDATER}}
       - name: Read changelog
         id: changelog
         uses: juliangruber/read-file-action@v1
@@ -37,7 +37,7 @@ jobs:
         uses: softprops/action-gh-release@v0.1.15
         with:
           body: ${{ steps.changelog.outputs.content }}
-          token: ${{ secrets.TOKEN}}
+          token: ${{ secrets.DAG_UPDATER}}
           files: |
             bin/saladbind-win.exe
             bin/saladbind-macos
