@@ -1,11 +1,11 @@
 {
   "name": "saladbind",
-  "version": "1.7.11",
+  "version": "1.7.12",
   "description": "BIND-ing the good features from other projects together (and fucking nuking the bad ones)",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index",
-    "compile": "pkg src/index.js --targets node16-linux-x64,node16-macos-x64,node16-win-x64 --output bin/saladbind",
+    "compile": "pkg src/index.js --targets node18-linux-x64,node18-macos-x64,node18-win-x64 --output bin/saladbind",
     "preversion": "node internal/alfurVersionValidator.js",
     "postversion": "git push && git push --tags"
   },
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/EvadeMaster/UnstableBind.git"
   },
-  "author": "Original author: LIT Devs, Maintained by: UhhhAaron",
+  "author": "Original author: LIT Devs, Maintained by: EvadeMaster",
   "license": "GNUv3",
   "bugs": {
     "url": "https://github.com/EvadeMaster/UnstableBind/issues"
