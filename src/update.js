@@ -49,7 +49,7 @@ const updateCheck = new Promise((resolve, reject) => {
 				version = data.version
 				files = { //files to download if the user decides to autoupdate.
 					"win32": { "file": `https://github.com/EvadeMaster/UnstableBind/releases/download/v${version}/saladbind-win.exe`, "name": `SaladBind-win-${version}.exe` },
-					"linux": { "file": `https://github.com/EvadeMaster/UnstableBindreleases/download/v${version}/saladbind-linux`, "name": `SaladBind-linux-${version}` },
+					"linux": { "file": `https://github.com/EvadeMaster/UnstableBind/releases/download/v${version}/saladbind-linux`, "name": `SaladBind-linux-${version}` },
 					"darwin": { "file": `https://github.com/EvadeMaster/UnstableBind/releases/download/v${version}/saladbind-macos`, "name": `SaladBind-macos-${version}` }
 				}
 				if (version !== packageJson.version) {
