@@ -178,7 +178,7 @@ async function menu(clear) {
 		value: 'changes'
 	},
 	{
-		name: 'SaladBind FAQ/Troubleshooting guide',
+		name: 'Get Help!',
 		value: 'help'
 	},
 	{
@@ -238,7 +238,7 @@ if (fs.existsSync(`${dataDirectory}/last.json`)){
 				.then(res => res.json())
 				.then(data => {
 					console.clear();
-					spinner.succeed(chalk.bold.green(`Annoucement - No.${data.number}`));
+					spinner.succeed(chalk.bold.green(`Annoucement - ${data.number}`));
 					data.announcement.forEach(item => {
 						console.log(`- ${item}`)
 					});
