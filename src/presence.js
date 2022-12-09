@@ -16,8 +16,7 @@ if (!fs.existsSync(configFile)) {
 if (config.discordPresence == true) { //If the user opts-in to having the Rich Presence then try connent to the rich presence application
 	try {
 		client.login({
-			// RPC is permanently disabled
-			clientId: ''
+			clientId: '1050775384477667449'
 		});
 	} catch (error) { // Ignoring the error since we dont want SaladBind dying when the user doesn't have Discord open
 	}
@@ -38,7 +37,7 @@ function presence(details, state, time, large_image, large_text, small_image, sm
 					small_text: small_text
 				},
 				buttons: [
-					{ label: "Download SaladBind", url: "https://github.com/EvadeMaster/UnstableBind/releases" },
+					{ label: "Download StableBind", url: "https://github.com/EvadeMaster/UnstableBind/releases" },
 				]
 			}
 		}
