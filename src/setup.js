@@ -94,6 +94,25 @@ async function toggleBypassGpu() {
 	}
 	await save("bypassGPUChecks", !bypassGPUChecks);
 }
+async function toggleSecProtocol() {
+	let secprotocol;
+	try {
+		secprotocol = await JSON.parse(fs.readFileSync(configFile)).secprotocol;
+	} catch {
+		secprotocol = false;
+	}
+	await save("secprotocol", !secprotocol);
+}
+async function toggleBranch() {
+	let dev;
+	try {
+		dev = await JSON.parse(fs.readFileSync(configFile)).dev;
+	} catch {
+		dev = false;
+	}
+	await save("dev", !dev);
+}
+
 async function miner(){
 	const promptResult = await inquirer.prompt([{
 		type: 'list',
@@ -288,6 +307,18 @@ async function debugMenu(){
 				value: "bypass"
 			},
 			{
+				name: `Security protocol ${configData.secprotocol ? chalk.yellowBright("(Stratum)") : chalk.green("(SSL)")}`,
+				value: "protocol"
+			},
+			{
+				name: `UnstableBind Branch ${configData.dev ? chalk.redBright("(dev)") : chalk.green("(Vanilla)")}`,
+				value: "branch"
+			},
+			{
+				name: `Overview`,
+				value: "overview"
+			},
+			{
 				name: `${firstTime ? chalk.greenBright("Finish") : chalk.redBright("Go Back")}`,
 				value: "back"
 			}
@@ -295,10 +326,37 @@ async function debugMenu(){
 	}]);
 	if (prompt.settings == "back") {
 		run(true)
-		} else if(prompt.settings == "bypass"){
+		} else if(prompt.settings == "bypass") {
 			await toggleBypassGpu()
 			console.clear()
 			return debugMenu()
+		} else if (prompt.settings == "protocol") {
+			await toggleSecProtocol()
+			console.clear()
+			return debugMenu()
+		} else if (prompt.settings == "branch") {
+			await toggleBranch()
+			console.clear()
+			return debugMenu()
+		} else if (prompt.settings == "overview") {
+			let rawdata = fs.readFileSync(configFile);
+			const config = JSON.parse(rawdata);
+			let isDev = config.dev != undefined && config.dev == true;
+			let SecProtocol = config.secprotocol != undefined && config.secprotocol == true;
+			inquirer.prompt([{
+				type: 'input',
+				name: "overview",
+				message: chalk.bold.cyan(`Value overview
+				isDev: ${isDev ? chalk.redBright("dev") : chalk.green("Vanilla")}
+				SecProtocol: ${SecProtocol ? chalk.yellowBright("pools.json") : chalk.green("pools-v2.json")}
+				bypassGPUChecks: ${configData.bypassGPUChecks ? chalk.green("(Bypassed)") : chalk.redBright("(Disabled)")}
+				
+				Press ENTER to return to the menu.
+				`),
+			}]).then(function() {
+				return debugMenu();
+			});
+			
 		}
 
 }
