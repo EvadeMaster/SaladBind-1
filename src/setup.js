@@ -39,7 +39,7 @@ All of the money you mine using SaladBind goes to Salad, and all Salad boosts an
 	const prompt = await inquirer.prompt([{
 		type: 'list',
 		name: "settings",
-		message: chalk.bold.cyan(`Configure SaladBind`),
+		message: chalk.bold.cyan(`Configure SaladBind - https://github.com/EvadeMaster/UnstableBind/wiki/Settings`),
 		choices: [{
 				name: `Update Miner Details ${configData.id != undefined || configData.minerId != undefined ? "" : chalk.bold.red("(Must be configured)")}`,
 				value: "miner"
@@ -301,7 +301,7 @@ async function debugMenu(){
 	const prompt = await inquirer.prompt([{
 		type: 'list',
 		name: "settings",
-		message: chalk.bold.cyan(`Debug Settings`),
+		message: chalk.bold.cyan(`Debug Settings - https://github.com/EvadeMaster/UnstableBind/wiki/Settings`),
 		choices: [{
 				name: `Bypass GPU Checks ${configData.bypassGPUChecks ? chalk.green("(Enabled)") : chalk.redBright("(Disabled)")}`,
 				value: "bypass"
@@ -339,6 +339,7 @@ async function debugMenu(){
 			console.clear()
 			return debugMenu()
 		} else if (prompt.settings == "overview") {
+			const packageJson = require('../package.json');
 			let rawdata = fs.readFileSync(configFile);
 			const config = JSON.parse(rawdata);
 			let isDev = config.dev != undefined && config.dev == true;
@@ -347,9 +348,16 @@ async function debugMenu(){
 				type: 'input',
 				name: "overview",
 				message: chalk.bold.cyan(`Value overview
-debugWarning: ${configData.debugWarning}
+
+Node.js version: ${process.version}
+SaladBind version: ${packageJson.version}
+
+
 id (prohashing id): ${configData.id}
 minerId: ${configData.minerId}}
+
+
+debugWarning: ${configData.debugWarning}
 isDev: ${isDev ? chalk.redBright("dev") : chalk.green("Vanilla")}
 SecProtocol: ${SecProtocol ? chalk.yellowBright("pools.json") : chalk.green("pools-v2.json")}
 bypassGPUChecks: ${configData.bypassGPUChecks ? chalk.green("(Bypassed)") : chalk.redBright("(Disabled)")}
@@ -357,6 +365,7 @@ bypassGPUChecks: ${configData.bypassGPUChecks ? chalk.green("(Bypassed)") : chal
 Press ENTER to return to the menu.
 				`),
 			}]).then(function() {
+				console.clear()
 				return debugMenu();
 			});
 			
