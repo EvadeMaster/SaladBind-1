@@ -347,11 +347,14 @@ async function debugMenu(){
 				type: 'input',
 				name: "overview",
 				message: chalk.bold.cyan(`Value overview
-				isDev: ${isDev ? chalk.redBright("dev") : chalk.green("Vanilla")}
-				SecProtocol: ${SecProtocol ? chalk.yellowBright("pools.json") : chalk.green("pools-v2.json")}
-				bypassGPUChecks: ${configData.bypassGPUChecks ? chalk.green("(Bypassed)") : chalk.redBright("(Disabled)")}
+debugWarning: ${configData.debugWarning}
+id (prohashing id): ${configData.id}
+minerId: ${configData.minerId}}
+isDev: ${isDev ? chalk.redBright("dev") : chalk.green("Vanilla")}
+SecProtocol: ${SecProtocol ? chalk.yellowBright("pools.json") : chalk.green("pools-v2.json")}
+bypassGPUChecks: ${configData.bypassGPUChecks ? chalk.green("(Bypassed)") : chalk.redBright("(Disabled)")}
 				
-				Press ENTER to return to the menu.
+Press ENTER to return to the menu.
 				`),
 			}]).then(function() {
 				return debugMenu();
