@@ -8,7 +8,8 @@
 	   "1.7.10 - Ethash Post-Mortem: Announcements feature, Ghostrider (Raptoreum) algorithm support, TeamRed updated",
        "1.7.11 - UnstableBind, change the URL in FAQ/Troubleshooting guide to github",
        "1.7.12 - UnstableBind, Fix Updater on Linux, Fix annoucement fetching the wrong branch",
-       "1.8.0 - UnstableBind, SSL Pools for NiceHash, 3 new debug options such as switching branch, legacy security connections."
+       "1.8.0 - UnstableBind, SSL Pools for NiceHash, 3 new debug options such as switching branch, legacy security connections.",
+       "1.8.1 - UnstableBind, Hotfix No.1"
     ],
     "force": true,
     "next_version": "1.6.0",

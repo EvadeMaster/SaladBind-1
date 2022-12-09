@@ -301,7 +301,7 @@ async function debugMenu(){
 	const prompt = await inquirer.prompt([{
 		type: 'list',
 		name: "settings",
-		message: chalk.bold.cyan(`Debug Settings - https://github.com/EvadeMaster/UnstableBind/wiki/Settings`),
+		message: chalk.bold.cyan(`Debug Settings`),
 		choices: [{
 				name: `Bypass GPU Checks ${configData.bypassGPUChecks ? chalk.green("(Enabled)") : chalk.redBright("(Disabled)")}`,
 				value: "bypass"
@@ -357,7 +357,7 @@ id (prohashing id): ${configData.id}
 minerId: ${configData.minerId}}
 
 
-debugWarning: ${configData.debugWarning}
+debugWarning: ${configData.debugWarning ? chalk.green("(Bypassed)") : chalk.redBright("(Not bypassed)")}
 isDev: ${isDev ? chalk.redBright("dev") : chalk.green("Vanilla")}
 SecProtocol: ${SecProtocol ? chalk.yellowBright("pools.json") : chalk.green("pools-v2.json")}
 bypassGPUChecks: ${configData.bypassGPUChecks ? chalk.green("(Bypassed)") : chalk.redBright("(Disabled)")}
