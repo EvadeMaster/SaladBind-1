@@ -18,8 +18,10 @@ const { spawn, execSync } = require("child_process");
 const presence = require('./presence');
 const cache = require("./getMachine.js"); // wtf how is this cache haha
 let spinner;
-let isDev = config.dev != undefined && config.dev == true;
 let lastMiner = {}
+
+let isDev = config.dev != undefined && config.dev == true;
+let SecProtocol = config.secprotocol != undefined && config.secprotocol == true;
 
 function moveDupeFolder(folderName) {
 	let folderData = fs.readdirSync(`${dataDirectory}/temp/${folderName}`)
@@ -296,7 +298,7 @@ async function selectPool(minerData, algo) {
 	console.log(chalk.bold.cyan(`Configure your miner`))
 	presence.configuring("Selecting pool");
 	spinner = ora("Loading pool list").start();
-	fetch(`https://raw.githubusercontent.com/EvadeMaster/UnstableBind/${isDev ? "dev" : "Vanilla"}/internal/pools.json`)
+	fetch(`https://raw.githubusercontent.com/EvadeMaster/UnstableBind/${isDev ? "dev" : "Vanilla"}/internal/${SecProtocol ? "pools.json" : "pools-v2.json"}`)
 		.then(res => res.json())
 		.then(async poolData => {
 				spinner.stop();

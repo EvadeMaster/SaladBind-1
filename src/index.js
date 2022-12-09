@@ -70,6 +70,10 @@ const presence = require("./presence.js");
 const { configFile, dataDirectory, saladbind_directory, run} = require("./setup");
 const envPaths = require('env-paths');
 
+let rawdata = fs.readFileSync(configFile);
+const config = JSON.parse(rawdata);
+let isDev = config.dev != undefined && config.dev == true;
+
 function getDebugData() {
 	function safelyReadAndParseFile(name) {
 		let data;
@@ -213,7 +217,7 @@ if (fs.existsSync(`${dataDirectory}/last.json`)){
 		case 'changes':
 			presence.configuring("Reading the changelog")
 			spinner = ora('Fetching the Changelogs').start();
-			fetch('https://raw.githubusercontent.com/EvadeMaster/UnstableBind/Vanilla/internal/changelog.json')
+			fetch(`https://raw.githubusercontent.com/EvadeMaster/UnstableBind/${isDev ? "dev" : "Vanilla"}/internal/changelog.json`)
 				.then(res => res.json())
 				.then(data => {
 					console.clear();
@@ -234,7 +238,7 @@ if (fs.existsSync(`${dataDirectory}/last.json`)){
 		case 'annoucement':
 			presence.configuring("Reading the annoucement")
 			spinner = ora('Fetching the Annoucement').start();
-			fetch(`https://raw.githubusercontent.com/EvadeMaster/UnstableBind/Vanilla/internal/announcement.json`)
+			fetch(`https://raw.githubusercontent.com/EvadeMaster/UnstableBind/${isDev ? "dev" : "Vanilla"}/internal/announcement.json`)
 				.then(res => res.json())
 				.then(data => {
 					console.clear();
