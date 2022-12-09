@@ -1,13 +1,8 @@
 ## ⚠️ Notice
 ### When will UnstableBind reach end-of-life?
-UnstableBind will reach a maturity state and will be archived on January 1st, 2023.
-
-
-### SaladBind Wiki is revived for historical purposes under CC-BY-SA 4.0 (same as WikiLit)
+UnstableBind will be archived on January 1st, 2023.
 
 ***This application is retired and not affiliated with Salad Technologies.***
-
-This repo will occasionally receive updates to the list of miners so they aren't too out-of-date. **You can do this yourself, too. Just go to /internal/miners.json, update the download link and variable "version" for the miner you want to update and submit a pull request. I will probably approve it within the day.**
 
 Support for this software is virtually non-existant at this point. You can use '-d' as a command line argument to debug independently.
 
