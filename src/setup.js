@@ -100,12 +100,11 @@ async function miner(){
 		name: "useapi",
 		message: "How would you like to provide your mining details?",
 		choices: [{
+			name: `Automatic ${chalk.yellow("(Get with Salad Auth token)")}`,
+			value: "api"
+			}, {
 				name: `Automatic ${chalk.yellow("(Read from Salad logs)")}`,
 				value: "auto"
-			},
-			{
-				name: `Automatic ${chalk.yellow("(Get with Salad Auth token)")}`,
-				value: "api"
 			}, {
 				name: `Manual ${chalk.yellow("(Input worker ID manually)")}`,
 				value: "manual"
