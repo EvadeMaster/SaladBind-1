@@ -22,11 +22,10 @@ async function doTheStuff(){
     miners.algos.autolykos2 = ergDag;
     console.log(`
 Algorithm overview:
-    Ethash      will work when VRAM is higher than   ${ethDag}
-    Etchash     will work when VRAM is higher than   ${etcDag}
-    Kawpow      will work when VRAM is higher than   ${rvnDag}
-    Autolykos2  will work when VRAM is higher than   ${ergDag}
-Please check if the result
+    Ethash (EthPoW)     will work when VRAM is higher than   ${ethDag}
+    Etchash             will work when VRAM is higher than   ${etcDag}
+    Kawpow              will work when VRAM is higher than   ${rvnDag}
+    Autolykos2          will work when VRAM is higher than   ${ergDag}
     `)
     fs.writeFileSync("./internal/miners.json", JSON.stringify(miners, null, 4));
     console.log(`
