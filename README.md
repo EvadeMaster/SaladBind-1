@@ -47,7 +47,9 @@ If you need support, see the [SaladBind FAQ](https://github.com/EvadeMaster/Unst
 ## Operating System requirement
 <details>
 <summary>Operating System</summary>
-
+ 
+> 64-bits only
+ 
 * Windows
   * Windows 7
   * Windows 8 & 8.1 (excluding Windows 8 RT & Windows 8.1 RT)
@@ -58,7 +60,7 @@ If you need support, see the [SaladBind FAQ](https://github.com/EvadeMaster/Unst
   * Windows Server 2022
   
 * Linux
-  * Any Linux distribution
+  * Any Linux distribution with support
 
 * macOS
   * macOS 13 Ventura
