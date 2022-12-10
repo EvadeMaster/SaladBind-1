@@ -1,5 +1,5 @@
 {
-    "version": "1.8.1",
+    "version": "1.8.2",
     "changelog": [
         "1.7.8: Updated miners",
 	"1.7.8.1: Forked project and updated miners again",
@@ -12,7 +12,7 @@
        "1.8.1 - UnstableBind, Hotfix No.1",
        "1.8.2 - UnstableBind, macOS ARM64 partial support (let the program run through Rosetta, but run the miner natively)"
     ],
-    "force": true,
+    "force": false,
     "next_version": "1.6.0",
     "next_changelog": [
         "New settings menu",
