@@ -17,6 +17,7 @@ const config = JSON.parse(rawdata);
 const { spawn, execSync } = require("child_process");
 const presence = require('./presence');
 const cache = require("./getMachine.js"); // wtf how is this cache haha
+const { arch } = require('os');
 let spinner;
 let lastMiner = {}
 
@@ -133,6 +134,7 @@ async function continueMiner() {
 			let temp2 = systemCache.graphics
 			let userPlatform = temp.platform;
 			if(userPlatform == "Windows") userPlatform = "win32";
+			if(userPlatform == "darwin" && si.os(arch) == "arm64") userPlatform = "darwin-arm";
 			let GPUs = [];
 			for (let i = 0; i < temp2.controllers.length; i++) {
 				let compatibleAlgos = []

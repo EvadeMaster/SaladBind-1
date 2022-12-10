@@ -354,7 +354,7 @@ SaladBind version: ${packageJson.version}
 
 
 id (prohashing id): ${configData.id}
-minerId: ${configData.minerId}}
+minerId: ${configData.minerId}
 
 
 debugWarning: ${configData.debugWarning ? chalk.green("(Bypassed)") : chalk.redBright("(Not bypassed)")}
