@@ -44,6 +44,33 @@ If you need support, see the [SaladBind FAQ](https://github.com/EvadeMaster/Unst
 - Save your advanced miner arguments
 - Immediately restart mining with old settings using a command line argument.
 
+## Operating System requirement
+<details>
+<summary>Operating System</summary>
+
+* Windows
+  * Windows 7
+  * Windows 8 & 8.1 (excluding Windows 8 RT & Windows 8.1 RT)
+  * Windows 10 & 11
+  * Windows Server 2012 R2
+  * Windows Server 2016
+  * Windows Server 2019
+  * Windows Server 2022
+  
+* Linux
+  * Any Linux distribution
+
+* macOS
+  * macOS 13 Ventura
+  * macOS 12 Monterey
+  * macOS 11 Big Sur
+  * macOS 10.15 Catalina
+  * macOS 10.14 Mojave
+  * macOS 10.13 High Sierra
+
+</details>
+
+
 ## Installation
 
 If my pre-compiled exe's don't work for whatever reason, compile the repo yourself.
