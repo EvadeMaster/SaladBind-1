@@ -134,7 +134,7 @@ async function continueMiner() {
 			let temp2 = systemCache.graphics
 			let userPlatform = temp.platform;
 			if(userPlatform == "Windows") userPlatform = "win32";
-			if(userPlatform == "darwin" && si.os(arch) == "arm64") userPlatform = "darwin-arm";
+			if(userPlatform == "darwin" && si.os(arch) == "arm64") userPlatform = "darwin-arm64";
 			let GPUs = [];
 			for (let i = 0; i < temp2.controllers.length; i++) {
 				let compatibleAlgos = []
