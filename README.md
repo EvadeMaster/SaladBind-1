@@ -1,22 +1,16 @@
-## ⚠️ Notice
-### When will UnstableBind reach end-of-life?
-UnstableBind will be archived on January 1st, 2023.
+# SaladBind
+
+<a href="https://gitmoji.dev">
+  <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
+</a>
 
 ***This application is retired and not affiliated with Salad Technologies.***
 
-Support for this software is virtually non-existant at this point. You can use '-d' as a command line argument to debug independently.
-
-*I* did **not** create this application, do not contact me for support (besides making minor tweaks)!
-
 The little support there is can be found at the [FAQ](https://github.com/EvadeMaster/UnstableBind/wiki/FAQ).
 
-# SaladBind
-
-#### This branch is Short-Term-Support (Maintanances, Pools, Miners, Support Services) until January 1st 2023
+#### This branch is Active (Features, Maintanances, Pools, Miners, Support Services) until January 1st 2023 then LTS
 
 If you want to contribute to UnstableBind, please read the [contributing guide](https://github.com/EvadeMaster/UnstableBind/wiki/Contributing). Do **NOT** make your own UnstableBind version unless you have a good reason to!
-
-SaladBind & UnstableBind is pretty much abandoned, nobody really works on it.
 
 ## Table of Contents
 
@@ -25,8 +19,6 @@ SaladBind & UnstableBind is pretty much abandoned, nobody really works on it.
 [Configuration](#Configuration) <br>
 [Miner Setup Guide](#Miner-Setup-Guide) <br>
 [Compiling](#Compiling)
-
-SaladBind is no longer made by LIT Devs, or associated with LIT Devs. Don't bother them about it, this is a fork by a 3rd party.
 
 If you need support, see the [SaladBind FAQ](https://github.com/EvadeMaster/UnstableBind/wiki/FAQ).
 
