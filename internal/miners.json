@@ -148,7 +148,8 @@
             "supported_os": [
                 "win32",
                 "linux",
-                "darwin"
+                "darwin",
+                "darwin-arm64"
             ],
             "fee": 1,
             "version": "6.18.1",
