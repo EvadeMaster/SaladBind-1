@@ -4,6 +4,10 @@
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
 </a>
 
+## ⚠️ Notice
+### When will UnstableBind reach end-of-life?
+UnstableBind will not be archiving anytime soon! This program will be active in development until Jan 1st 2023, After Jan 1st 2023, the branch will enter LTS or Long-Term-Support phase where I will continue to update the program without adding new features (only bug fixes or critical security fixes)
+
 ***This application is retired and not affiliated with Salad Technologies.***
 
 The little support there is can be found at the [FAQ](https://github.com/EvadeMaster/UnstableBind/wiki/FAQ).
