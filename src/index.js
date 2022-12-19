@@ -219,20 +219,39 @@ if (fs.existsSync(`${dataDirectory}/last.json`)){
 			spinner = ora('Fetching the Changelogs').start();
 			fetch(`https://raw.githubusercontent.com/EvadeMaster/UnstableBind/${isDev ? "dev" : "Vanilla"}/internal/changelog.json`)
 				.then(res => res.json())
-				.then(data => {
+				.then(async data => {
 					console.clear();
-					spinner.succeed(chalk.bold.green(`What's new in the latest update - ${data.version}`));
-					data.changelog.forEach(item => {
+					spinner.succeed(chalk.bold.green(`What's new in the latest update - ${data.version}!`));
+					data.next_changelog.forEach(item => {
 						console.log(`- ${item}`)
 					});
 					console.log();
-					inquirer.prompt({
-						type: 'input',
-						name: 'backtomenu',
-						message: 'Press ENTER to return to the menu.'
-					}).then(function() {
-						menu();
+					const questions = await inquirer.prompt({
+						type: 'list',
+						name: 'menu',
+						message: 'What would you like to do?',
+						choices: [{
+							name: 'Past Changelog',
+							value: 'past'
+						},
+						{
+							name: `Go Back`,
+							value: 'back'
+						}]
 					});
+					if (questions.menu == 'past') {
+						console.log(chalk.bold.green(`What's new in the past update!`))
+						data.changelog.forEach(item => {
+							console.log(`- ${item}`)
+						});
+						inquirer.prompt({
+							type: 'input',
+							name: 'backtomenu',
+							message: 'Press ENTER to return to the menu.'
+						}).then(async function() {
+							menu();
+						});
+					} else {menu()}
 				})
 			break;
 		case 'annoucement':

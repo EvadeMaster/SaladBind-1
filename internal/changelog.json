@@ -1,23 +1,29 @@
 {
-    "version": "1.8.2",
+    "version": "1.8.3",
     "changelog": [
-        "1.7.8: Updated miners",
-	"1.7.8.1: Forked project and updated miners again",
-	"1.7.8.2: NiceHash hostnames fixed, broken links changed/removed",
 	   "1.7.9: lolMiner configuration improved, added FAQ/Troubleshooting guide, updated miners (TeamRed, lolM, XMR)",
 	   "1.7.10 - Ethash Post-Mortem: Announcements feature, Ghostrider (Raptoreum) algorithm support, TeamRed updated",
        "1.7.11 - UnstableBind, change the URL in FAQ/Troubleshooting guide to github",
        "1.7.12 - UnstableBind, Fix Updater on Linux, Fix annoucement fetching the wrong branch",
        "1.8.0 - UnstableBind, SSL Pools for NiceHash, 3 new debug options such as switching branch, legacy security connections.",
        "1.8.1 - UnstableBind, Hotfix No.1",
-       "1.8.2 - UnstableBind, macOS ARM64 partial support (let the program run through Rosetta, but run the miner natively)"
+       "1.8.2 - UnstableBind, macOS ARM64 partial support (let the program run through Rosetta, but run the miner natively)",
+       "1.8.3-beta.1 - UnstableBind, Merge announcement with changelog by changing next-changelog value"
     ],
     "force": false,
-    "next_version": "1.6.0",
+    "next_version": "1.8.3",
     "next_changelog": [
-        "New settings menu",
-        "Quickly start mining with last settings",
-        "Big improvements to the error handler",
-        "Checking if Salad is already running before starting the miner"
+        "🔖 UnstableBind - 1.8.3",
+        "Experiments No.4 enabled!",
+        "",
+        "",
+        "🧪 Active Experiments",
+        "",
+        "Experiments No.4",
+        "🔁 Merge announcement with changelog",
+        "Merge announcement with changelog by changing next-changelog value",
+        "",
+        "📝 Written by EvadeMaster, Repository maintained by EvadeMaster",
+        "Branch: dev"
     ]
 }
