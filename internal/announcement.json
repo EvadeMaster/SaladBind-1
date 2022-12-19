@@ -1,9 +1,9 @@
 {
-    "number": "No.8 (rev 1) - UnstableBind",
+    "number": "No.9 (rev 1) - UnstableBind",
     "announcement": [
-        "🔖 UnstableBind - 1.8.3",
-        "Experiments No.4 enabled!",
-        "",
+        "🔖 UnstableBind - 1.8.3-beta.2",
+        "✨ Add a way to distinguish StableBind & UnstableBind build",
+        "🔥 Remove Announcement feature, use the new changelog instead",
         "",
         "🧪 Active Experiments",
         "",
