@@ -13,6 +13,8 @@ UnstableBind will not be archiving anytime soon! This program will be active in 
 The little support there is can be found at the [FAQ](https://github.com/EvadeMaster/UnstableBind/wiki/FAQ).
 
 #### This branch is Active (Features, Maintanances, Pools, Miners, Support Services) until January 1st 2023 then LTS
+- Latest stable version: <img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/EvadeMaster/UnstableBind?style=flat-square">
+- Latest unstable version: <img alt="GitHub release (latest SemVer including pre-releases)" src="https://img.shields.io/github/v/release/EvadeMaster/UnstableBind?include_prereleases&style=flat-square">
 
 If you want to contribute to UnstableBind, please read the [contributing guide](https://github.com/EvadeMaster/UnstableBind/wiki/Contributing). Do **NOT** make your own UnstableBind version unless you have a good reason to!
 
