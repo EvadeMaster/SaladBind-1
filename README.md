@@ -50,24 +50,22 @@ If you need support, see the [SaladBind FAQ](https://github.com/EvadeMaster/Unst
  > macOS: Compatible with ARM64 or 64-bits
  
 * Windows
-  * Windows 7
-  * Windows 8 & 8.1 (excluding Windows 8 RT & Windows 8.1 RT)
-  * Windows 10 & 11
-  * Windows Server 2012 R2
-  * Windows Server 2016
-  * Windows Server 2019
-  * Windows Server 2022
+  * ⚠️ Windows 7, Support dropped
+  * ⚠️ Windows 8 & 8.1 (excluding Windows 8 RT & Windows 8.1 RT), Support will end in January 2023
+  * ✅ Windows 10 & 11
+  * ⚠️ Windows Server 2012 R2, Support will end in October 2023
+  * ❓ Windows Server 2016
+  * ❓ Windows Server 2019
+  * ✅ Windows Server 2022
   
 * Linux
   * Any Linux distribution with support
 
 * macOS
-  * macOS 13 Ventura
-  * macOS 12 Monterey
-  * macOS 11 Big Sur
-  * macOS 10.15 Catalina
-  * macOS 10.14 Mojave
-  * macOS 10.13 High Sierra
+  * ❓ macOS 13 Ventura
+  * ❓ macOS 12 Monterey
+  * ❓ macOS 11 Big Sur
+  * ❓ macOS 10.15 Catalina
 
 </details>
 
