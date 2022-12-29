@@ -1,12 +1,12 @@
 {
     "algos": {
-        "ethash": 5203,
+        "ethash": 5219,
         "etchash": 3156,
-        "kawpow": 3695,
+        "kawpow": 3703,
         "beamv3": 2000,
         "EQUI144_5": 2000,
-        "autolykos2": 2658,
-        "octopus": 7000,
+        "autolykos2": 2669,
+        "octopus": 7500,
         "randomx": null,
         "ghostrider": null
     },
@@ -76,8 +76,8 @@
         "teamredminer": {
             "miner": "TeamRedMiner",
             "download": {
-                "win32": "https://github.com/todxx/teamredminer/releases/download/v0.10.6/teamredminer-v0.10.6-win.zip",
-                "linux": "https://github.com/todxx/teamredminer/releases/download/v0.10.6/teamredminer-v0.10.6-linux.tgz"
+                "win32": "https://github.com/todxx/teamredminer/releases/download/v0.10.7/teamredminer-v0.10.7-win.zip",
+                "linux": "https://github.com/todxx/teamredminer/releases/download/v0.10.7/teamredminer-v0.10.7-linux.tgz"
             },
             "algos": [
                 "ethash",
@@ -92,7 +92,7 @@
                 "linux"
             ],
             "fee": 2,
-            "version": "v0.10.6",
+            "version": "v0.10.7",
             "parameters": {
                 "fileName": "teamredminer",
                 "algo": "-a",
@@ -104,8 +104,8 @@
         "lolminer": {
             "miner": "lolMiner",
             "download": {
-                "win32": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.64/lolMiner_v1.64_Win64.zip",
-                "linux": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.64/lolMiner_v1.64_Lin64.tar.gz"
+                "win32": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.65/lolMiner_v1.65_Win64.zip",
+                "linux": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.65/lolMiner_v1.65_Lin64.tar.gz"
             },
             "algos": [
                 "ethash",
@@ -122,7 +122,7 @@
                 "linux"
             ],
             "fee": 1,
-            "version": "1.64",
+            "version": "1.65",
             "parameters": {
                 "fileName": "lolMiner",
                 "algo": "--algo",
@@ -137,7 +137,7 @@
                 "win32": "https://github.com/xmrig/xmrig/releases/download/v6.18.1/xmrig-6.18.1-gcc-win64.zip",
                 "linux": "https://github.com/xmrig/xmrig/releases/download/v6.18.1/xmrig-6.18.1-linux-x64.tar.gz",
                 "darwin": "https://github.com/xmrig/xmrig/releases/download/v6.18.1/xmrig-6.18.1-macos-x64.tar.gz",
-                "darwin-arm64": "https://github.com/xmrig/xmrig/releases/download/v6.18.1/xmrig-6.18.1-macos-x64.tar.gz"
+                "darwin-arm64": "https://github.com/xmrig/xmrig/releases/download/v6.18.1/xmrig-6.18.1-macos-arm64.tar.gz"
             },
             "algos": [
                 "randomx",
