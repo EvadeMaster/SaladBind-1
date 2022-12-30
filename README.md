@@ -4,11 +4,17 @@
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
 </a>
 
+## ⚠️ Notice
+### When will UnstableBind reach end-of-life?
+UnstableBind will not be archiving anytime soon! This program will be active in development until Jan 1st 2023, After Jan 1st 2023, the branch will enter LTS or Long-Term-Support phase where I will continue to update the program without adding new features (only bug fixes or critical security fixes)
+
 ***This application is retired and not affiliated with Salad Technologies.***
 
 The little support there is can be found at the [FAQ](https://github.com/EvadeMaster/UnstableBind/wiki/FAQ).
 
 #### This branch is Active (Features, Maintanances, Pools, Miners, Support Services) until January 1st 2023 then LTS
+- Latest stable version: <img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/EvadeMaster/UnstableBind?style=flat-square">
+- Latest unstable version: <img alt="GitHub release (latest SemVer including pre-releases)" src="https://img.shields.io/github/v/release/EvadeMaster/UnstableBind?include_prereleases&style=flat-square">
 
 If you want to contribute to UnstableBind, please read the [contributing guide](https://github.com/EvadeMaster/UnstableBind/wiki/Contributing). Do **NOT** make your own UnstableBind version unless you have a good reason to!
 
@@ -44,24 +50,22 @@ If you need support, see the [SaladBind FAQ](https://github.com/EvadeMaster/Unst
  > macOS: Compatible with ARM64 or 64-bits
  
 * Windows
-  * Windows 7
-  * Windows 8 & 8.1 (excluding Windows 8 RT & Windows 8.1 RT)
-  * Windows 10 & 11
-  * Windows Server 2012 R2
-  * Windows Server 2016
-  * Windows Server 2019
-  * Windows Server 2022
+  * ⚠️ Windows 7, Support dropped
+  * ⚠️ Windows 8 & 8.1 (excluding Windows 8 RT & Windows 8.1 RT), Support will end in January 2023
+  * ✅ Windows 10 & 11
+  * ⚠️ Windows Server 2012 R2, Support will end in October 2023
+  * ❓ Windows Server 2016
+  * ✅ Windows Server 2019
+  * ✅ Windows Server 2022
   
 * Linux
   * Any Linux distribution with support
 
 * macOS
-  * macOS 13 Ventura
-  * macOS 12 Monterey
-  * macOS 11 Big Sur
-  * macOS 10.15 Catalina
-  * macOS 10.14 Mojave
-  * macOS 10.13 High Sierra
+  * ✅ macOS 13 Ventura
+  * ✅ macOS 12 Monterey
+  * ❓ macOS 11 Big Sur
+  * ❓ macOS 10.15 Catalina
 
 </details>
 
