@@ -1,6 +1,8 @@
 {
-    "number": "No.7 (rev 1) - UnstableBind",
+    "number": "No.7 (rev 2) - UnstableBind",
     "announcement": [
+        "🔥 Happy New Year! (2023)",
+        "",
         "🔖 StableBind - 1.8.2",
         "macOS ARM64 partial support (let the program run through Rosetta, but run the miner natively)",
         "",
