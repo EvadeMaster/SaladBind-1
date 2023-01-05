@@ -6,15 +6,6 @@
         "🔖 StableBind - 1.8.2",
         "macOS ARM64 partial support (let the program run through Rosetta, but run the miner natively)",
         "",
-        "🔖 StableBind - 1.8.1",
-        "Hotfixes",
-        "",
-        "🔖 StableBind - 1.8.0",
-        "Switched to SSL connections for NiceHash pools. (not yet for Prohashing pools)",
-        "Added 3 new debug options. (Security protocol, UnstableBind Branch, Overview)",
-        "Re-enabled Discord RPC.",
-        "Better distinguish between SaladBind and UnstableBind/StableBind",
-        "",
         "📝 Written by EvadeMaster, Repository maintained by EvadeMaster",
         "Branch: Vanilla (Active)"
     ]
