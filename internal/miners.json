@@ -1,14 +1,15 @@
 {
     "algos": {
-        "etchash": 3164,
-        "kawpow": 3711,
+        "etchash": 3172,
+        "kawpow": 3727,
         "beamv3": 2000,
         "EQUI144_5": 2000,
-        "autolykos2": 2679,
+        "autolykos2": 2689,
         "octopus": 7500,
         "kaspa": 1000,
         "randomx": null,
-        "ghostrider": null
+        "ghostrider": null,
+        "ethash": 2147483647
     },
     "miners": {
         "trex": {
