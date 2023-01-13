@@ -1,14 +1,14 @@
 {
-    "number": "No.7 (rev 2) - UnstableBind",
+    "number": "No.8 - UnstableBind",
     "announcement": [
         "🔥 Happy New Year! (2023)",
         "",
-        "🔧 New Algorithm has been added! Kaspa! Kaspa is an algorithm for low-end GPU (1gb of VRAM)",
+        "⚠️ Branch switching is temporary disabled!",
         "",
-        "🔖 StableBind - 1.8.2",
-        "macOS ARM64 partial support (let the program run through Rosetta, but run the miner natively)",
+        "🔖 StableBind - 1.8.3",
+        "🔧 Fix SaladBind being unable to open first-start because the program was trying to access a folder that doesn't exist >:(((",
         "",
         "📝 Written by EvadeMaster, Repository maintained by EvadeMaster",
-        "Branch: Vanilla (Active)"
+        "Branch: Vanilla (Long-Terms Support)"
     ]
 }

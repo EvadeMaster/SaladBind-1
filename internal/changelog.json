@@ -1,5 +1,5 @@
 {
-    "version": "1.8.2",
+    "version": "1.8.3",
     "changelog": [
         "1.7.8: Updated miners",
 	"1.7.8.1: Forked project and updated miners again",
@@ -10,7 +10,8 @@
        "1.7.12 - UnstableBind, Fix Updater on Linux, Fix annoucement fetching the wrong branch",
        "1.8.0 - UnstableBind, SSL Pools for NiceHash, 3 new debug options such as switching branch, legacy security connections.",
        "1.8.1 - UnstableBind, Hotfix No.1",
-       "1.8.2 - UnstableBind, macOS ARM64 partial support (let the program run through Rosetta, but run the miner natively)"
+       "1.8.2 - UnstableBind, macOS ARM64 partial support (let the program run through Rosetta, but run the miner natively)",
+       "1.8.3 - UnstableBind, Temporary disable branch switching"
     ],
     "force": false,
     "next_version": "1.6.0",

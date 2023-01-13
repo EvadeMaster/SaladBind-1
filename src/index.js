@@ -70,9 +70,12 @@ const presence = require("./presence.js");
 const { configFile, dataDirectory, saladbind_directory, run} = require("./setup");
 const envPaths = require('env-paths');
 
-let rawdata = fs.readFileSync(configFile);
-const config = JSON.parse(rawdata);
-let isDev = config.dev != undefined && config.dev == true;
+try {
+	let rawdata = fs.readFileSync(configFile);
+	const config = JSON.parse(rawdata);
+	let isDev = config.dev != undefined && config.dev == true;
+} catch {}
+
 
 function getDebugData() {
 	function safelyReadAndParseFile(name) {
