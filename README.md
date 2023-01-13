@@ -45,6 +45,7 @@ If you need support, see the [SaladBind FAQ](https://github.com/EvadeMaster/Unst
 ## Operating System requirement
 <details>
 <summary>Operating System</summary>
+
  > Windows: Compatible with 64-bits
  > Linux: Compatible with 64-bits
  > macOS: Compatible with ARM64 or 64-bits
