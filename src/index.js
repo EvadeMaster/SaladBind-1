@@ -70,11 +70,12 @@ const presence = require("./presence.js");
 const { configFile, dataDirectory, saladbind_directory, run} = require("./setup");
 const envPaths = require('env-paths');
 
-try {
-	let rawdata = fs.readFileSync(configFile);
-	const config = JSON.parse(rawdata);
-	let isDev = config.dev != undefined && config.dev == true;
-} catch {}
+buildid = "StableBind"
+if (packageJson.version !== "beta") {
+	buildid = "UnstableBind"
+}
+
+isDev = false
 
 
 function getDebugData() {
@@ -148,7 +149,7 @@ if(process.argv[process.argv.length-1] == "-l") {
 console.clear();
 
 const aprilfools = new Date().getMonth() == 3 && new Date().getDate() == 1;
-process.title = `${aprilfools ? "VegetableJoiner" : "SaladBind (StableBind)"} v${packageJson.version}`;
+process.title = `${aprilfools ? "VegetableJoiner" : `SaladBind (${buildid})`} v${packageJson.version}`;
 
 (async() => {
 	update.updateCheck.then(() => {
@@ -166,15 +167,11 @@ async function menu(clear) {
 		console.clear();
 	}
 	presence.mainmenu();
-	console.log(chalk.bold.green(`${aprilfools ? "VegetableJoiner" : "SaladBind (StableBind)"} v${packageJson.version}\n`));
+	console.log(chalk.bold.green(`${aprilfools ? "VegetableJoiner" : `SaladBind (${buildid})`} v${packageJson.version}\n`));
 	console.log("Please note that there is absolutely no support for SaladBind from anyone, if you have a problem fix it yourself or cry.")
 	let choices = [{
 		name: 'Start mining',
 		value: 'mining'
-	},
-	{
-		name: `Annoucement`,
-		value: 'annoucement'
 	},
 	{
 		name: 'Settings',
@@ -221,35 +218,32 @@ if (fs.existsSync(`${dataDirectory}/last.json`)){
 			presence.configuring("Reading the changelog")
 			spinner = ora('Fetching the Changelogs').start();
 			fetch(`https://raw.githubusercontent.com/EvadeMaster/UnstableBind/${isDev ? "dev" : "Vanilla"}/internal/changelog.json`)
-				.then(res => res.json())
-				.then(data => {
-					console.clear();
-					spinner.succeed(chalk.bold.green(`What's new in the latest update - ${data.version}`));
+			.then(res => res.json())
+			.then(async data => {
+				console.clear();
+				spinner.succeed(chalk.bold.green(`What's new in the latest update - ${data.version}!`));
+				data.next_changelog.forEach(item => {
+					console.log(`- ${item}`)
+				});
+				console.log();
+				const questions = await inquirer.prompt({
+					type: 'list',
+					name: 'menu',
+					message: 'What would you like to do?',
+					choices: [{
+						name: 'Past Changelog',
+						value: 'past'
+					},
+					{
+						name: `Go Back`,
+						value: 'back'
+					}]
+				});
+				if (questions.menu == 'past') {
+					console.log(chalk.bold.green(`What's new in the past update!`))
 					data.changelog.forEach(item => {
 						console.log(`- ${item}`)
 					});
-					console.log();
-					inquirer.prompt({
-						type: 'input',
-						name: 'backtomenu',
-						message: 'Press ENTER to return to the menu.'
-					}).then(function() {
-						menu();
-					});
-				})
-			break;
-		case 'annoucement':
-			presence.configuring("Reading the annoucement")
-			spinner = ora('Fetching the Annoucement').start();
-			fetch(`https://raw.githubusercontent.com/EvadeMaster/UnstableBind/${isDev ? "dev" : "Vanilla"}/internal/announcement.json`)
-				.then(res => res.json())
-				.then(data => {
-					console.clear();
-					spinner.succeed(chalk.bold.green(`Annoucement - ${data.number}`));
-					data.announcement.forEach(item => {
-						console.log(`- ${item}`)
-					});
-					console.log();
 					inquirer.prompt({
 						type: 'input',
 						name: 'backtomenu',
@@ -257,8 +251,9 @@ if (fs.existsSync(`${dataDirectory}/last.json`)){
 					}).then(async function() {
 						menu();
 					});
-				})
-			break;
+				} else {menu()}
+			})
+		break;
 		case 'help':
 			let temp = await si.osInfo()
 			if (temp.platform == "linux") {
@@ -268,7 +263,7 @@ if (fs.existsSync(`${dataDirectory}/last.json`)){
 				console.log("\nOpened the SaladBind troubleshooting page in your browser!");
 			}
 			setTimeout(() => {
-				process.title = `${aprilfools ? "VegetableJoiner" : "SaladBind (StableBind)"} v${packageJson.version}`; // very lazy solution, I know.
+				process.title = `${aprilfools ? "VegetableJoiner" : `SaladBind (${buildid})`} v${packageJson.version}`; // very lazy solution, I know.
 				menu();
 			}, 3500);
 			break;

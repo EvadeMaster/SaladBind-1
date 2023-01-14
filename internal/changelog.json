@@ -1,24 +1,29 @@
 {
-    "version": "1.8.3",
+    "version": "1.8.4",
     "changelog": [
         "1.7.8: Updated miners",
 	"1.7.8.1: Forked project and updated miners again",
 	"1.7.8.2: NiceHash hostnames fixed, broken links changed/removed",
 	   "1.7.9: lolMiner configuration improved, added FAQ/Troubleshooting guide, updated miners (TeamRed, lolM, XMR)",
 	   "1.7.10 - Ethash Post-Mortem: Announcements feature, Ghostrider (Raptoreum) algorithm support, TeamRed updated",
-       "1.7.11 - UnstableBind, change the URL in FAQ/Troubleshooting guide to github",
-       "1.7.12 - UnstableBind, Fix Updater on Linux, Fix annoucement fetching the wrong branch",
-       "1.8.0 - UnstableBind, SSL Pools for NiceHash, 3 new debug options such as switching branch, legacy security connections.",
-       "1.8.1 - UnstableBind, Hotfix No.1",
-       "1.8.2 - UnstableBind, macOS ARM64 partial support (let the program run through Rosetta, but run the miner natively)",
-       "1.8.3 - UnstableBind, Temporary disable branch switching"
+       "1.7.11 - StableBind, change the URL in FAQ/Troubleshooting guide to github",
+       "1.7.12 - StableBind, Fix Updater on Linux, Fix annoucement fetching the wrong branch",
+       "1.8.0 - StableBind, SSL Pools for NiceHash, 3 new debug options such as switching branch, legacy security connections.",
+       "1.8.1 - StableBind, Hotfix No.1",
+       "1.8.2 - StableBind, macOS ARM64 partial support (let the program run through Rosetta, but run the miner natively)",
+       "1.8.3 - StableBind, Temporary disable branch switching",
+       "1.8.4 - StableBind, Merge annoucement with changelog"
     ],
     "force": false,
-    "next_version": "1.6.0",
+    "next_version": "1.8.4",
     "next_changelog": [
-        "New settings menu",
-        "Quickly start mining with last settings",
-        "Big improvements to the error handler",
-        "Checking if Salad is already running before starting the miner"
+        "🔖 StableBind - 1.8.4",
+        "",
+        "✨ Added a way to distinguish UnstableBind and StableBind!",
+        "🔁 Merge announcement with changelog!",
+        "🔥 Announcements feature have been deprecated!",
+        "",
+        "📝 Written by EvadeMaster, Repository maintained by EvadeMaster",
+        "Branch: Vanilla"
     ]
 }
