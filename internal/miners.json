@@ -83,8 +83,7 @@
             "algos": [
                 "ethash",
                 "etchash",
-                "kawpow",
-                "kaspa"
+                "kawpow"
             ],
             "supported_gpus": [
                 "amd"
