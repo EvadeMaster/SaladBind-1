@@ -13,6 +13,7 @@ UnstableBind has reached LTS or Long-Term Support! Don't worry about new feature
 The little support there is can be found at the [FAQ](https://github.com/EvadeMaster/UnstableBind/wiki/FAQ).
 
 #### This branch is LTS (Maintanances, Pools, Miners, Support Services) until January 1st 2024
+
 - Latest stable version: <img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/EvadeMaster/UnstableBind?style=flat-square">
 - Latest unstable version: <img alt="GitHub release (latest SemVer including pre-releases)" src="https://img.shields.io/github/v/release/EvadeMaster/UnstableBind?include_prereleases&style=flat-square">
 
