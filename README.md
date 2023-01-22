@@ -6,13 +6,14 @@
 
 ## ⚠️ Notice
 ### When will UnstableBind reach end-of-life?
-UnstableBind will not be archiving anytime soon! This program will be active in development until Jan 1st 2023, After Jan 1st 2023, the branch will enter LTS or Long-Term-Support phase where I will continue to update the program without adding new features (only bug fixes or critical security fixes)
+UnstableBind has reached LTS or Long-Term Support! Don't worry about new features not added anymore, although development of new features are less frequent and more heavily tested before releasing, unless they're bug fixes which they'll released almost instantly.
 
 ***This application is retired and not affiliated with Salad Technologies.***
 
 The little support there is can be found at the [FAQ](https://github.com/EvadeMaster/UnstableBind/wiki/FAQ).
 
-#### This branch is Active (Features, Maintanances, Pools, Miners, Support Services) until January 1st 2023 then LTS
+#### This branch is LTS (Maintanances, Pools, Miners, Support Services) until January 1st 2024
+
 - Latest stable version: <img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/EvadeMaster/UnstableBind?style=flat-square">
 - Latest unstable version: <img alt="GitHub release (latest SemVer including pre-releases)" src="https://img.shields.io/github/v/release/EvadeMaster/UnstableBind?include_prereleases&style=flat-square">
 
@@ -45,21 +46,22 @@ If you need support, see the [SaladBind FAQ](https://github.com/EvadeMaster/Unst
 ## Operating System requirement
 <details>
 <summary>Operating System</summary>
+
  > Windows: Compatible with 64-bits
  > Linux: Compatible with 64-bits
  > macOS: Compatible with ARM64 or 64-bits
  
 * Windows
-  * ⚠️ Windows 7, Support dropped
-  * ⚠️ Windows 8 & 8.1 (excluding Windows 8 RT & Windows 8.1 RT), Support will end in January 2023
+  * ⚠️ Windows 7, Support dropped in January 2020
+  * ⚠️ Windows 8 & 8.1 (excluding Windows 8 RT & Windows 8.1 RT), Support dropped in January 2023
   * ✅ Windows 10 & 11
   * ⚠️ Windows Server 2012 R2, Support will end in October 2023
-  * ❓ Windows Server 2016
+  * ✅ Windows Server 2016
   * ✅ Windows Server 2019
   * ✅ Windows Server 2022
   
 * Linux
-  * Any Linux distribution with support
+  * Any Linux distribution with that's compatible with Node.js 18 or above
 
 * macOS
   * ✅ macOS 13 Ventura

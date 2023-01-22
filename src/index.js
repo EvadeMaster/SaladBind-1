@@ -70,9 +70,13 @@ const presence = require("./presence.js");
 const { configFile, dataDirectory, saladbind_directory, run} = require("./setup");
 const envPaths = require('env-paths');
 
-let rawdata = fs.readFileSync(configFile);
-const config = JSON.parse(rawdata);
-let isDev = config.dev != undefined && config.dev == true;
+buildid = "StableBind"
+if (packageJson.version !== "beta") {
+	buildid = "UnstableBind"
+}
+
+isDev = false
+
 
 buildid = "StableBind"
 if (packageJson.version !== "beta") {
@@ -219,54 +223,32 @@ if (fs.existsSync(`${dataDirectory}/last.json`)){
 			presence.configuring("Reading the changelog")
 			spinner = ora('Fetching the Changelogs').start();
 			fetch(`https://raw.githubusercontent.com/EvadeMaster/UnstableBind/${isDev ? "dev" : "Vanilla"}/internal/changelog.json`)
-				.then(res => res.json())
-				.then(async data => {
-					console.clear();
-					spinner.succeed(chalk.bold.green(`What's new in the latest update - ${data.version}!`));
-					data.next_changelog.forEach(item => {
+			.then(res => res.json())
+			.then(async data => {
+				console.clear();
+				spinner.succeed(chalk.bold.green(`What's new in the latest update - ${data.version}!`));
+				data.next_changelog.forEach(item => {
+					console.log(`- ${item}`)
+				});
+				console.log();
+				const questions = await inquirer.prompt({
+					type: 'list',
+					name: 'menu',
+					message: 'What would you like to do?',
+					choices: [{
+						name: 'Past Changelog',
+						value: 'past'
+					},
+					{
+						name: `Go Back`,
+						value: 'back'
+					}]
+				});
+				if (questions.menu == 'past') {
+					console.log(chalk.bold.green(`What's new in the past update!`))
+					data.changelog.forEach(item => {
 						console.log(`- ${item}`)
 					});
-					console.log();
-					const questions = await inquirer.prompt({
-						type: 'list',
-						name: 'menu',
-						message: 'What would you like to do?',
-						choices: [{
-							name: 'Past Changelog',
-							value: 'past'
-						},
-						{
-							name: `Go Back`,
-							value: 'back'
-						}]
-					});
-					if (questions.menu == 'past') {
-						console.log(chalk.bold.green(`What's new in the past update!`))
-						data.changelog.forEach(item => {
-							console.log(`- ${item}`)
-						});
-						inquirer.prompt({
-							type: 'input',
-							name: 'backtomenu',
-							message: 'Press ENTER to return to the menu.'
-						}).then(async function() {
-							menu();
-						});
-					} else {menu()}
-				})
-			break;
-		case 'annoucement':
-			presence.configuring("Reading the annoucement")
-			spinner = ora('Fetching the Annoucement').start();
-			fetch(`https://raw.githubusercontent.com/EvadeMaster/UnstableBind/${isDev ? "dev" : "Vanilla"}/internal/announcement.json`)
-				.then(res => res.json())
-				.then(data => {
-					console.clear();
-					spinner.succeed(chalk.bold.green(`Annoucement - ${data.number}`));
-					data.announcement.forEach(item => {
-						console.log(`- ${item}`)
-					});
-					console.log();
 					inquirer.prompt({
 						type: 'input',
 						name: 'backtomenu',
@@ -274,8 +256,9 @@ if (fs.existsSync(`${dataDirectory}/last.json`)){
 					}).then(async function() {
 						menu();
 					});
-				})
-			break;
+				} else {menu()}
+			})
+		break;
 		case 'help':
 			let temp = await si.osInfo()
 			if (temp.platform == "linux") {

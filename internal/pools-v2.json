@@ -29,6 +29,9 @@
             },
             "neoscrpyt": {
                 "host": "stratum+ssl://neoscrypt.REGION.nicehash.com:443"
+            },
+            "kaspa": {
+                "host": "stratum+ssl://kheavyhash.REGION.nicehash.com:443"
             }
         }
     },

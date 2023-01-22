@@ -1,12 +1,12 @@
 {
     "algos": {
-        "ethash": 5219,
-        "etchash": 3156,
-        "kawpow": 3703,
+        "octopus": 7500,
+        "kawpow": 3734,
+        "etchash": 3180,
+        "autolykos2": 2699,
         "beamv3": 2000,
         "EQUI144_5": 2000,
-        "autolykos2": 2669,
-        "octopus": 7500,
+        "kaspa": 1000,
         "randomx": null,
         "ghostrider": null
     },
@@ -111,7 +111,8 @@
                 "ethash",
                 "etchash",
                 "beamv3",
-                "EQUI144_5"
+                "EQUI144_5",
+                "kaspa"
             ],
             "supported_gpus": [
                 "nvidia",

@@ -1,29 +1,26 @@
 {
-    "version": "1.8.3-beta.2",
+    "version": "1.8.4",
     "changelog": [
 	   "1.7.9: lolMiner configuration improved, added FAQ/Troubleshooting guide, updated miners (TeamRed, lolM, XMR)",
 	   "1.7.10 - Ethash Post-Mortem: Announcements feature, Ghostrider (Raptoreum) algorithm support, TeamRed updated",
-       "1.7.11 - UnstableBind, change the URL in FAQ/Troubleshooting guide to github",
-       "1.7.12 - UnstableBind, Fix Updater on Linux, Fix annoucement fetching the wrong branch",
-       "1.8.0 - UnstableBind, SSL Pools for NiceHash, 3 new debug options such as switching branch, legacy security connections.",
-       "1.8.1 - UnstableBind, Hotfix No.1",
-       "1.8.2 - UnstableBind, macOS ARM64 partial support (let the program run through Rosetta, but run the miner natively)",
-       "1.8.3-beta.1 - UnstableBind, Merge announcement with changelog by changing next-changelog value",
-       "1.8.3-beta.2 - UnstableBind, distinguish between Stable and Unstable, Annoucement feature removed"
+       "1.7.11 - StableBind, change the URL in FAQ/Troubleshooting guide to github",
+       "1.7.12 - StableBind, Fix Updater on Linux, Fix annoucement fetching the wrong branch",
+       "1.8.0 - StableBind, SSL Pools for NiceHash, 3 new debug options such as switching branch, legacy security connections.",
+       "1.8.1 - StableBind, Hotfix No.1",
+       "1.8.2 - StableBind, macOS ARM64 partial support (let the program run through Rosetta, but run the miner natively)",
+       "1.8.3 - StableBind, Temporary disable branch switching",
+       "1.8.4 - StableBind, Merge annoucement with changelog"
     ],
     "force": false,
-    "next_version": "1.8.3-beta.2",
+    "next_version": "1.8.4",
     "next_changelog": [
-        "🔖 UnstableBind - 1.8.3-beta.2",
-        "✨ Add a way to distinguish StableBind & UnstableBind build",
-        "🔥 Remove Announcement feature, use the new changelog instead",
+        "🔖 StableBind - 1.8.4",
         "",
-        "🧪 Active Experiments",
+        "✨ Added a way to distinguish UnstableBind and StableBind!",
+        "🔁 Merge announcement with changelog!",
+        "🔥 Announcements feature has been deprecated!",
         "",
-        "Experiments No.4",
-        "🔁 Merge announcement with changelog",
-        "Merge announcement with changelog by changing next-changelog value",
-        "",
-        "Branch: dev"
+        "📝 Written by EvadeMaster, Repository maintained by EvadeMaster",
+        "Branch: Vanilla"
     ]
 }

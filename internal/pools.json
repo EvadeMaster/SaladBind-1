@@ -28,7 +28,10 @@
                 "host": "stratum+tcp://zelhash.REGION.nicehash.com:9200"
             },
             "neoscrpyt": {
-                "host": "stratum+tcp://neoscrypt.auto.nicehash.com:9200"
+                "host": "stratum+tcp://neoscrypt.REGION.nicehash.com:9200"
+            },
+            "kaspa": {
+                "host": "stratum+tcp://kheavyhash.REGION.nicehash.com:9200"
             }
         }
     },

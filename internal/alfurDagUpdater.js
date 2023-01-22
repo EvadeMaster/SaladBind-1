@@ -12,7 +12,8 @@ async function getDag(coin) {
 }
 
 async function doTheStuff(){
-    const ethDag = Math.round(await getDag("ETHW") * 1000);
+    //const ethDag = Math.round(await getDag("ETHW") * 1000);
+    ethDag = 2147483647;
     const etcDag = Math.round(await getDag("ETC") * 1000);
     const rvnDag = Math.round(await getDag("RVN") * 1000);
     const ergDag = Math.round(await getDag("ERG") * 1000);

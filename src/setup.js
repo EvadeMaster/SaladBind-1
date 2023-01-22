@@ -195,7 +195,7 @@ async function miner(){
 	} else if (promptResult.useapi == "api") {
 		console.clear();
 		//auth
-		console.log(chalk.green("We need the token to get your Wallet, Rig, and Prohashing ID automatically.\nThey will not be stored!\n\nIf you do not know how to find your token, please read this:\nhttps://bit.ly/saladbindconfig (copy this to read it)"))
+		console.log(chalk.green("We need the token to get your Wallet, Rig, and Prohashing ID automatically.\nThey will not be stored!\n\nIf you do not know how to find your token, please read this:\nhttps://github.com/EvadeMaster/UnstableBind/wiki/Miner-Details-Configuration (copy this to read it)"))
 		const auth = await inquirer.prompt([{
 			type: 'input',
 			name: 'auth',
@@ -204,7 +204,7 @@ async function miner(){
 				if (input.length == 778 || input == "cancel") {
 					return true;
 				}
-				return `Your Salad Access Token is required for automatic mode. If you don't want this, type "${chalk.yellowBright("cancel")}" and select manual\nor select to get them automatically from the logs of Salad. ${chalk.yellow.bold("\nYou may be seeing this if you entered the token incorrectly, the token is 778 chars long!\nIf you do not know how to configure read this\nhttps://bit.ly/saladbindconfig (copy this to read it)")}`;
+				return `Your Salad Access Token is required for automatic mode. If you don't want this, type "${chalk.yellowBright("cancel")}" and select manual\nor select to get them automatically from the logs of Salad. ${chalk.yellow.bold("\nYou may be seeing this if you entered the token incorrectly, the token is 778 chars long!\nIf you do not know how to configure read this\nhttps://github.com/EvadeMaster/UnstableBind/wiki/Miner-Details-Configuration#automatic-get-with-salad-auth-token (copy this to read it)")}`;
 			}
 		}]);
 		if(auth.auth == "cancel") {
@@ -344,26 +344,30 @@ async function debugMenu(){
 			const config = JSON.parse(rawdata);
 			let isDev = config.dev != undefined && config.dev == true;
 			let SecProtocol = config.secprotocol != undefined && config.secprotocol == true;
+			buildid = "StableBind"
+			if (packageJson.version == "beta") {
+				buildid = "UnstableBind"
+			}
+			console.log(`  - ${chalk.yellowBright("SaladBind Build Information")}
+  Node.js version: ${process.version}
+  SaladBind version: ${packageJson.version}
+  SaladBind Build: ${buildid}
+			
+  - ${chalk.yellowBright("Miner Configuration")}
+  id (prohashing id): ${configData.id}
+  minerId: ${configData.minerId}
+			
+  - ${chalk.yellowBright("SaladBind Flags")}
+  debugWarning: ${configData.debugWarning ? chalk.green("(Bypassed)") : chalk.redBright("(Not bypassed)")}
+  isDev: ${isDev ? chalk.redBright("dev") : chalk.green("Vanilla")} ${chalk.redBright("(Temporary on Vanilla branch until fix)")}
+  SecProtocol: ${SecProtocol ? chalk.yellowBright("pools.json") : chalk.green("pools-v2.json")}
+  bypassGPUChecks: ${configData.bypassGPUChecks ? chalk.green("(Bypassed)") : chalk.redBright("(Disabled)")}`
+
+)
 			inquirer.prompt([{
 				type: 'input',
 				name: "overview",
-				message: chalk.bold.cyan(`Value overview
-
-Node.js version: ${process.version}
-SaladBind version: ${packageJson.version}
-
-
-id (prohashing id): ${configData.id}
-minerId: ${configData.minerId}
-
-
-debugWarning: ${configData.debugWarning ? chalk.green("(Bypassed)") : chalk.redBright("(Not bypassed)")}
-isDev: ${isDev ? chalk.redBright("dev") : chalk.green("Vanilla")}
-SecProtocol: ${SecProtocol ? chalk.yellowBright("pools.json") : chalk.green("pools-v2.json")}
-bypassGPUChecks: ${configData.bypassGPUChecks ? chalk.green("(Bypassed)") : chalk.redBright("(Disabled)")}
-				
-Press ENTER to return to the menu.
-				`),
+				message: chalk.bold.cyan(`Press ENTER to return to the menu.`),
 			}]).then(function() {
 				console.clear()
 				return debugMenu();
