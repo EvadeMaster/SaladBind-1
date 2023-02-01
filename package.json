@@ -28,7 +28,7 @@
     "discord-rpc": "^4.0.1",
     "env-paths": "^2.2.1",
     "https": "^1.0.0",
-    "inquirer": "^8.2.0",
+    "inquirer": "^9.1.4",
     "mv": "^2.1.1",
     "node-fetch": "^2.6.7",
     "open": "^8.4.0",
