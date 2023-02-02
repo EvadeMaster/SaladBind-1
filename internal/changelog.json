@@ -1,5 +1,5 @@
 {
-    "version": "1.8.4",
+    "version": "1.8.5",
     "changelog": [
 	   "1.7.9: lolMiner configuration improved, added FAQ/Troubleshooting guide, updated miners (TeamRed, lolM, XMR)",
 	   "1.7.10 - Ethash Post-Mortem: Announcements feature, Ghostrider (Raptoreum) algorithm support, TeamRed updated",
@@ -12,13 +12,16 @@
        "1.8.4 - StableBind, Merge annoucement with changelog"
     ],
     "force": false,
-    "next_version": "1.8.4",
+    "next_version": "1.8.5",
     "next_changelog": [
-        "🔖 StableBind - 1.8.4",
+        "🔖 StableBind - 1.8.5",
         "",
-        "✨ Added a way to distinguish UnstableBind and StableBind!",
-        "🔁 Merge announcement with changelog!",
-        "🔥 Announcements feature has been deprecated!",
+        "⬆️ Bumped dependencies.",
+        "Bump systeminformation from 5.11.3 to 5.17.8",
+        "Bump inquirer from 8.2.0 to 8.2.5",
+        "Bump node-fetch from 2.6.7 to 2.6.9",
+        "Bump rxjs from 7.2.0 to 7.8.0",
+        "Bump tslib from 2.1.0 to 2.5.0",
         "",
         "📝 Written by EvadeMaster, Repository maintained by EvadeMaster",
         "Branch: Vanilla"
