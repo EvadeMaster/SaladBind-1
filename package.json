@@ -33,7 +33,7 @@
     "node-fetch": "^2.6.9",
     "open": "^8.4.1",
     "ora": "^5.4.1",
-    "systeminformation": "^5.17.8"
+    "systeminformation": "^5.17.9"
   },
   "devDependencies": {
     "pkg": "^5.8.0"
