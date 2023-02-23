@@ -77,12 +77,6 @@ if (packageJson.version !== "beta") {
 
 isDev = false
 
-
-buildid = "StableBind"
-if (packageJson.version !== "beta") {
-	buildid = "UnstableBind"
-}
-
 function getDebugData() {
 	function safelyReadAndParseFile(name) {
 		let data;

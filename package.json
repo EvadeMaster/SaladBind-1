@@ -1,6 +1,6 @@
 {
   "name": "saladbind",
-  "version": "1.8.4",
+  "version": "1.8.5",
   "description": "BIND-ing the good features from other projects together (and fucking nuking the bad ones)",
   "main": "src/index.js",
   "scripts": {
@@ -28,12 +28,12 @@
     "discord-rpc": "^4.0.1",
     "env-paths": "^2.2.1",
     "https": "^1.0.0",
-    "inquirer": "^8.2.0",
+    "inquirer": "^8.2.5",
     "mv": "^2.1.1",
-    "node-fetch": "^2.6.7",
-    "open": "^8.4.0",
+    "node-fetch": "^2.6.9",
+    "open": "^8.4.2",
     "ora": "^5.4.1",
-    "systeminformation": "^5.11.3"
+    "systeminformation": "^5.17.9"
   },
   "devDependencies": {
     "pkg": "^5.8.0"
