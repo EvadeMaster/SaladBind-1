@@ -36,6 +36,6 @@
     "systeminformation": "^5.17.12"
   },
   "devDependencies": {
-    "pkg": "^5.8.0"
+    "pkg": "^5.8.1"
   }
 }
