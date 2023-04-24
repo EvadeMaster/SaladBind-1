@@ -75,8 +75,8 @@
         "teamredminer": {
             "miner": "TeamRedMiner",
             "download": {
-                "win32": "https://github.com/todxx/teamredminer/releases/download/v0.10.8/teamredminer-v0.10.8-win.zip",
-                "linux": "https://github.com/todxx/teamredminer/releases/download/v0.10.8/teamredminer-v0.10.8-linux.tgz"
+                "win32": "https://github.com/todxx/teamredminer/releases/download/v0.10.11/teamredminer-v0.10.11-win.zip",
+                "linux": "https://github.com/todxx/teamredminer/releases/download/v0.10.11/teamredminer-v0.10.11-linux.tgz"
             },
             "algos": [
                 "ethash",
@@ -91,7 +91,7 @@
                 "linux"
             ],
             "fee": 2,
-            "version": "v0.10.8",
+            "version": "v0.10.11",
             "parameters": {
                 "fileName": "teamredminer",
                 "algo": "-a",
@@ -103,8 +103,8 @@
         "lolminer": {
             "miner": "lolMiner",
             "download": {
-                "win32": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.67/lolMiner_v1.67_Win64.zip",
-                "linux": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.67/lolMiner_v1.67_Lin64.tar.gz"
+                "win32": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.73/lolMiner_v1.73_Win64.zip",
+                "linux": "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.73/lolMiner_v1.73_Lin64.tar.gz"
             },
             "algos": [
                 "ethash",
@@ -122,7 +122,7 @@
                 "linux"
             ],
             "fee": 1,
-            "version": "1.67",
+            "version": "1.73",
             "parameters": {
                 "fileName": "lolMiner",
                 "algo": "--algo",
@@ -134,10 +134,10 @@
         "xmrig": {
             "miner": "XMRig",
             "download": {
-                "win32": "https://github.com/xmrig/xmrig/releases/download/v6.19.0/xmrig-6.19.0-gcc-win64.zip",
-                "linux": "https://github.com/xmrig/xmrig/releases/download/v6.19.0/xmrig-6.19.0-linux-x64.tar.gz",
-                "darwin": "https://github.com/xmrig/xmrig/releases/download/v6.19.0/xmrig-6.19.0-macos-x64.tar.gz",
-                "darwin-arm64": "https://github.com/xmrig/xmrig/releases/download/v6.19.0/xmrig-6.19.0-macos-arm64.tar.gz"
+                "win32": "https://github.com/xmrig/xmrig/releases/download/v6.19.2/xmrig-6.19.2-gcc-win64.zip",
+                "linux": "https://github.com/xmrig/xmrig/releases/download/v6.19.2/xmrig-6.19.2-linux-x64.tar.gz",
+                "darwin": "https://github.com/xmrig/xmrig/releases/download/v6.19.2/xmrig-6.19.2-macos-x64.tar.gz",
+                "darwin-arm64": "https://github.com/xmrig/xmrig/releases/download/v6.19.2/xmrig-6.19.2-macos-arm64.tar.gz"
             },
             "algos": [
                 "randomx",
@@ -152,7 +152,7 @@
                 "darwin-arm64"
             ],
             "fee": 1,
-            "version": "6.19.0",
+            "version": "6.19.2",
             "parameters": {
                 "fileName": "xmrig",
                 "algo": "-a",
