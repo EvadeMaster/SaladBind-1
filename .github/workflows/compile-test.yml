@@ -13,9 +13,9 @@ jobs:
       fail-fast: false
 
     steps:
-    - uses: actions/checkout@v3.1.0
+    - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3.6.0
+      uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
     - run: |
@@ -23,20 +23,20 @@ jobs:
        npm run compile
        
     - name: Upload a Build Artifact [Linux]
-      uses: actions/upload-artifact@v3.1.2
+      uses: actions/upload-artifact@v3
       with:
         name: saladbind-linux
         path: bin/saladbind-linux
 
     - name: Upload a Build Artifact [MacOS]
-      uses: actions/upload-artifact@v3.1.2
+      uses: actions/upload-artifact@v3
       with:
         name: saladbind-macos
         path: bin/saladbind-macos
         
       
     - name: Upload a Build Artifact [Windows]
-      uses: actions/upload-artifact@v3.1.2
+      uses: actions/upload-artifact@v3
       with:
         name: saladbind-win
         path: bin/saladbind-win.exe
