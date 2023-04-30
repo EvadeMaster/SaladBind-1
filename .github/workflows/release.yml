@@ -13,7 +13,7 @@ jobs:
         node-version: [18.x]
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.1.0
+        uses: actions/checkout@v3
       - name: Generate changelog
         run: |
           gh api repos/EvadeMaster/UnstableBind/releases/generate-notes -f tag_name="${GITHUB_REF#refs/tags/}" -f target_commitish=main -q .body >> CHANGELOG.md
@@ -25,7 +25,7 @@ jobs:
         with:
           path: ./CHANGELOG.md
       - name: Install node
-        uses: actions/setup-node@v3.6.0
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
