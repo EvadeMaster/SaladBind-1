@@ -15,7 +15,7 @@ The little support there is can be found at the [FAQ](https://github.com/EvadeMa
 
 - Latest stable version: <img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/EvadeMaster/UnstableBind?style=flat-square">
 - Latest unstable version: <img alt="GitHub release (latest SemVer including pre-releases)" src="https://img.shields.io/github/v/release/EvadeMaster/UnstableBind?include_prereleases&style=flat-square">
-- Latest development version: https://github.com/EvadeMaster/UnstableBind/actions
+- Latest development version: https://github.com/EvadeMaster/UnstableBind/actions/workflows/compile-test.yml
 
 If you want to contribute to UnstableBind, please read the [contributing guide](https://github.com/EvadeMaster/UnstableBind/wiki/Contributing). Do **NOT** make your own UnstableBind version unless you have a good reason to!
 
