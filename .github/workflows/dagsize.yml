@@ -6,18 +6,50 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  github-actions:
+    name: 🪸 DAG size updater - GitHub Actions
     runs-on: ubuntu-latest
+    timeout-minutes: 1
     strategy:
       matrix:
         node-version: [18.x]
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.1.0
+        uses: actions/checkout@v3
         with:
           token: ${{ secrets.DAG_UPDATER }}
       - name: Install node
-        uses: actions/setup-node@v3.6.0
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - name: Run update script
+        run: |
+            npm install node-fetch --no-save
+            node internal/alfurDagUpdater
+      - name: Push
+        run: |
+            git config user.name EvadeMaster
+            git config user.email 93124920+EvadeMaster@users.noreply.github.com
+            git add .
+            git commit -m "🔧 Weekly Maintenance: Update DAG sizes"
+            git push
+  self-hosted:
+    name: 🪸 DAG size updater - Self-hosted
+    runs-on: [self-hosted, linux, low-power]
+    timeout-minutes: 1
+    if: ${{ failure() }}
+    needs: github-actions
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.DAG_UPDATER }}
+      - name: Install node
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
