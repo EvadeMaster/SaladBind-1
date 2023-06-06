@@ -1,8 +1,11 @@
-name: Auto-merger
-on: [pull_request_target]
+name: 👷 Auto-merger
+on:
+  pull_request_review:
+    types: [submitted]
 
 jobs:
   compile:
+    if: github.event.review.state == 'approved'
     runs-on: ubuntu-latest
 
     strategy:
@@ -12,21 +15,21 @@ jobs:
 
 
     steps:
-    - name: Checkout
+    - name: 📔 Checkout the repository
       uses: actions/checkout@v3
       
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: 🧰 Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         cache: npm
         node-version: ${{ matrix.node-version }}
         
-    - name: Compile
+    - name: ⚙️ Compile the application
       run: |
        npm install
        npm run compile
        
-    - name: Upload a Build Artifact
+    - name: 🌩️ Upload Build Artifacts
       uses: actions/upload-artifact@v3
       with:
         name: saladbind
@@ -42,7 +45,10 @@ jobs:
       always() && !contains(needs.*.result, 'failure') && !contains(needs.*.result, 'cancelled')
     
     steps:
-    - name: Merge Pull Request
+    - name: 📔 Checkout the repository
+      uses: actions/checkout@v3
+    
+    - name: ⚡ Merge Pull Request
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: "gh pr merge ${{ github.event.number }}"
