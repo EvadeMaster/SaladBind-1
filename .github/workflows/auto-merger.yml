@@ -57,7 +57,8 @@ jobs:
       env:
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         MERGE_LABELS: "dependencies"
-        MERGE_COMMIT_MESSAGE: "pull-request-title"
+        MERGE_COMMIT_MESSAGE: pull-request-title
+        MERGE_METHOD: squash
         
     - name: 📣 Send Feedback
       if: steps.automerge.outputs.mergeResult == 'merged'
