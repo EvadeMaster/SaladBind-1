@@ -58,6 +58,6 @@ jobs:
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         
     - name: 📣 Send Feedback
-      if: steps.automerge.outputs.mergeResult == "merged"
+      if: steps.automerge.outputs.mergeResult == 'merged'
       run: |
         echo ":tada: Pull request ${{ steps.automerge.outputs.pullRequestNumber }} has been merged by auto-merger!"
