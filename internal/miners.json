@@ -1,9 +1,9 @@
 {
     "algos": {
         "octopus": 8000,
-        "kawpow": 3992,
+        "kawpow": 4000,
         "etchash": 3328,
-        "autolykos2": 2952,
+        "autolykos2": 2960,
         "beamv3": 2000,
         "EQUI144_5": 2000,
         "kaspa": 1000,
