@@ -2,7 +2,7 @@ name: DAG size updater
 
 on:
   schedule:
-    - cron: '0 0 * * 1'
+    - cron: '* * 1/14 * *'
   workflow_dispatch:
 
 jobs:
