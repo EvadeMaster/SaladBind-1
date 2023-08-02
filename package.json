@@ -32,7 +32,7 @@
     "mv": "^2.1.1",
     "node-fetch": "^2.6.12",
     "open": "^8.4.2",
-    "ora": "^5.4.1",
+    "ora": "^7.0.1",
     "systeminformation": "^5.18.10"
   },
   "devDependencies": {
