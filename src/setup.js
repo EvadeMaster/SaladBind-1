@@ -396,4 +396,4 @@ async function save(setting, value){
 module.exports = {
 	saladbind_directory, dataDirectory, configFile,
 	run
-}
+};

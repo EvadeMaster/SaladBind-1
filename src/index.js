@@ -26,7 +26,7 @@ process.on("uncaughtException", err => {
 				}
 			]
 		}).then(out => {
-			if (out.exit == "exit" || out.exit == "") process.exit(1)
+			if (out.exit == "exit" || out.exit == "") process.exit(1);
 			else if (out.exit == "write_log") {
 				try {
 					fs.writeFileSync(`${envPaths('SaladBind', { suffix: "" }).data}/saladbind_error.txt`, `Hi! I'm a SaladBind Error Log.\nI'm now going to puke everything I know at you. I hope you don't mind (it's very technical :D)\n\nThe error was ${err}\n\nHere's the stacktrace, so we can figure out where the error is coming from:\n${err.stack}\n\nAnd finally, some cool debug information I made just for you!\nIt helps us find out if the person sitting in front of the screen is the problem.\n${JSON.stringify(getDebugData(), null, " ")}`);

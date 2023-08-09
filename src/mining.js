@@ -19,7 +19,7 @@ const presence = require('./presence');
 const cache = require("./getMachine.js"); // wtf how is this cache haha
 const { arch } = require('os');
 let spinner;
-let lastMiner = {}
+let lastMiner = {};
 
 let isDev = config.dev != undefined && config.dev == true;
 let SecProtocol = config.secprotocol != undefined && config.secprotocol == true;
@@ -90,7 +90,7 @@ const downloadFile = async function(url, location, name) {
 			}
 		});
 	});
-}
+};
 
 async function run() {
 	spinner = ora("Checking system specs...").start();
