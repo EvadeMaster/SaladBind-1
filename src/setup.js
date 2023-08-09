@@ -269,7 +269,7 @@ async function miner(){
 }
 
 async function debugMenu(){
-	config = await JSON.parse(fs.readFileSync(configFile))
+	let config = await JSON.parse(fs.readFileSync(configFile))
 	if(config.debugWarning != true){
 		await inquirer.prompt([
 			{
@@ -297,7 +297,7 @@ async function debugMenu(){
 	}
     })
 	}
-	configData = await JSON.parse(fs.readFileSync(configFile))
+	let configData = await JSON.parse(fs.readFileSync(configFile))
 	const prompt = await inquirer.prompt([{
 		type: 'list',
 		name: "settings",
@@ -344,9 +344,9 @@ async function debugMenu(){
 			const config = JSON.parse(rawdata);
 			let isDev = config.dev != undefined && config.dev == true;
 			let SecProtocol = config.secprotocol != undefined && config.secprotocol == true;
-			buildid = "StableBind"
+			var buildid = "StableBind"
 			if (packageJson.version == "beta") {
-				buildid = "UnstableBind"
+				var buildid = "UnstableBind"
 			}
 			console.log(`  - ${chalk.yellowBright("SaladBind Build Information")}
   Node.js version: ${process.version}

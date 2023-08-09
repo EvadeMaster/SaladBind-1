@@ -47,7 +47,7 @@ const updateCheck = new Promise((resolve, reject) => {
 			.then(data => {
 				clearTimeout(timer);
 				if(updateFailed) return; // to not mess up stuff if it recovers
-				version = data.version
+				let version = data.version
 				files = { //files to download if the user decides to autoupdate.
 					"win32": { "file": `https://github.com/validcube/UnstableBind/releases/download/v${version}/saladbind-win.exe`, "name": `SaladBind-win-${version}.exe` },
 					"linux": { "file": `https://github.com/validcube/UnstableBind/releases/download/v${version}/saladbind-linux`, "name": `SaladBind-linux-${version}` },
@@ -101,16 +101,16 @@ const updateCheck = new Promise((resolve, reject) => {
 
 async function startUpdate() {
 	spinner = ora(`Downloading SaladBind v${version}`).start();
-	temp = await si.osInfo()
-	platform = temp.platform
+	let temp = await si.osInfo()
+	let platform = temp.platform
 	if(platform == "Windows"){
 		platform = "win32"
 	}
 	if (platform == "win32") {
-		filename = files.win32.name
+		var filename = files.win32.name
 		downloadFile(files.win32.file, `${dataDirectory}/${filename}`, `SaladBind v${version}`)
 	} else if (platform == "darwin") {
-		filename = files.macos.name
+		var filename = files.macos.name
 		downloadFile(files.macos.file, `${dataDirectory}/${filename}`, `SaladBind v${version}`)
 	}
 }

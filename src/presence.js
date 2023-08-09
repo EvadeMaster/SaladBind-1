@@ -24,7 +24,7 @@ if (config.discordPresence == true) { //If the user opts-in to having the Rich P
 
 function presence(details, state, time, large_image, large_text, small_image, small_text) {
 	if (presenceEnabled == true) {
-		activity = {
+		let activity = {
 			pid: process.pid,
 			activity: {
 				details: details,

@@ -123,7 +123,6 @@ async function continueMiner() {
 				var systemCache = JSON.parse(fs.readFileSync(`${dataDirectory}/cache.json`))
 			} catch {
 				console.log(chalk.bold.red("\nFailed to load cache! Trying to recover. Please allow up to 30 seconds.\n"))
-				systemCache = {};
 				fs.rmSync(`${dataDirectory}/cache.json`);
 				spinner.stop();
 				return await run(); // Restart from the beginning if cache is corrupted.
@@ -365,7 +364,7 @@ async function selectPool(minerData, algo) {
 					if(!silent) var spinner = ora("Calculating ping").start();
 					let pings = [];
 					let borkedRegion = false;
-					for await(regionToTest of regionList) {
+					for await(var regionToTest of regionList) {
 						var totalPing = 0;
 						var failedAttempts = 0;
 						for(let i=0;i<5;i++){
