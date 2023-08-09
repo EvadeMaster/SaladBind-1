@@ -5,17 +5,12 @@
 </a>
 
 ## ⚠️ Notice
+
 This repository is maintained by 👷 CI/CD, meaning only dependencies, minor features, or minor bug fixes will be made.
 
 ***This application is retired and not affiliated with Salad Technologies.***
 
 The little support there is can be found at the [FAQ](https://github.com/validcube/UnstableBind/wiki/FAQ).
-
-#### This branch is in maintanances until notices.
-
-- Latest stable version: <img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/validcube/UnstableBind?style=flat-square">
-- Latest unstable version: <img alt="GitHub release (latest SemVer including pre-releases)" src="https://img.shields.io/github/v/release/validcube/UnstableBind?include_prereleases&style=flat-square">
-- Latest development version: https://github.com/validcube/UnstableBind/actions/workflows/compile-test.yml (needs github account)
 
 If you want to contribute to UnstableBind, please read the [contributing guide](https://github.com/validcube/UnstableBind/wiki/Contributing). Do **NOT** make your own UnstableBind version unless you have a good reason to!
 
