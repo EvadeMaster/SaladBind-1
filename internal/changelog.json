@@ -1,5 +1,5 @@
 {
-    "version": "1.8.5",
+    "version": "1.8.8",
     "changelog": [
 	   "1.7.9: lolMiner configuration improved, added FAQ/Troubleshooting guide, updated miners (TeamRed, lolM, XMR)",
 	   "1.7.10 - Ethash Post-Mortem: Announcements feature, Ghostrider (Raptoreum) algorithm support, TeamRed updated",
@@ -9,12 +9,16 @@
        "1.8.1 - StableBind, Hotfix No.1",
        "1.8.2 - StableBind, macOS ARM64 partial support (let the program run through Rosetta, but run the miner natively)",
        "1.8.3 - StableBind, Temporary disable branch switching",
-       "1.8.4 - StableBind, Merge annoucement with changelog"
+       "1.8.4 - StableBind, Merge annoucement with changelog",
+	"1.8.5 - StableBind, Bump dependencies",
+	"1.8.6 - StableBind, Bump dependencies",
+	"1.8.7 - StableBind, Bump Version number (whoops)",
+	"1.8.8 - StableBind, Security fixes"
     ],
-    "force": false,
-    "next_version": "1.8.5",
+    "force": true,
+    "next_version": "1.8.8",
     "next_changelog": [
-        "🔖 StableBind - 1.8.5",
+        "🔖 StableBind - 1.8.8",
         "",
         "⬆️ Bumped dependencies.",
         "Bump systeminformation from 5.11.3 to 5.17.8",
