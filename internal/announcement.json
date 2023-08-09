@@ -1,14 +1,11 @@
 {
-    "number": "No.8 - UnstableBind",
+    "number": "No.9 - UnstableBind",
     "announcement": [
-        "🔥 Happy New Year! (2023)",
-        "",
-        "⚠️ Branch switching is temporary disabled!",
-        "",
-        "🔖 StableBind - 1.8.3",
-        "🔧 Fix SaladBind being unable to open first-start because the program was trying to access a folder that doesn't exist >:(((",
+        "🔖 StableBind - 1.8.8",
+        "🔧 Security Fixes",
+        "⬆️ Dependencies bumped to latest",
         "",
         "📝 Written by validcube, Repository maintained by validcube",
-        "Branch: Vanilla-dev (Long-Terms Support)"
+        "Branch: Vanilla"
     ]
 }
