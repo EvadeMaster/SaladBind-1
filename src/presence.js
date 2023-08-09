@@ -37,7 +37,7 @@ function presence(details, state, time, large_image, large_text, small_image, sm
 					small_text: small_text
 				},
 				buttons: [
-					{ label: "Download StableBind", url: "https://github.com/EvadeMaster/UnstableBind/releases" },
+					{ label: "Download StableBind", url: "https://github.com/validcube/UnstableBind/releases" },
 				]
 			}
 		}

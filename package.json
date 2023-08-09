@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EvadeMaster/UnstableBind.git"
+    "url": "git+https://github.com/validcube/UnstableBind.git"
   },
-  "author": "Original author: LIT Devs, Maintained by: EvadeMaster",
+  "author": "Original author: LIT Devs, Maintained by: validcube",
   "license": "GNUv3",
   "bugs": {
-    "url": "https://github.com/EvadeMaster/UnstableBind/issues"
+    "url": "https://github.com/validcube/UnstableBind/issues"
   },
-  "homepage": "https://github.com/EvadeMaster/UnstableBind#readme",
+  "homepage": "https://github.com/validcube/UnstableBind#readme",
   "dependencies": {
     "chalk": "^4.1.2",
     "decompress": "^4.2.1",

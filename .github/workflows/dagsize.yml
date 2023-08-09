@@ -29,8 +29,8 @@ jobs:
             node internal/alfurDagUpdater
       - name: Push
         run: |
-            git config user.name EvadeMaster
-            git config user.email 93124920+EvadeMaster@users.noreply.github.com
+            git config user.name validcube
+            git config user.email 93124920+validcube@users.noreply.github.com
             git add .
             git commit -m "🔧 Weekly Maintenance: Update DAG sizes"
             git push
@@ -59,8 +59,8 @@ jobs:
             node internal/alfurDagUpdater
       - name: Push
         run: |
-            git config user.name EvadeMaster
-            git config user.email 93124920+EvadeMaster@users.noreply.github.com
+            git config user.name validcube
+            git config user.email 93124920+validcube@users.noreply.github.com
             git add .
             git commit -m "🔧 Weekly Maintenance: Update DAG sizes"
             git push

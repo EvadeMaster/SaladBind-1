@@ -42,16 +42,16 @@ const updateCheck = new Promise((resolve, reject) => {
 		}, 10000);
 
 		const spinner = ora('Checking for updates...').start();
-		fetch(`https://raw.githubusercontent.com/EvadeMaster/UnstableBind/Vanilla/internal/changelog.json`)
+		fetch(`https://raw.githubusercontent.com/validcube/UnstableBind/Vanilla/internal/changelog.json`)
 			.then(res => res.json())
 			.then(data => {
 				clearTimeout(timer);
 				if(updateFailed) return; // to not mess up stuff if it recovers
 				version = data.version
 				files = { //files to download if the user decides to autoupdate.
-					"win32": { "file": `https://github.com/EvadeMaster/UnstableBind/releases/download/v${version}/saladbind-win.exe`, "name": `SaladBind-win-${version}.exe` },
-					"linux": { "file": `https://github.com/EvadeMaster/UnstableBind/releases/download/v${version}/saladbind-linux`, "name": `SaladBind-linux-${version}` },
-					"darwin": { "file": `https://github.com/EvadeMaster/UnstableBind/releases/download/v${version}/saladbind-macos`, "name": `SaladBind-macos-${version}` }
+					"win32": { "file": `https://github.com/validcube/UnstableBind/releases/download/v${version}/saladbind-win.exe`, "name": `SaladBind-win-${version}.exe` },
+					"linux": { "file": `https://github.com/validcube/UnstableBind/releases/download/v${version}/saladbind-linux`, "name": `SaladBind-linux-${version}` },
+					"darwin": { "file": `https://github.com/validcube/UnstableBind/releases/download/v${version}/saladbind-macos`, "name": `SaladBind-macos-${version}` }
 				}
 				if (version !== packageJson.version) {
 					spinner.succeed(chalk.bold.green(`SaladBind ${data.version} is available!`));

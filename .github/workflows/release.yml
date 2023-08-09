@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Generate changelog
         run: |
-          gh api repos/EvadeMaster/UnstableBind/releases/generate-notes -f tag_name="${GITHUB_REF#refs/tags/}" -f target_commitish=main -q .body >> CHANGELOG.md
+          gh api repos/validcube/UnstableBind/releases/generate-notes -f tag_name="${GITHUB_REF#refs/tags/}" -f target_commitish=main -q .body >> CHANGELOG.md
         env:
           GITHUB_TOKEN: ${{secrets.DAG_UPDATER}}
       - name: Read changelog

@@ -216,7 +216,7 @@ if (fs.existsSync(`${dataDirectory}/last.json`)){
 		case 'changes':
 			presence.configuring("Reading the changelog")
 			spinner = ora('Fetching the Changelogs').start();
-			fetch(`https://raw.githubusercontent.com/EvadeMaster/UnstableBind/${isDev ? "dev" : "Vanilla"}/internal/changelog.json`)
+			fetch(`https://raw.githubusercontent.com/validcube/UnstableBind/${isDev ? "dev" : "Vanilla"}/internal/changelog.json`)
 			.then(res => res.json())
 			.then(async data => {
 				console.clear();
@@ -256,9 +256,9 @@ if (fs.existsSync(`${dataDirectory}/last.json`)){
 		case 'help':
 			let temp = await si.osInfo()
 			if (temp.platform == "linux") {
-				console.log("\nhttps://github.com/EvadeMaster/UnstableBind/wiki/FAQ");
+				console.log("\nhttps://github.com/validcube/UnstableBind/wiki/FAQ");
 			} else {
-				open("https://github.com/EvadeMaster/UnstableBind/wiki/FAQ");
+				open("https://github.com/validcube/UnstableBind/wiki/FAQ");
 				console.log("\nOpened the SaladBind troubleshooting page in your browser!");
 			}
 			setTimeout(() => {

@@ -39,7 +39,7 @@ All of the money you mine using SaladBind goes to Salad, and all Salad boosts an
 	const prompt = await inquirer.prompt([{
 		type: 'list',
 		name: "settings",
-		message: chalk.bold.cyan(`Configure SaladBind - https://github.com/EvadeMaster/UnstableBind/wiki/Settings`),
+		message: chalk.bold.cyan(`Configure SaladBind - https://github.com/validcube/UnstableBind/wiki/Settings`),
 		choices: [{
 				name: `Update Miner Details ${configData.id != undefined || configData.minerId != undefined ? "" : chalk.bold.red("(Must be configured)")}`,
 				value: "miner"
@@ -195,7 +195,7 @@ async function miner(){
 	} else if (promptResult.useapi == "api") {
 		console.clear();
 		//auth
-		console.log(chalk.green("We need the token to get your Wallet, Rig, and Prohashing ID automatically.\nThey will not be stored!\n\nIf you do not know how to find your token, please read this:\nhttps://github.com/EvadeMaster/UnstableBind/wiki/Miner-Details-Configuration (copy this to read it)"))
+		console.log(chalk.green("We need the token to get your Wallet, Rig, and Prohashing ID automatically.\nThey will not be stored!\n\nIf you do not know how to find your token, please read this:\nhttps://github.com/validcube/UnstableBind/wiki/Miner-Details-Configuration (copy this to read it)"))
 		const auth = await inquirer.prompt([{
 			type: 'input',
 			name: 'auth',
@@ -204,7 +204,7 @@ async function miner(){
 				if (input.length == 778 || input == "cancel") {
 					return true;
 				}
-				return `Your Salad Access Token is required for automatic mode. If you don't want this, type "${chalk.yellowBright("cancel")}" and select manual\nor select to get them automatically from the logs of Salad. ${chalk.yellow.bold("\nYou may be seeing this if you entered the token incorrectly, the token is 778 chars long!\nIf you do not know how to configure read this\nhttps://github.com/EvadeMaster/UnstableBind/wiki/Miner-Details-Configuration#automatic-get-with-salad-auth-token (copy this to read it)")}`;
+				return `Your Salad Access Token is required for automatic mode. If you don't want this, type "${chalk.yellowBright("cancel")}" and select manual\nor select to get them automatically from the logs of Salad. ${chalk.yellow.bold("\nYou may be seeing this if you entered the token incorrectly, the token is 778 chars long!\nIf you do not know how to configure read this\nhttps://github.com/validcube/UnstableBind/wiki/Miner-Details-Configuration#automatic-get-with-salad-auth-token (copy this to read it)")}`;
 			}
 		}]);
 		if(auth.auth == "cancel") {

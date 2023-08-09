@@ -1,4 +1,4 @@
-Moved to https://github.com/EvadeMaster/UnstableBind/wiki/Contributing
+Moved to https://github.com/validcube/UnstableBind/wiki/Contributing
 
 ### Note:
 * `pools.json` is (still in-use for Stratum Security protocol) and reversed for compatibility with older versions of SaladBind and detivatives.

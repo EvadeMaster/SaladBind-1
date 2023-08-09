@@ -9,15 +9,15 @@ This repository is maintained by 👷 CI/CD, meaning only dependencies, minor fe
 
 ***This application is retired and not affiliated with Salad Technologies.***
 
-The little support there is can be found at the [FAQ](https://github.com/EvadeMaster/UnstableBind/wiki/FAQ).
+The little support there is can be found at the [FAQ](https://github.com/validcube/UnstableBind/wiki/FAQ).
 
 #### This branch is in maintanances until notices.
 
-- Latest stable version: <img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/EvadeMaster/UnstableBind?style=flat-square">
-- Latest unstable version: <img alt="GitHub release (latest SemVer including pre-releases)" src="https://img.shields.io/github/v/release/EvadeMaster/UnstableBind?include_prereleases&style=flat-square">
-- Latest development version: https://github.com/EvadeMaster/UnstableBind/actions/workflows/compile-test.yml (needs github account)
+- Latest stable version: <img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/validcube/UnstableBind?style=flat-square">
+- Latest unstable version: <img alt="GitHub release (latest SemVer including pre-releases)" src="https://img.shields.io/github/v/release/validcube/UnstableBind?include_prereleases&style=flat-square">
+- Latest development version: https://github.com/validcube/UnstableBind/actions/workflows/compile-test.yml (needs github account)
 
-If you want to contribute to UnstableBind, please read the [contributing guide](https://github.com/EvadeMaster/UnstableBind/wiki/Contributing). Do **NOT** make your own UnstableBind version unless you have a good reason to!
+If you want to contribute to UnstableBind, please read the [contributing guide](https://github.com/validcube/UnstableBind/wiki/Contributing). Do **NOT** make your own UnstableBind version unless you have a good reason to!
 
 ## Table of Contents
 
@@ -27,7 +27,7 @@ If you want to contribute to UnstableBind, please read the [contributing guide](
 [Miner Setup Guide](#Miner-Setup-Guide) <br>
 [Compiling](#Compiling)
 
-If you need support, see the [SaladBind FAQ](https://github.com/EvadeMaster/UnstableBind/wiki/FAQ).
+If you need support, see the [SaladBind FAQ](https://github.com/validcube/UnstableBind/wiki/FAQ).
 
 ## Features
 
@@ -79,11 +79,11 @@ If they do work, you should probably compile it yourself anyway.
 
 ### Windows
 
-Download the `saladbind-win.exe` from [GitHub Releases](https://github.com/EvadeMaster/UnstableBind/releases/latest).
+Download the `saladbind-win.exe` from [GitHub Releases](https://github.com/validcube/UnstableBind/releases/latest).
 
 ### macOS and Linux
 
-Download the `saladbind-macos`/`saladbind-linux` file from [GitHub Releases](https://github.com/EvadeMaster/UnstableBind/releases/latest). For these platforms, you'll need to run UnstableBind from the terminal, due to how UnstableBind works. If you need help with using the terminal, don't be afraid to Google a bit - you'll have to use `cd` to be in the same folder that UnstableBind is in.
+Download the `saladbind-macos`/`saladbind-linux` file from [GitHub Releases](https://github.com/validcube/UnstableBind/releases/latest). For these platforms, you'll need to run UnstableBind from the terminal, due to how UnstableBind works. If you need help with using the terminal, don't be afraid to Google a bit - you'll have to use `cd` to be in the same folder that UnstableBind is in.
 
 Use these commands to start UnstableBind, for macOS or Linux respectively:
 
@@ -99,11 +99,11 @@ chmod +x ./saladbind-linux # You only need to run this once
 
 ## Configuration
 
-Moved to https://github.com/EvadeMaster/UnstableBind/wiki/Miner-Details-Configuration
+Moved to https://github.com/validcube/UnstableBind/wiki/Miner-Details-Configuration
 
 ### Miner Setup Guide
 
-If you don't know what miner, algorithm or pool to pick, see the [handy guide](https://github.com/EvadeMaster/UnstableBind/wiki/Miner-guide).
+If you don't know what miner, algorithm or pool to pick, see the [handy guide](https://github.com/validcube/UnstableBind/wiki/Miner-guide).
 
 ## Command line arguments
 
@@ -114,7 +114,7 @@ UnstableBind offers some command line arguments.
 
 ## Compiling
 
-You can and probably should compile UnstableBind yourself. You'll need to install [Node.js](https://nodejs.org/). Highly recommended that you read [Contributing guide](https://github.com/EvadeMaster/UnstableBind/wiki/Contributing) before contributing
+You can and probably should compile UnstableBind yourself. You'll need to install [Node.js](https://nodejs.org/). Highly recommended that you read [Contributing guide](https://github.com/validcube/UnstableBind/wiki/Contributing) before contributing
 
 1. Clone the repository
 2. Open a terminal in the folder and run `npm install`
