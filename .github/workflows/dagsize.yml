@@ -38,6 +38,8 @@ jobs:
           echo 'gpg --batch --pinentry-mode=loopback --passphrase $GPG_KEY_PASSPHRASE $@' >> $GITHUB_WORKSPACE/gpg.sh
           chmod +x $GITHUB_WORKSPACE/gpg.sh
           git config gpg.program $GITHUB_WORKSPACE/gpg.sh
+          git config --global user.email "pun.experiment@gmail.com"
+          git config --global user.name "CollisionBot"
           git config user.signingkey 13D0B11B631937DE
         env: 
           GPG_KEY_PASSPHRASE: ${{ secrets.COLLISIONBOT_PASS }}
