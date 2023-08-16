@@ -38,12 +38,13 @@ jobs:
           git_commit_gpgsign: true
           git_tag_gpgsign: true
           git_push_gpgsign: if-asked
-      - name: Enable GPG loopback
+      - name: Enable GPG Magical
         run: |
           echo "use-agent" >> ~/.gnupg/gpg.conf
           echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf
           echo "allow-loopback-pinentry" >> ~/.gnupg/gpg-agent.conf
           echo RELOADAGENT | gpg-connect-agent
+          export GPG_TTY=$(tty)
       - name: Push
         run: |
             git add .
