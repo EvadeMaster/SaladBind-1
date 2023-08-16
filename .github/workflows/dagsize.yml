@@ -27,9 +27,6 @@ jobs:
         run: |
             npm install node-fetch --no-save
             node internal/alfurDagUpdater
-      - name: Enable GPG loopback
-        run: |
-          echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf
       - name: Import GPG
         uses: crazy-max/ghaction-import-gpg@v5
         with:
@@ -41,6 +38,9 @@ jobs:
           git_commit_gpgsign: true
           git_tag_gpgsign: true
           git_push_gpgsign: if-asked
+      - name: Enable GPG loopback
+        run: |
+          echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf
       - name: Push
         run: |
             git add .
