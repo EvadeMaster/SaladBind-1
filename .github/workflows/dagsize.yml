@@ -32,7 +32,7 @@ jobs:
           echo "$GPG_KEY" | gpg --batch --import
         env:
           GPG_KEY: ${{ secrets.COLLISIONBOT_SIGN }}
-      - name: Configuration
+      - name: Configuration & Push
         run: |
           echo '#!/bin/bash' >> $GITHUB_WORKSPACE/gpg.sh
           echo 'gpg --batch --pinentry-mode=loopback --passphrase $GPG_KEY_PASSPHRASE $@' >> $GITHUB_WORKSPACE/gpg.sh
@@ -41,10 +41,8 @@ jobs:
           git config --global user.email "pun.experiment@gmail.com"
           git config --global user.name "CollisionBot"
           git config user.signingkey 4633555474DD3B1D
+          git add internal/miners.json
+          git commit -S -m "🔧 Weekly Maintenance: Update DAG sizes"
+          git push
         env: 
           GPG_KEY_PASSPHRASE: ${{ secrets.COLLISIONBOT_PASS }}
-      - name: Push
-        run: |
-            git add internal/miners.json
-            git commit -S -m "🔧 Weekly Maintenance: Update DAG sizes"
-            git push
