@@ -34,6 +34,11 @@ jobs:
           passphrase: ${{ secrets.COLLISIONBOT_PASSPHRASE }}
           git_user_signingkey: true
           git_commit_gpgsign: true
+      - name: Enable GPG loopback
+        run: |
+          echo "use-agent" >> ~/.gnupg/gpg.conf
+          echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf
+          echo "allow-loopback-pinentry" >> ~/.gnupg/gpg-agent.conf
       - name: Push
         run: |
             git add .
