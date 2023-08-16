@@ -28,7 +28,7 @@ jobs:
             npm install node-fetch --no-save
             node internal/alfurDagUpdater
       - name: Import GPG key
-        run: echo $GPG_KEY | base64 --decode | gpg --batch --import
+        run: echo $GPG_KEY | gpg --batch --import
         env:
           GPG_KEY: ${{ secrets.COLLISIONBOT_SIGN }}
       - name: Configuration
