@@ -41,7 +41,7 @@ jobs:
           git config gpg.program /tmp/gpg.sh
           git config user.signingkey 13D0B11B631937DE
         env: 
-          GPG_KEY_PASSPHRASE: ${{ secrets.COLLISIONBOT_PASSPHRASE }}
+          GPG_KEY_PASSPHRASE: ${{ secrets.COLLISIONBOT_PASS }}
       - name: Push
         run: |
             git add internal/miners.json
