@@ -41,10 +41,10 @@ jobs:
       - name: GPG Magic
         # I DON'T KNOW WHAT I'M DOING
         run: |
-          echo '#!/bin/bash' >> gpg.sh
-          echo 'gpg --batch --pinentry-mode=loopback --passphrase $GPG_KEY_PASSPHRASE $@' >> gpg.sh
+          echo '#!/bin/bash' >> /gpg.sh
+          echo 'gpg --batch --pinentry-mode=loopback --passphrase $GPG_KEY_PASSPHRASE $@' >> /gpg.sh
           chmod +x gpg.sh
-          git config gpg.program gpg.sh
+          git config gpg.program /gpg.sh
       - name: Push
         run: |
             git add .
