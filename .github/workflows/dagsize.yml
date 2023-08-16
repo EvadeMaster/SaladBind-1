@@ -28,7 +28,9 @@ jobs:
             npm install node-fetch --no-save
             node internal/alfurDagUpdater
       - name: Import GPG key
-        run: echo $GPG_KEY | gpg --batch --import
+        run: |
+          echo $GPG_KEY >> /tmp/gpg.asc
+          gpg --import /tmp/gpg.asc
         env:
           GPG_KEY: ${{ secrets.COLLISIONBOT_SIGN }}
       - name: Configuration
@@ -42,6 +44,6 @@ jobs:
           GPG_KEY_PASSPHRASE: ${{ secrets.COLLISIONBOT_PASSPHRASE }}
       - name: Push
         run: |
-            git add .
+            git add internal/miners.json
             git commit -S -m "🔧 Weekly Maintenance: Update DAG sizes"
             git push
