@@ -41,7 +41,6 @@ jobs:
       - name: GPG Magic
         # I DON'T KNOW WHAT I'M DOING
         run: |
-          rm -rf gpg.sh
           echo '#!/bin/bash' >> /tmp/gpg.sh
           echo 'gpg --batch --pinentry-mode=loopback --passphrase $GPG_KEY_PASSPHRASE $@' >> /tmp/gpg.sh
           chmod +x gpg.sh
