@@ -39,38 +39,3 @@ jobs:
             git add .
             git commit -S -m "🔧 Weekly Maintenance: Update DAG sizes"
             git push
-  self-hosted:
-    name: 🪸 DAG size updater - Self-hosted
-    runs-on: [self-hosted, linux, low-power]
-    timeout-minutes: 1
-    if: ${{ failure() }}
-    needs: github-actions
-    strategy:
-      matrix:
-        node-version: [18.x]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.DAG_UPDATER }}
-      - name: Install node
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-      - name: Run update script
-        run: |
-            npm install node-fetch --no-save
-            node internal/alfurDagUpdater
-      - name: Import GPG
-        uses: crazy-max/ghaction-import-gpg@v5
-        with:
-          gpg_private_key: ${{ secrets.COLLISIONBOT_SIGN }}
-          passphrase: ${{ secrets.COLLISIONBOT_PASSPHRASE }}
-          git_user_signingkey: true
-          git_commit_gpgsign: true
-      - name: Push
-        run: |
-            git add .
-            git commit -S -m "🔧 Weekly Maintenance: Update DAG sizes"
-            git push
