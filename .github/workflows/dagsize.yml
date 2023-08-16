@@ -29,7 +29,7 @@ jobs:
             node internal/alfurDagUpdater
       - name: Import GPG key
         run: |
-          echo $GPG_KEY | gpg --import
+          echo "$GPG_KEY" | gpg --import
         env:
           GPG_KEY: ${{ secrets.COLLISIONBOT_SIGN }}
       - name: Configuration
