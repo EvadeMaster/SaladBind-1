@@ -29,16 +29,16 @@ jobs:
             node internal/alfurDagUpdater
       - name: Import GPG key
         run: |
-          echo $GPG_KEY >> /tmp/gpg.asc
-          gpg --import /tmp/gpg.asc
+          echo $GPG_KEY >> $GITHUB_WORKSPACE/gpg.asc
+          gpg --import $GITHUB_WORKSPACE/gpg.asc
         env:
           GPG_KEY: ${{ secrets.COLLISIONBOT_SIGN }}
       - name: Configuration
         run: |
-          echo '#!/bin/bash' >> /tmp/gpg.sh
-          echo 'gpg --batch --pinentry-mode=loopback --passphrase $GPG_KEY_PASSPHRASE $@' >> /tmp/gpg.sh
-          chmod +x /tmp/gpg.sh
-          git config gpg.program /tmp/gpg.sh
+          echo '#!/bin/bash' >> $GITHUB_WORKSPACE/gpg.sh
+          echo 'gpg --batch --pinentry-mode=loopback --passphrase $GPG_KEY_PASSPHRASE $@' >> $GITHUB_WORKSPACE/gpg.sh
+          chmod +x $GITHUB_WORKSPACE/gpg.sh
+          git config gpg.program $GITHUB_WORKSPACE/gpg.sh
           git config user.signingkey 13D0B11B631937DE
         env: 
           GPG_KEY_PASSPHRASE: ${{ secrets.COLLISIONBOT_PASS }}
