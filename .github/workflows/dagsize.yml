@@ -38,13 +38,15 @@ jobs:
           git_commit_gpgsign: true
           git_tag_gpgsign: true
           git_push_gpgsign: if-asked
-      - name: Enable GPG Magical
+      - name: GPG Magic
+        # I DON'T KNOW WHAT I'M DOING
         run: |
           echo "use-agent" >> ~/.gnupg/gpg.conf
           echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf
           echo "allow-loopback-pinentry" >> ~/.gnupg/gpg-agent.conf
           echo RELOADAGENT | gpg-connect-agent
           export GPG_TTY=$(tty)
+          git config --global gpg.program gpg --batch --no-tty
       - name: Push
         run: |
             git add .
