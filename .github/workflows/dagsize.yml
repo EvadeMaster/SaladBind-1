@@ -46,7 +46,8 @@ jobs:
           echo "allow-loopback-pinentry" >> ~/.gnupg/gpg-agent.conf
           echo RELOADAGENT | gpg-connect-agent
           export GPG_TTY=$(tty)
-          git config --global gpg.program "gpg --batch --no-tty"
+          eval $(gpg-agent --daemon)
+          export GPG_AGENT_INFO
       - name: Push
         run: |
             git add .
