@@ -40,7 +40,10 @@ jobs:
           git_push_gpgsign: if-asked
       - name: Enable GPG loopback
         run: |
+          echo "use-agent" >> ~/.gnupg/gpg.conf
           echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf
+          echo "allow-loopback-pinentry" >> ~/.gnupg/gpg-agent.conf
+          echo RELOADAGENT | gpg-connect-agent
       - name: Push
         run: |
             git add .
