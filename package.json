@@ -30,7 +30,7 @@
     "https": "^1.0.0",
     "inquirer": "^8.2.6",
     "mv": "^2.1.1",
-    "node-fetch": "^2.6.12",
+    "node-fetch": "^2.6.13",
     "open": "^8.4.2",
     "ora": "^5.4.1",
     "systeminformation": "^5.18.15"
