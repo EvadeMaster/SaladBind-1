@@ -3,6 +3,8 @@ name: 👷 Auto-merger
 on:
   pull_request_review:
     types: [submitted]
+  check_run:
+    type: [completed]
 
 jobs:
   compile:
@@ -48,6 +50,12 @@ jobs:
       always() && !contains(needs.*.result, 'failure') && !contains(needs.*.result, 'cancelled')
     
     steps:
+    
+    - name: 📩 Checks all CI status
+      uses: arup-group/action-all-checks-passed@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
     - name: 📔 Checkout the repository
       uses: actions/checkout@v3
       
