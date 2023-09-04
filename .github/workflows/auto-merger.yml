@@ -20,7 +20,7 @@ jobs:
 
     steps:
     - name: 📔 Checkout the repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       
     - name: 🧰 Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
@@ -57,7 +57,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
     - name: 📔 Checkout the repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       
     - id: automerge
       name: ⚡ Merge Pull Request
