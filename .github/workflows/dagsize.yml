@@ -15,7 +15,7 @@ jobs:
         node-version: [18.x]
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           token: ${{ secrets.DAG_UPDATER }}
       - name: Install node
