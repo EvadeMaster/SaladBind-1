@@ -31,7 +31,7 @@
     "inquirer": "^8.2.6",
     "mv": "^2.1.1",
     "node-fetch": "^2.7.0",
-    "open": "^8.4.2",
+    "open": "^10.0.0",
     "ora": "^5.4.1",
     "systeminformation": "^5.21.20"
   },
