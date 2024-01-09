@@ -61,7 +61,7 @@ jobs:
       
     - id: automerge
       name: ⚡ Merge Pull Request
-      uses: "pascalgn/automerge-action@v0.15.6"
+      uses: "pascalgn/automerge-action@v0.16.0"
       env:
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         MERGE_LABELS: "dependencies"
